@@ -39,23 +39,24 @@ jobs:
 
 
   # the gh-pages branch is pushed to Tencent COS after the build job successfully
-  # deploy-to-cos:
-  #   needs: [build-and-deploy]
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     # https://github.com/actions/checkout#checkout-a-different-branch
-  #     - name: checkout gh-pages
-  #       uses: actions/checkout@v3
-  #       with:
-  #          ref: gh-pages
-  #     # coscmd : https://cloud.tencent.com/document/product/436/10976
-  #     - run: pip install coscmd
-  #     - name: Configure coscmd
-  #       env:
-  #         SECRET_ID: ${{ secrets.COS_SECRET_ID }}
-  #         SECRET_KEY: ${{ secrets.COS_SECRET_KEY }}
-  #         BUCKET: ${{ secrets.COS_BUCKET }}
-  #         REGION: ${{ secrets.COS_REGION }}
-  #       run: coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION
-  #     - name: Deploy to COS 🚀
-  #       run: coscmd upload -rs --skipmd5 --delete -f ./ / --ignore "./.git/*"
+  deploy-to-cos:
+    needs: [build-and-deploy]
+    runs-on: ubuntu-latest
+    steps:
+      # https://github.com/actions/checkout#checkout-a-different-branch
+      - name: checkout release
+        uses: actions/checkout@v3
+        with:
+           ref: release
+      # coscmd : https://cloud.tencent.com/document/product/436/10976
+      - run: pip install coscmd
+      - name: Configure coscmd
+        env:
+          SECRET_ID: ${{ secrets.COS_SECRET_ID }}
+          SECRET_KEY: ${{ secrets.COS_SECRET_KEY }}
+          BUCKET: ${{ secrets.COS_BUCKET }}
+          REGION: ${{ secrets.COS_REGION }}
+        run: coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION
+      - name: Deploy to COS 🚀
+        run: |
+          coscmd upload -s --delete -f ./ logseq-theme --include *.css
