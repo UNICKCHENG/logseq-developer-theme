@@ -17,14 +17,14 @@ jobs:
         uses: actions/cache@v3
         with: 
           path: ${{ github.workspace }}/node_modules
-          key: node_modules-${{ hashFiles('package.json') }}
+          key: node-modules-${{ hashFiles('**/package.json') }}
+          restore-keys: node-modules-
       - uses: actions/checkout@v3
       - name: Setup Node.js Environment
         uses: actions/setup-node@v3
         with:
           node-version: '16'
       - name: Install Dependencies
-        if: ${{ steps.get-modules.outputs.cache-hit != 'true' }}
         run: npm install
       - name: Build CSS
         run: |
