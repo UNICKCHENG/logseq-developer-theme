@@ -3,7 +3,7 @@
     --ct-code-font-family: code-font, common-font, ui-font, system-ui !important;
 }
 
-/* 字体参考 https://css-tricks.com/snippets/css/system-font-stack/ */
+// 字体参考 https://css-tricks.com/snippets/css/system-font-stack/ 
 @font-face {
     font-family: apple-font;
     font-style: normal;
@@ -15,15 +15,16 @@
 
 @font-face {
     font-family: common-font;
-    src: url("https://unickcheng-11222202-1258884073.cos.accelerate.myqcloud.com/Fonts_LXGWWenKaiLite_Regular.ttf") format("TrueType");
-    /* 不影响本地使用, 如果在网页端使用会存在 CORS 跨越限制 */
+    src: url("../fonts/Fonts_LXGWWenKaiLite_Regular.ttf") format("TrueType");
+    // 不影响本地使用, 如果在网页端使用会存在 CORS 跨越限制
     src: url("https://github.com/lxgw/LxgwWenKai-Lite/releases/download/v1.245.1/LXGWWenKaiLite-Regular.ttf") format("TrueType");
 }
 
 @font-face {
     font-family: code-font;
     src: local("DejaVuSansMono Nerd Font Mono");
-    src: url("https://unickcheng-11222202-1258884073.cos.accelerate.myqcloud.com/Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.ttf") format("TrueType");
+    src: url("../fonts/Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.ttf") format("TrueType");
+    src: url("https://docs.unickcheng.cc/static/fonts/Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.ttf")  format("TrueType");
 }
 
 @font-face {
