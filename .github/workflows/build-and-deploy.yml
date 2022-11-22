@@ -1,0 +1,61 @@
+name: build and deploy
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scss/*'
+  workflow_dispatch:
+
+jobs:
+
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get node_modules From Cache
+        id: get-modules
+        uses: actions/cache@v3
+        with: 
+          path: ${{ github.workspace }}/node_modules
+          key: node_modules-${{ hashFiles('package.json') }}
+      - uses: actions/checkout@v3
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: Install Dependencies
+        if: ${{ steps.get-modules.outputs.cache-hit != 'true' }}
+        run: npm install
+      - name: Build CSS
+        run: |
+          npm run theme:build
+          npm run theme:expanded
+      - name: Deploy to release branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: release
+          folder: css
+          clean: true
+
+
+  # the gh-pages branch is pushed to Tencent COS after the build job successfully
+  # deploy-to-cos:
+  #   needs: [build-and-deploy]
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     # https://github.com/actions/checkout#checkout-a-different-branch
+  #     - name: checkout gh-pages
+  #       uses: actions/checkout@v3
+  #       with:
+  #          ref: gh-pages
+  #     # coscmd : https://cloud.tencent.com/document/product/436/10976
+  #     - run: pip install coscmd
+  #     - name: Configure coscmd
+  #       env:
+  #         SECRET_ID: ${{ secrets.COS_SECRET_ID }}
+  #         SECRET_KEY: ${{ secrets.COS_SECRET_KEY }}
+  #         BUCKET: ${{ secrets.COS_BUCKET }}
+  #         REGION: ${{ secrets.COS_REGION }}
+  #       run: coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION
+  #     - name: Deploy to COS 🚀
+  #       run: coscmd upload -rs --skipmd5 --delete -f ./ / --ignore "./.git/*"

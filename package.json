@@ -1,8 +1,13 @@
 {
+    "name": "unickcheng",
+    "description": "Developer Theme For Logseq",
+    "license": "MIT",
     "scripts": {
-        "theme:dev": "sass --watch ./scss/main.scss test.css",
-        "theme:test": "sass --style expanded ./scss/main.scss test.css",
-        "theme:build": "sass --style compressed ./scss/main.scss custom.css"
+        "dev": "sass --watch ./scss/main.scss dev.css",
+        "dev:expanded": "sass --style expanded ./scss/main.scss css/custom-expanded.css",
+        "dev:build": "sass --style compressed ./scss/main.scss css/custom.css",
+        "theme:expanded": "sass --no-source-map --style expanded ./scss/main.scss css/custom-expanded.css",
+        "theme:build": "sass --no-source-map --style compressed ./scss/main.scss css/custom.css"
     },
     "dependencies": {
         "sass": "^1.56.1"
