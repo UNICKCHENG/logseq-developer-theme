@@ -14,7 +14,7 @@
 }
 @font-face {
   font-family: common-font;
-  src: url("../fonts/Fonts_LXGWWenKaiLite_Regular.ttf") format("TrueType"), url("https://github.com/lxgw/LxgwWenKai-Lite/releases/download/v1.245.1/LXGWWenKaiLite-Regular.ttf") format("TrueType");
+  src: url("../fonts/Fonts_LXGWWenKaiLite_Regular.ttf") format("TrueType"), url("https://docs.unickcheng.cc/static/fonts/Fonts_LXGWWenKaiLite_Regular.ttf") format("TrueType");
 }
 @font-face {
   font-family: code-font;
