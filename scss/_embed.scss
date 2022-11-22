@@ -1,0 +1,32 @@
+/* ==== 引用效果 ==== */
+/* 深色主题 */
+:not(.color-level) .color-level {
+    box-shadow: none;
+    border: 2px solid #404b55;
+    background-color: #272c35;
+}
+/* 浅色主题 */
+.white-theme :not(.color-level) .color-level {
+    box-shadow: none;
+    border: 2px solid #E9ECEF;
+    background-color: #FFFFFF;
+}
+
+/* ==== 嵌入效果 ==== */
+.embed,
+.embed-page,
+.embed-block {
+    border-radius: 8px;
+    transition: all ease-in 0.3s;
+}
+
+/* 关闭 logseq-dev-theme 主题嵌入页面的触发效果 */
+:is(.embed, .embed-page, .embed-block):is(:hover, :focus-within) {
+    box-shadow: none;
+    transform: none;
+    padding: 0.75em 0.5em;
+    margin: 0.5em;
+    /* border: 2px solid #38434c; */
+    border-radius: 8px;
+    transition: all ease-in 0.3s;
+}

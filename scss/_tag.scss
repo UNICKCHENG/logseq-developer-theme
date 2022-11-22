@@ -1,0 +1,70 @@
+@import "./color";
+
+:root {
+    --tag-background-color-hover-dark: #{$tag-background-color-hover-dark};
+    --tag-background-color-hover-light: #{$tag-background-color-hover-light};
+    
+    --issues-bug-color: #{$issues-bug-color};
+    --issues-enhancement-color: #{$issues-enhancement-color};
+    --issues-question-color: #{$issues-question-color};
+}
+
+/* ==== Tags ==== */
+// 针对宽屏 标签全部靠右显示
+// TODO 后期仅针对特殊标签进行配置
+@media screen and (min-width: 640px) {
+    a.tag {
+        position: relative;
+        float: right;
+        top: 11%;
+    }
+}
+a.tag {
+    border: none;
+}
+a.tag:hover {
+    background-color: var(--tag-background-color-hover-dark);
+}
+.white-theme a.tag:hover {
+    background-color: var(--tag-background-color-hover-light);
+}
+
+// === 优先级样式
+a[priority=A]::before,
+a.priority[href="#/page/A" i]:before {
+  content: "A";
+  background: var(--ct-warning-color);
+  border: var(--background);
+  color: #000;
+}
+a[priority=B]::before,
+a.priority[href="#/page/B" i]:before {
+  content: "B";
+  background: var(--ct-highlight-color);
+  border: var(--background);
+  color: #000;
+}
+a[priority=C]::before,
+a.priority[href="#/page/C" i]:before {
+  content: "C";
+  background: #E9ECEF;
+  border: var(--background);
+  color: #000;
+}
+
+// ==== 定制化 TAG 显示
+a.tag[data-ref="issues-bug"] {
+    content: "bug";
+    border: transparent;
+    color: var(--issues-bug-color);
+}
+a.tag[data-ref="issues-enhancement"] {
+    content: "enhancement";
+    border: transparent;
+    color: var(--issues-enhancement-color);
+}
+a.tag[data-ref="issues-question"] {
+    content: "question";
+    border: transparent;
+    color: var(--issues-question-color);
+}

@@ -1,0 +1,121 @@
+/* ==== 重写代码效果: 浅色主题和深色主题设置一致 ===== */
+/* 参考 https://github.com/flowerornament/logseq-simple-parametric-theme */
+.CodeMirror {
+    font-family: var(--ct-code-font-family);
+}
+
+.extensions__code-lang {
+    background: transparent !important;
+    color: gray;
+}
+
+/* 深色主题代码块背景 */
+.cm-s-solarized.cm-s-dark {
+    background:  #272c35 !important;
+    color: white !important;
+    border: 0.5px solid #404b55;
+    border-radius: 8px;
+}
+.cm-s-solarized.cm-s-dark .CodeMirror-gutters {
+    background:  #313942 !important;
+    
+}
+
+/* 浅色主题代码块背景 */
+.cm-s-solarized.cm-s-light {
+    background:  #272c35 !important;
+    color: white !important;
+    border: 0.5px solid #404b55;
+    border-radius: 8px;
+}
+.cm-s-solarized.cm-s-light .CodeMirror-gutters {
+    background:  #313942 !important;
+}
+
+/* 清除浅色/深色主题下默认的阴影设置 */
+.cm-s-solarized.cm-s-light,
+.cm-s-solarized.cm-s-dark,
+.cm-s-solarized.cm-s-dark .CodeMirror-linenumber,
+.cm-s-solarized.cm-s-light .CodeMirror-linenumber {
+    text-shadow: none !important;
+}
+
+/* 其余代码样式设计 */
+.cm-s-solarized .CodeMirror-matchingbracket {
+    text-decoration: underline;
+    color: #5bdf66 !important;
+}
+.cm-s-solarized span.cm-comment {
+    color: #a0a0a0;
+}
+.cm-s-solarized span.cm-string,
+.cm-s-solarized span.cm-string-2 {
+color: #e6c963;
+}
+.cm-s-solarized span.cm-number {
+color: #978ade;
+}
+.cm-s-solarized span.cm-variable {
+color: #82aaff;
+}
+.cm-s-solarized span.cm-variable-2 {
+color: rgba(255, 255, 255, 0.7);
+}
+.cm-s-solarized span.cm-def {
+color: var(--ls-secondary-text-color);
+}
+.cm-s-solarized span.cm-operator {
+color: #f15f60;
+}
+.cm-s-solarized span.cm-keyword {
+color: #f15f60;
+}
+.cm-s-solarized span.cm-atom {
+color: #978ade;
+}
+.cm-s-solarized span.cm-meta {
+color: white;
+}
+.cm-s-solarized span.cm-tag {
+color: #f07178;
+}
+.cm-s-solarized span.cm-attribute {
+color: #c792ea;
+}
+.cm-s-solarized span.cm-qualifier {
+color: #41b394;
+}
+.cm-s-solarized span.cm-property {
+    color: #9bd174;
+}
+.cm-s-solarized span.cm-builtin {
+    color: #45add6;
+}
+.cm-s-solarized span.cm-variable-3,
+.cm-s-solarized span.cm-type {
+    color: orange;
+}
+
+.white-theme .cm-s-solarized span.cm-string,
+.white-theme .cm-s-solarized span.cm-string-2 {
+    color: orange;
+}
+.white-theme .cm-s-solarized span.cm-variable-2 {
+    color: rgba(255, 255, 255, 0.7);
+}
+.white-theme .cm-s-solarized span.cm-def {
+    color: var(--ls-secondary-text-color);
+}
+.white-theme .cm-s-solarized span.cm-meta {
+    color: var(--ls-secondary-text-color);
+}
+
+/* 代码选中效果 */
+.cm-s-solarized div.CodeMirror-selected {
+    background: #343841 !important;
+    font-weight: bolder !important;
+}
+.white-theme .cm-s-solarized div.CodeMirror-selected {
+    background: #343841 !important;
+    font-weight: bolder !important;
+}

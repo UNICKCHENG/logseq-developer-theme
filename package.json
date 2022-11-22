@@ -1,0 +1,10 @@
+{
+    "scripts": {
+        "theme:dev": "sass --watch ./scss/main.scss test.css",
+        "theme:test": "sass --style expanded ./scss/main.scss test.css",
+        "theme:build": "sass --style compressed ./scss/main.scss custom.css"
+    },
+    "dependencies": {
+        "sass": "^1.56.1"
+    }
+}

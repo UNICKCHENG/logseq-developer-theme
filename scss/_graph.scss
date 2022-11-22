@@ -1,0 +1,16 @@
+/* ==== 图谱设置 ==== */
+.graph-filters {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: none;
+    border: none;
+
+    li:not(:last-of-type) {
+        border-bottom: none;
+    }
+}
+.dark-theme .graph-filters {
+    background-color: #272c35;
+}
+.white-theme .graph-filters {
+    background-color: #fff;
+}
