@@ -58,5 +58,4 @@ jobs:
           REGION: ${{ secrets.COS_REGION }}
         run: coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION
       - name: Deploy to COS 🚀
-        run: |
-          coscmd upload -s --delete -f ./ logseq-theme --include *.css
+        run: coscmd upload -rs --delete -f ./ / --include "*.css"
