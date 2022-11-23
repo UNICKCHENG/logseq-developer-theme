@@ -58,4 +58,4 @@ jobs:
           REGION: ${{ secrets.COS_REGION }}
         run: coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION
       - name: Deploy to COS 🚀
-        run: coscmd upload -s --delete -f ./custom.css /
+        run: coscmd upload -s ./custom.css /
