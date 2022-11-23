@@ -307,3 +307,18 @@ a.tag[data-ref=issues-question] {
 .white-theme .graph-filters {
   background-color: #fff;
 }
+
+/* query model */
+.custom-query > div,
+.dark-theme .table-auto > tbody > tr.cursor,
+.white-theme .table-auto > tbody > tr.cursor {
+  background-color: transparent !important;
+}
+
+.dark-theme .table-auto > tbody > tr.cursor:hover {
+  background-color: #38434C !important;
+}
+
+.white-theme .table-auto > tbody > tr.cursor:hover {
+  background-color: #E9ECEF !important;
+}
