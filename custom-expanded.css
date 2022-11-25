@@ -14,11 +14,11 @@
 }
 @font-face {
   font-family: common-font;
-  src: url("../fonts/Fonts_LXGWWenKaiLite_Regular.ttf") format("TrueType"), url("https://docs.unickcheng.cc/static/fonts/Fonts_LXGWWenKaiLite_Regular.ttf") format("TrueType");
+  src: url("../fonts/Fonts_LXGWWenKaiLite_Regular.ttf") format("TrueType");
 }
 @font-face {
   font-family: code-font;
-  src: local("DejaVuSansMono Nerd Font Mono"), url("../fonts/Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.ttf") format("TrueType"), url("https://docs.unickcheng.cc/static/fonts/Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.ttf") format("TrueType");
+  src: local("DejaVuSansMono Nerd Font Mono"), url("../fonts/Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.ttf") format("TrueType");
 }
 @font-face {
   font-family: ui-font;
