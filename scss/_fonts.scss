@@ -15,15 +15,18 @@
 
 @font-face {
     font-family: common-font;
-    src: url("../fonts/Fonts_LXGWWenKaiLite_Regular.ttf") format("TrueType");
-        // GitHub 链接不影响本地使用, 如果在网页端使用会存在 CORS 跨越限制
-        // url("https://github.com/lxgw/LxgwWenKai-Lite/releases/download/v1.245.1/LXGWWenKaiLite-Regular.ttf") format("TrueType");
+    src: url("https://docs.unickcheng.cc/static/fonts/Fonts_LXGWWenKaiLite_Regular.ttf")  format("TrueType");
+    // src: url("../fonts/Fonts_LXGWWenKaiLite_Regular.ttf") format("TrueType");
+    // GitHub 链接不影响本地使用, 如果在网页端使用会存在 CORS 跨越限制
+    // src: url("https://github.com/lxgw/LxgwWenKai-Lite/releases/download/v1.245.1/LXGWWenKaiLite-Regular.ttf") format("TrueType");
 }
 
 @font-face {
     font-family: code-font;
-    src: local("DejaVuSansMono Nerd Font Mono"),
-        url("../fonts/Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.ttf") format("TrueType");
+    src: local("DejaVuSansMono Nerd Font Mono");
+    src: url("https://docs.unickcheng.cc/static/fonts/Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.ttf")  format("TrueType");
+    // 这个速度最快，但是如果是在网页端使用，他会加上 URL 进行请求
+    // src: url("../fonts/Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.ttf") format("TrueType");
 }
 
 @font-face {
