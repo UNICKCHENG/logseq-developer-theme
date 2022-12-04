@@ -1,0 +1,15 @@
+/* 搜索效果 */
+.dark-theme .ui__modal-overlay {
+    backdrop-filter: blur(8px) brightness(60%);
+    background-color: transparent !important;
+}
+.dark-theme .ui__modal-overlay div {
+    background-color: transparent !important;
+}
+.dark-theme .ui__modal-panel {
+    background-color: #232329 ;
+}
+.dark-theme input[type=password]
+, .dark-theme input[type=text] {
+    background: 0 0 #232329;
+}

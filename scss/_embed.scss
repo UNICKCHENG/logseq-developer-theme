@@ -1,10 +1,18 @@
 /* ==== 引用效果 ==== */
-/* 深色主题 */
-:not(.color-level) .color-level {
-    box-shadow: none;
-    border: 2px solid #404b55;
-    background-color: #272c35;
+// 引用效果
+blockquote {
+    @include theme_background_color(true);
 }
+
+/* 深色主题 */
+// 右侧显示效果
+.cp__right-sidebar-inner :not(.color-level) .sidebar-item-list > .color-level {
+    border: none !important;
+    border-radius: 10px !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+    background-color: var(--ls-primary-background-color) !important;
+}
+
 /* 浅色主题 */
 .white-theme :not(.color-level) .color-level {
     box-shadow: none;

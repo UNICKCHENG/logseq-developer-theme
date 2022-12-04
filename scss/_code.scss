@@ -2,6 +2,7 @@
 /* 参考 https://github.com/flowerornament/logseq-simple-parametric-theme */
 .CodeMirror {
     font-family: var(--ct-code-font-family);
+    box-shadow: none;
 }
 
 .extensions__code-lang {
@@ -9,19 +10,18 @@
     color: gray;
 }
 
-/* 深色主题代码块背景 */
-.cm-s-solarized.cm-s-dark {
-    background:  #272c35 !important;
+
+// 深色主题代码块背景, 也可写作 .cm-s-solarized.cm-s-dark
+.dark .cm-s-solarized {
+    background: #34343c !important;
     color: white !important;
-    border: 0.5px solid #404b55;
-    border-radius: 8px;
-}
-.cm-s-solarized.cm-s-dark .CodeMirror-gutters {
-    background:  #313942 !important;
-    
+    border-radius: 10px;
+  }
+.dark .cm-s-solarized .CodeMirror-gutters {
+    background: #34343c !important;
 }
 
-/* 浅色主题代码块背景 */
+// 浅色主题代码块背景
 .cm-s-solarized.cm-s-light {
     background:  #272c35 !important;
     color: white !important;
@@ -32,15 +32,19 @@
     background:  #313942 !important;
 }
 
-/* 清除浅色/深色主题下默认的阴影设置 */
+// 默认的阴影设置
 .cm-s-solarized.cm-s-light,
-.cm-s-solarized.cm-s-dark,
-.cm-s-solarized.cm-s-dark .CodeMirror-linenumber,
-.cm-s-solarized.cm-s-light .CodeMirror-linenumber {
+.cm-s-solarized.cm-s-dark {
     text-shadow: none !important;
 }
 
-/* 其余代码样式设计 */
+.cm-s-solarized.cm-s-dark .CodeMirror-linenumber,
+.cm-s-solarized.cm-s-light .CodeMirror-linenumber {
+    text-shadow: none !important;
+    color: #5e5c5c !important;
+}
+
+// 其余代码样式设计
 .cm-s-solarized .CodeMirror-matchingbracket {
     text-decoration: underline;
     color: #5bdf66 !important;
@@ -50,40 +54,40 @@
 }
 .cm-s-solarized span.cm-string,
 .cm-s-solarized span.cm-string-2 {
-color: #e6c963;
+    color: #e6c963;
 }
 .cm-s-solarized span.cm-number {
-color: #978ade;
+    color: #978ade;
 }
 .cm-s-solarized span.cm-variable {
-color: #82aaff;
+    color: #82aaff;
 }
 .cm-s-solarized span.cm-variable-2 {
-color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.7);
 }
 .cm-s-solarized span.cm-def {
-color: var(--ls-secondary-text-color);
+    color: var(--ls-secondary-text-color);
 }
 .cm-s-solarized span.cm-operator {
-color: #f15f60;
+    color: #f15f60;
 }
 .cm-s-solarized span.cm-keyword {
-color: #f15f60;
+    color: #f15f60;
 }
 .cm-s-solarized span.cm-atom {
-color: #978ade;
+    color: #978ade;
 }
 .cm-s-solarized span.cm-meta {
-color: white;
+    color: white;
 }
 .cm-s-solarized span.cm-tag {
-color: #f07178;
+    color: #f07178;
 }
 .cm-s-solarized span.cm-attribute {
-color: #c792ea;
+    color: #c792ea;
 }
 .cm-s-solarized span.cm-qualifier {
-color: #41b394;
+    color: #41b394;
 }
 .cm-s-solarized span.cm-property {
     color: #9bd174;

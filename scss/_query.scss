@@ -1,5 +1,22 @@
 /* query model */
 
+// 正文查询效果
+.query-title {
+    background-color: transparent;
+}
+:not(.color-level) .color-level,
+.custom-query > div:first-child {
+    box-shadow: none;
+    border-radius: 10px !important;
+    border: 2px solid #34343C !important;
+    background-color: var(--ls-primary-background-color) !important;
+}
+.custom-query .lazy-visibility :not(.color-level) .color-level {
+    box-shadow: none;
+    border-radius: 10px !important;
+    border: 2px solid #34343C !important;
+}
+
 // table
 .custom-query > div,
 .dark-theme .table-auto > tbody > tr.cursor,
@@ -8,7 +25,7 @@
 }
 
 .dark-theme .table-auto > tbody > tr.cursor:hover {
-    background-color: #38434C !important;
+    background-color: var(--ls-secondary-background-color) !important;
 }
 
 .white-theme .table-auto > tbody > tr.cursor:hover {

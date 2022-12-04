@@ -4,3 +4,30 @@ $tag-background-color-hover-light: #F8F9FA;
 $issues-bug-color: #D46459;
 $issues-enhancement-color: #8A6BEF;
 $issues-question-color: #D3A400;
+
+.dark-theme,
+html[data-theme=dark] {
+    --ls-primary-background-color: #232329;
+    --ls-secondary-background-color: #2B2B33;
+    --ls-primary-theme-color: #769AFF;
+    --ct-header-bg-color: #232329;
+
+    --ct-secondary-color: #769AFF;
+    --ct-primary-color: #769AFF;
+}
+
+@mixin theme_background_color($is_primary) {
+    @if $is_primary {
+        background-color: var(--ls-primary-background-color) !important;
+    } @else {
+        background-color: var(--ls-secondary-background-color) !important;
+    }
+}
+
+@mixin theme_color($is_primary) {
+    @if $is_primary {
+        color: var(--ls-primary-theme-color) !important;
+    } @else {
+        color: var(--ls-primary-theme-color) !important;
+    }
+}

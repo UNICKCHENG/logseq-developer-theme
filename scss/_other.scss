@@ -1,0 +1,28 @@
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+// 右侧页面效果
+.dark .sidebar-item-list .page-properties, .sidebar-item-list .block-properties {
+    background-color: var(--ls-secondary-background-color);
+}
+
+// 全部页面下-删除按钮
+.actions-wrap .ui__button {
+    background-color: var(--ls-secondary-background-color) !important;
+}
+.has-selected .actions-wrap .ui__button {
+    background-color: rgba(255, 0, 0, 0.5) !important;
+}
+.actions-wrap .ui__button:hover {
+    background-color: rgba(255, 0, 0, 0.9) !important;
+}
+
+// timetracking 样式
+.cp__header-logo, .fade-link {
+    color: #34343C;
+}
+.cp__header-logo, .fade-link:hover {
+    color: gray;
+}
