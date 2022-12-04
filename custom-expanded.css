@@ -25,10 +25,72 @@
   font-family: ui-font;
   src: local("Apple Color Emoji"), local("Segoe UI Emoji"), local("Segoe UI Symbol");
 }
+.dark-theme,
+html[data-theme=dark] {
+  --ls-primary-background-color: #232329;
+  --ls-secondary-background-color: #2B2B33;
+  --ls-primary-theme-color: #769AFF;
+  --ct-header-bg-color: #232329;
+  --ct-secondary-color: #769AFF;
+  --ct-primary-color: #769AFF;
+}
+
+/* 左侧菜单栏 */
+.left-sidebar-inner {
+  scrollbar-width: none; /* firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.left-sidebar-inner ::-webkit-scrollbar {
+  display: none;
+}
+
+.dark-theme .left-sidebar-inner, .dark-theme .left-sidebar-inner .create {
+  background-color: var(--ls-primary-background-color) !important;
+  background-image: linear-gradient(transparent, var(--background-color)) !important;
+}
+.dark-theme .left-sidebar-inner .header {
+  background-color: transparent !important;
+}
+.dark-theme .left-sidebar-inner a.item.active,
+.dark-theme .left-sidebar-inner a.item:active,
+.dark-theme .left-sidebar-inner ul li:hover,
+.dark-theme .left-sidebar-inner ul li a:hover {
+  background-color: transparent !important;
+  color: var(--ls-primary-theme-color) !important;
+}
+.dark-theme .left-sidebar-inner a.item:hover {
+  background-color: transparent !important;
+  color: var(--ls-primary-theme-color) !important;
+  opacity: 0.78;
+}
+
+/* 搜索效果 */
+.dark-theme .ui__modal-overlay {
+  backdrop-filter: blur(8px) brightness(60%);
+  background-color: transparent !important;
+}
+
+.dark-theme .ui__modal-overlay div {
+  background-color: transparent !important;
+}
+
+.dark-theme .ui__modal-panel {
+  background-color: #232329;
+}
+
+.dark-theme input[type=password],
+.dark-theme input[type=text] {
+  background: 0 0 #232329;
+}
+
 /* ==== 重写代码效果: 浅色主题和深色主题设置一致 ===== */
 /* 参考 https://github.com/flowerornament/logseq-simple-parametric-theme */
 .CodeMirror {
   font-family: var(--ct-code-font-family);
+  box-shadow: none;
 }
 
 .extensions__code-lang {
@@ -36,19 +98,16 @@
   color: gray;
 }
 
-/* 深色主题代码块背景 */
-.cm-s-solarized.cm-s-dark {
-  background: #272c35 !important;
+.dark .cm-s-solarized {
+  background: #34343c !important;
   color: white !important;
-  border: 0.5px solid #404b55;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
-.cm-s-solarized.cm-s-dark .CodeMirror-gutters {
-  background: #313942 !important;
+.dark .cm-s-solarized .CodeMirror-gutters {
+  background: #34343c !important;
 }
 
-/* 浅色主题代码块背景 */
 .cm-s-solarized.cm-s-light {
   background: #272c35 !important;
   color: white !important;
@@ -60,15 +119,17 @@
   background: #313942 !important;
 }
 
-/* 清除浅色/深色主题下默认的阴影设置 */
 .cm-s-solarized.cm-s-light,
-.cm-s-solarized.cm-s-dark,
-.cm-s-solarized.cm-s-dark .CodeMirror-linenumber,
-.cm-s-solarized.cm-s-light .CodeMirror-linenumber {
+.cm-s-solarized.cm-s-dark {
   text-shadow: none !important;
 }
 
-/* 其余代码样式设计 */
+.cm-s-solarized.cm-s-dark .CodeMirror-linenumber,
+.cm-s-solarized.cm-s-light .CodeMirror-linenumber {
+  text-shadow: none !important;
+  color: #5e5c5c !important;
+}
+
 .cm-s-solarized .CodeMirror-matchingbracket {
   text-decoration: underline;
   color: #5bdf66 !important;
@@ -187,6 +248,16 @@
   border: var(--background-color) !important;
 }
 
+.dark-theme,
+html[data-theme=dark] {
+  --ls-primary-background-color: #232329;
+  --ls-secondary-background-color: #2B2B33;
+  --ls-primary-theme-color: #769AFF;
+  --ct-header-bg-color: #232329;
+  --ct-secondary-color: #769AFF;
+  --ct-primary-color: #769AFF;
+}
+
 :root {
   --tag-background-color-hover-dark: #313942;
   --tag-background-color-hover-light: #F8F9FA;
@@ -258,11 +329,16 @@ a.tag[data-ref=issues-question] {
 }
 
 /* ==== 引用效果 ==== */
+blockquote {
+  background-color: var(--ls-primary-background-color) !important;
+}
+
 /* 深色主题 */
-:not(.color-level) .color-level {
-  box-shadow: none;
-  border: 2px solid #404b55;
-  background-color: #272c35;
+.cp__right-sidebar-inner :not(.color-level) .sidebar-item-list > .color-level {
+  border: none !important;
+  border-radius: 10px !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+  background-color: var(--ls-primary-background-color) !important;
 }
 
 /* 浅色主题 */
@@ -310,6 +386,24 @@ a.tag[data-ref=issues-question] {
 }
 
 /* query model */
+.query-title {
+  background-color: transparent;
+}
+
+:not(.color-level) .color-level,
+.custom-query > div:first-child {
+  box-shadow: none;
+  border-radius: 10px !important;
+  border: 2px solid #34343C !important;
+  background-color: var(--ls-primary-background-color) !important;
+}
+
+.custom-query .lazy-visibility :not(.color-level) .color-level {
+  box-shadow: none;
+  border-radius: 10px !important;
+  border: 2px solid #34343C !important;
+}
+
 .custom-query > div,
 .dark-theme .table-auto > tbody > tr.cursor,
 .white-theme .table-auto > tbody > tr.cursor {
@@ -317,9 +411,37 @@ a.tag[data-ref=issues-question] {
 }
 
 .dark-theme .table-auto > tbody > tr.cursor:hover {
-  background-color: #38434C !important;
+  background-color: var(--ls-secondary-background-color) !important;
 }
 
 .white-theme .table-auto > tbody > tr.cursor:hover {
   background-color: #E9ECEF !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.dark .sidebar-item-list .page-properties, .sidebar-item-list .block-properties {
+  background-color: var(--ls-secondary-background-color);
+}
+
+.actions-wrap .ui__button {
+  background-color: var(--ls-secondary-background-color) !important;
+}
+
+.has-selected .actions-wrap .ui__button {
+  background-color: rgba(255, 0, 0, 0.5) !important;
+}
+
+.actions-wrap .ui__button:hover {
+  background-color: rgba(255, 0, 0, 0.9) !important;
+}
+
+.cp__header-logo, .fade-link {
+  color: #34343C;
+}
+
+.cp__header-logo, .fade-link:hover {
+  color: gray;
 }
