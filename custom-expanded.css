@@ -418,31 +418,38 @@ blockquote {
   background-color: #E9ECEF !important;
 }
 
-.cp__sidebar-main-content {
+.scrollbar-spacing::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-spacing {
   scrollbar-width: none; /* firefox */
   -ms-overflow-style: none; /* IE 10+ */
   overflow-x: hidden;
   overflow-y: auto;
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
-
 .dark .sidebar-item-list .page-properties, .sidebar-item-list .block-properties {
   background-color: var(--ls-secondary-background-color);
 }
 
-.actions-wrap .ui__button {
+.actions:not(.has-selected) .actions-wrap .ui__button {
   background-color: var(--ls-secondary-background-color) !important;
+  display: none;
 }
 
-.has-selected .actions-wrap .ui__button {
+.actions.has-selected .actions-wrap .ui__button {
   background-color: rgba(255, 0, 0, 0.5) !important;
+  color: rgba(229, 228, 228, 0.6);
 }
 
-.actions-wrap .ui__button:hover {
-  background-color: rgba(255, 0, 0, 0.9) !important;
+.actions.has-selected .actions-wrap .ui__button:hover {
+  /* background-color: rgba(255, 0, 0, 0.9) !important; */
+  color: rgb(229, 228, 228);
+}
+
+.table-auto.cp__all_pages_table tbody a:hover {
+  color: rgba(118, 154, 255, 0.78);
 }
 
 .cp__header-logo, .fade-link {
