@@ -229,6 +229,14 @@ html[data-theme=dark] {
   font-weight: bolder !important;
 }
 
+.CodeMirror-hscrollbar {
+  height: 0.1em !important;
+}
+
+.CodeMirror-hscrollbar:hover {
+  height: 1em !important;
+}
+
 /* ==== checkbox ==== */
 /* 浅色主题下复选框问题修复 */
 .white-theme .form-checkbox,
@@ -458,4 +466,8 @@ blockquote {
 
 .cp__header-logo, .fade-link:hover {
   color: gray;
+}
+
+.all-pages-nav > a {
+  display: none;
 }
