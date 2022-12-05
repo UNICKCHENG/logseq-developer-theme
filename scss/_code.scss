@@ -123,3 +123,11 @@
     background: #343841 !important;
     font-weight: bolder !important;
 }
+
+// 水平滚动条样式
+.CodeMirror-hscrollbar {
+    height: 0.1em !important;
+}
+.CodeMirror-hscrollbar:hover {
+    height: 1em !important;
+}
