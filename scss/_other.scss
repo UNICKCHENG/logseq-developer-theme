@@ -28,6 +28,10 @@
     /* background-color: rgba(255, 0, 0, 0.9) !important; */
     color: rgb(229, 228, 228);
 }
+// 全部页面-hover效果
+.table-auto.cp__all_pages_table tbody a:hover  {
+    color: rgb(118, 154, 255, 0.78);
+}
 
 // timetracking 样式
 .cp__header-logo, .fade-link {
