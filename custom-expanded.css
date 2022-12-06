@@ -111,11 +111,6 @@ html[data-theme=dark] {
   }
 }
 
-.cm-s-solarized div.CodeMirror-selected {
-  background: #264F78 !important;
-  font-weight: bolder !important;
-}
-
 .white-theme .cm-s-solarized div.CodeMirror-selected {
   background: #343841 !important;
   font-weight: bolder !important;
@@ -139,6 +134,10 @@ html[data-theme=dark] {
   -moz-border-radius: 10px !important;
   -khtml-border-radius: 10px !important;
   border-radius: 10px !important;
+}
+.dark-theme .cm-s-solarized div.CodeMirror-selected {
+  background: #32445A !important;
+  font-weight: bolder !important;
 }
 
 .cm-s-solarized.cm-s-light {
