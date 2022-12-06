@@ -50,7 +50,7 @@
         @include bordeRadius();
     }
     // 代码选中效果
-    .cm-s-solarized div.CodeMirror-selected {
+    .CodeMirror .CodeMirror-lines div.CodeMirror-selected {
         background: #32445A !important;
         font-weight: bolder !important;
     }
