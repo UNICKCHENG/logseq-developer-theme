@@ -33,11 +33,8 @@
 }
 
 // 水平滚动条样式
-.CodeMirror-hscrollbar {
-    height: 0.1em !important;
-}
-.CodeMirror-hscrollbar:hover {
-    height: 1em !important;
+.CodeMirror-hscrollbar:not(:hover, :active) {
+    opacity: 0.05;
 }
 
 
