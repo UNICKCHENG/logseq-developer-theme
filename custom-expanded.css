@@ -111,7 +111,6 @@ html[data-theme=dark] {
   }
 }
 
-/* 代码选中效果 */
 .cm-s-solarized div.CodeMirror-selected {
   background: #264F78 !important;
   font-weight: bolder !important;
@@ -122,21 +121,29 @@ html[data-theme=dark] {
   font-weight: bolder !important;
 }
 
-.CodeMirror-hscrollbar {
-  height: 0.1em !important;
-}
-
-.CodeMirror-hscrollbar:hover {
-  height: 1em !important;
+.CodeMirror-hscrollbar:not(:hover, :active) {
+  opacity: 0.05;
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  -khtml-border-radius: 10px !important;
+  border-radius: 10px !important;
 }
 
 .dark .cm-s-solarized {
   background: #34343c !important;
   color: white !important;
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  -khtml-border-radius: 10px !important;
+  border-radius: 10px !important;
 }
 
 .dark .cm-s-solarized .CodeMirror-gutters {
   background: #34343c !important;
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  -khtml-border-radius: 10px !important;
+  border-radius: 10px !important;
 }
 
 .cm-s-solarized.cm-s-light {
@@ -251,15 +258,12 @@ html[data-theme=dark] {
 }
 
 /* ==== checkbox ==== */
-/* 浅色主题下复选框问题修复 */
-.white-theme .form-checkbox,
-.form-checkbox:focus {
+.white-theme .form-checkbox {
   border: 1.8px solid #313942 !important;
 }
 
 :is(.doing, .now) .form-checkbox,
 :is(.doing, .now) .form-checkbox:focus {
-  /* border: 1.8px solid var(--ct-success-color) !important; */
   background-color: transparent !important;
 }
 
@@ -391,7 +395,6 @@ blockquote {
 /* ==== 图谱设置 ==== */
 .graph-filters {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  box-shadow: none;
   border: none;
 }
 .graph-filters li:not(:last-of-type) {
@@ -450,6 +453,18 @@ blockquote {
   -ms-overflow-style: none; /* IE 10+ */
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+.dropdown-wrapper {
+  border: none !important;
+}
+
+.menu-links-wrapper {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
+}
+
+.menu-links-wrapper .menu-separator {
+  display: none;
 }
 
 .dark .sidebar-item-list .page-properties, .sidebar-item-list .block-properties {
