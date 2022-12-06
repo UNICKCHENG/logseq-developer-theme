@@ -26,7 +26,6 @@
     }
 }
 
-
 .white-theme .cm-s-solarized div.CodeMirror-selected {
     background: #343841 !important;
     font-weight: bolder !important;
@@ -53,6 +52,10 @@
     .CodeMirror .CodeMirror-lines div.CodeMirror-selected {
         background: #32445A !important;
         font-weight: bolder !important;
+    }
+    // `` 语法的代码块
+    :not(pre) > code {
+        background-color: var(--ls-secondary-background-color);
     }
 }
 
