@@ -91,9 +91,9 @@ html[data-theme=dark] {
 .CodeMirror {
   font-family: var(--ct-code-font-family);
   box-shadow: none;
-  -webkit-border-radius: 10% !important;
-  -moz-border-radius: 10% !important;
-  -khtml-border-radius: 10% !important;
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  -khtml-border-radius: 10px !important;
   border-radius: 10px !important;
 }
 
