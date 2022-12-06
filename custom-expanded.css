@@ -80,10 +80,10 @@ html[data-theme=dark] {
   background-color: transparent !important;
 }
 .dark-theme .ui__modal-panel {
-  background-color: var(--ls-secondary-background-color);
+  background-color: var(--ls-primary-background-color);
 }
 .dark-theme input[type=password], .dark-theme input[type=text] {
-  background: 0 0 var(--ls-secondary-background-color);
+  background: 0 0 var(--ls-primary-background-color);
 }
 
 /* ==== 重写代码效果: 浅色主题和深色主题设置一致 ===== */
