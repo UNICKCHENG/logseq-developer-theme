@@ -88,7 +88,7 @@ html[data-theme=dark] {
 
 /* ==== 重写代码效果: 浅色主题和深色主题设置一致 ===== */
 /* 参考 https://github.com/flowerornament/logseq-simple-parametric-theme */
-.CodeMirror {
+.CodeMirror, .CodeMirror-scroll, .CodeMirror-sizer {
   font-family: var(--ct-code-font-family);
   box-shadow: none;
   -webkit-border-radius: 10px !important;
@@ -123,10 +123,6 @@ html[data-theme=dark] {
 
 .CodeMirror-hscrollbar:not(:hover, :active) {
   opacity: 0.05;
-  -webkit-border-radius: 10px !important;
-  -moz-border-radius: 10px !important;
-  -khtml-border-radius: 10px !important;
-  border-radius: 10px !important;
 }
 
 .dark .cm-s-solarized {
