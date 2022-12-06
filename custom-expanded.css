@@ -144,7 +144,7 @@ html[data-theme=dark] {
   -khtml-border-radius: 10px !important;
   border-radius: 10px !important;
 }
-.dark-theme .cm-s-solarized div.CodeMirror-selected {
+.dark-theme .CodeMirror .CodeMirror-lines div.CodeMirror-selected {
   background: #32445A !important;
   font-weight: bolder !important;
 }
