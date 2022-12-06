@@ -26,11 +26,7 @@
     }
 }
 
-// 代码选中效果
-.cm-s-solarized div.CodeMirror-selected {
-    background: #264F78 !important;
-    font-weight: bolder !important;
-}
+
 .white-theme .cm-s-solarized div.CodeMirror-selected {
     background: #343841 !important;
     font-weight: bolder !important;
@@ -41,16 +37,23 @@
     opacity: 0.05;
 }
 
-
-// 深色主题代码块背景, 也可写作 .cm-s-solarized.cm-s-dark
-.dark .cm-s-solarized {
-    background: #34343c !important;
-    color: white !important;
-    @include bordeRadius();
-  }
-.dark .cm-s-solarized .CodeMirror-gutters {
-    background: #34343c !important;
-    @include bordeRadius();
+.dark-theme {
+    // 背景样式
+    .CodeMirror-scroll .CodeMirror-sizer {
+        background: #34343c !important;
+        color: white !important;
+        @include bordeRadius();
+      }
+    //  序号样式
+    .CodeMirror, .CodeMirror-scroll .CodeMirror-gutters {
+        background: #34343c !important;
+        @include bordeRadius();
+    }
+    // 代码选中效果
+    .cm-s-solarized div.CodeMirror-selected {
+        background: #32445A !important;
+        font-weight: bolder !important;
+    }
 }
 
 // 浅色主题代码块背景
