@@ -92,6 +92,7 @@ html[data-theme=dark] {
   font-family: var(--ct-code-font-family);
   box-shadow: none;
   border-radius: 10px !important;
+  --webkit-appearance: none !important;
 }
 
 @media screen and (max-width: 640px) {
