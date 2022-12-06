@@ -68,16 +68,18 @@ html[data-theme=dark] {
 }
 
 /* 搜索效果 */
-.dark-theme .ls-search {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
-}
-.dark-theme .ui__modal-overlay {
+.ui__modal-overlay {
   -webkit-backdrop-filter: blur(8px) brightness(60%);
   backdrop-filter: blur(8px) brightness(60%);
   background-color: transparent !important;
 }
-.dark-theme .ui__modal-overlay div {
+
+.ui__modal-overlay div {
   background-color: transparent !important;
+}
+
+.dark-theme .ls-search {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
 }
 .dark-theme .ui__modal-panel {
   background-color: var(--ls-primary-background-color);
@@ -86,7 +88,11 @@ html[data-theme=dark] {
   background: 0 0 var(--ls-primary-background-color);
 }
 .dark-theme #ui__ac-inner > div:first-child > a {
+  background-color: var(--ls-primary-background-color);
+}
+.dark-theme #ui__ac-inner > div a:hover {
   background-color: var(--ls-secondary-background-color);
+  color: #fff;
 }
 
 /* ==== 重写代码效果: 浅色主题和深色主题设置一致 ===== */
