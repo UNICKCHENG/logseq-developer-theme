@@ -148,6 +148,9 @@ html[data-theme=dark] {
   background: #32445A !important;
   font-weight: bolder !important;
 }
+.dark-theme :not(pre) > code {
+  background-color: var(--ls-secondary-background-color);
+}
 
 .cm-s-solarized.cm-s-light {
   background: #272c35 !important;
