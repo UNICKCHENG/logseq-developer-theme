@@ -1,13 +1,17 @@
 /* ==== 重写代码效果: 浅色主题和深色主题设置一致 ===== */
 /* 参考 https://github.com/flowerornament/logseq-simple-parametric-theme */
-.CodeMirror {
-    font-family: var(--ct-code-font-family);
-    box-shadow: none;
 
+@mixin bordeRadius() {
     -webkit-border-radius: 10px !important; // Safari 3-4, iOS 1-3.2, Android 1.6-
     -moz-border-radius: 10px !important;    // Firefox 1-3.6 
     -khtml-border-radius: 10px !important;  // Konqueror
     border-radius: 10px !important;         // Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+
+}
+
+.CodeMirror, .CodeMirror-scroll, .CodeMirror-sizer {
+    font-family: var(--ct-code-font-family);
+    box-shadow: none;
+    @include bordeRadius();
 }
 
 .extensions__code-lang {
@@ -22,7 +26,7 @@
     }
 }
 
-/* 代码选中效果 */
+// 代码选中效果
 .cm-s-solarized div.CodeMirror-selected {
     background: #264F78 !important;
     font-weight: bolder !important;
@@ -42,9 +46,11 @@
 .dark .cm-s-solarized {
     background: #34343c !important;
     color: white !important;
+    @include bordeRadius();
   }
 .dark .cm-s-solarized .CodeMirror-gutters {
     background: #34343c !important;
+    @include bordeRadius();
 }
 
 // 浅色主题代码块背景
