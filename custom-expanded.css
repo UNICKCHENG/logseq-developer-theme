@@ -91,6 +91,7 @@ html[data-theme=dark] {
 .CodeMirror {
   font-family: var(--ct-code-font-family);
   box-shadow: none;
+  border-radius: 10px !important;
 }
 
 @media screen and (max-width: 640px) {
@@ -107,15 +108,32 @@ html[data-theme=dark] {
   }
 }
 
+/* 代码选中效果 */
+.cm-s-solarized div.CodeMirror-selected {
+  background: #264F78 !important;
+  font-weight: bolder !important;
+}
+
+.white-theme .cm-s-solarized div.CodeMirror-selected {
+  background: #343841 !important;
+  font-weight: bolder !important;
+}
+
+.CodeMirror-hscrollbar {
+  height: 0.1em !important;
+}
+
+.CodeMirror-hscrollbar:hover {
+  height: 1em !important;
+}
+
 .dark .cm-s-solarized {
   background: #34343c !important;
   color: white !important;
-  border-radius: 10px;
 }
 
 .dark .cm-s-solarized .CodeMirror-gutters {
   background: #34343c !important;
-  border-radius: 10px !important;
 }
 
 .cm-s-solarized.cm-s-light {
@@ -227,25 +245,6 @@ html[data-theme=dark] {
 
 .white-theme .cm-s-solarized span.cm-meta {
   color: var(--ls-secondary-text-color);
-}
-
-/* 代码选中效果 */
-.cm-s-solarized div.CodeMirror-selected {
-  background: #343841 !important;
-  font-weight: bolder !important;
-}
-
-.white-theme .cm-s-solarized div.CodeMirror-selected {
-  background: #343841 !important;
-  font-weight: bolder !important;
-}
-
-.CodeMirror-hscrollbar {
-  height: 0.1em !important;
-}
-
-.CodeMirror-hscrollbar:hover {
-  height: 1em !important;
 }
 
 /* ==== checkbox ==== */
