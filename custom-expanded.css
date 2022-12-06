@@ -125,7 +125,7 @@ html[data-theme=dark] {
   opacity: 0.05;
 }
 
-.dark .cm-s-solarized {
+.dark-theme .CodeMirror-scroll .CodeMirror-sizer {
   background: #34343c !important;
   color: white !important;
   -webkit-border-radius: 10px !important;
@@ -133,8 +133,7 @@ html[data-theme=dark] {
   -khtml-border-radius: 10px !important;
   border-radius: 10px !important;
 }
-
-.dark .cm-s-solarized .CodeMirror-gutters {
+.dark-theme .CodeMirror, .dark-theme .CodeMirror-scroll .CodeMirror-gutters {
   background: #34343c !important;
   -webkit-border-radius: 10px !important;
   -moz-border-radius: 10px !important;
