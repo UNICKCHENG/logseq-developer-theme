@@ -68,22 +68,21 @@ html[data-theme=dark] {
 }
 
 /* 搜索效果 */
+.dark-theme .ls-search {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
+}
 .dark-theme .ui__modal-overlay {
   backdrop-filter: blur(8px) brightness(60%);
   background-color: transparent !important;
 }
-
 .dark-theme .ui__modal-overlay div {
   background-color: transparent !important;
 }
-
 .dark-theme .ui__modal-panel {
-  background-color: #232329;
+  background-color: var(--ls-secondary-background-color);
 }
-
-.dark-theme input[type=password],
-.dark-theme input[type=text] {
-  background: 0 0 #232329;
+.dark-theme input[type=password], .dark-theme input[type=text] {
+  background: 0 0 var(--ls-secondary-background-color);
 }
 
 /* ==== 重写代码效果: 浅色主题和深色主题设置一致 ===== */
