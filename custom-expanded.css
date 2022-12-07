@@ -87,12 +87,15 @@ html[data-theme=dark] {
 .dark-theme input[type=password], .dark-theme input[type=text] {
   background: 0 0 var(--ls-primary-background-color);
 }
-.dark-theme #ui__ac-inner > div:first-child > a {
-  background-color: var(--ls-primary-background-color);
-}
 .dark-theme #ui__ac-inner > div a:hover {
   background-color: var(--ls-secondary-background-color);
   color: #fff;
+}
+.dark-theme .ls-search > .search-results-wrap ::-webkit-scrollbar {
+  background-color: var(--ls-primary-background-color);
+}
+.dark-theme .cp__palette-main .chosen, .dark-theme .cp__select-main .chosen {
+  background-color: var(--ls-secondary-background-color);
 }
 
 /* ==== 重写代码效果: 浅色主题和深色主题设置一致 ===== */
