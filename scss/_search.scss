@@ -19,11 +19,17 @@
     input[type=password], input[type=text] {
         background: 0 0 var(--ls-primary-background-color);
     }
-    #ui__ac-inner > div:first-child > a {
-        background-color: var(--ls-primary-background-color);
-    }
     #ui__ac-inner > div a:hover {
         background-color: var(--ls-secondary-background-color);
         color: #fff;
+    }
+
+    .ls-search > .search-results-wrap ::-webkit-scrollbar {
+        background-color: var(--ls-primary-background-color);
+    }
+
+    // 全局上下切换效果（含搜索框）
+    .cp__palette-main .chosen, .cp__select-main .chosen {
+        background-color: var(--ls-secondary-background-color);
     }
 }
