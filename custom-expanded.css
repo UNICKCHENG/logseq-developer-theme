@@ -446,27 +446,28 @@ blockquote {
   background-color: transparent;
 }
 
-.query-title {
+.custom-query .query-title {
   background-color: transparent;
+}
+@media screen and (max-width: 640px) {
+  .custom-query .query-title {
+    display: none;
+  }
 }
 
 :not(.color-level) .color-level,
 .custom-query > div:first-child {
   box-shadow: none;
   border-radius: 10px !important;
-  border: 2px solid #34343C !important;
-  background-color: var(--ls-primary-background-color) !important;
+  border: 2px solid var(--ls-secondary-background-color) !important;
+  background-color: transparent !important;
 }
 
-.custom-query .lazy-visibility :not(.color-level) .color-level {
-  box-shadow: none;
-  border-radius: 10px !important;
-  border: 2px solid #34343C !important;
+.custom-query .table-auto > thead > tr > th {
+  border-bottom: 2px solid var(--ls-secondary-background-color) !important;
 }
 
-.custom-query > div,
-.dark-theme .table-auto > tbody > tr.cursor,
-.white-theme .table-auto > tbody > tr.cursor {
+.custom-query .table-auto > tbody > tr.cursor {
   background-color: transparent !important;
 }
 
