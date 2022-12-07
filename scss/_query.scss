@@ -29,35 +29,42 @@
     background-color: transparent;
 }
 
-
-// 正文查询效果
-.query-title {
+// 查询标题样式
+.custom-query .query-title {
+    // 窄屏情况下不显示查询标题 
+    @media screen and (max-width: 640px) {
+        display: none;
+    }
     background-color: transparent;
 }
+
+// .custom-query .flex-col,
+// .references-blocks {
+//     box-shadow: none !important;
+//     border-radius: 10px !important;
+//     border: 2px solid var(--ls-secondary-background-color) !important;
+//     background-color: var(--ls-primary-background-color) !important;
+// }
+// 查询效果和引用效果: references-blocks
 :not(.color-level) .color-level,
 .custom-query > div:first-child {
-    box-shadow: none;
+    box-shadow: none;;
     border-radius: 10px !important;
-    border: 2px solid #34343C !important;
-    background-color: var(--ls-primary-background-color) !important;
-}
-.custom-query .lazy-visibility :not(.color-level) .color-level {
-    box-shadow: none;
-    border-radius: 10px !important;
-    border: 2px solid #34343C !important;
-}
-
-// table
-.custom-query > div,
-.dark-theme .table-auto > tbody > tr.cursor,
-.white-theme .table-auto > tbody > tr.cursor{
+    border: 2px solid var(--ls-secondary-background-color) !important;
     background-color: transparent !important;
 }
 
+
+// # table
+.custom-query .table-auto > thead > tr > th {
+    border-bottom: 2px solid var(--ls-secondary-background-color) !important;
+}
+.custom-query .table-auto > tbody > tr.cursor {
+    background-color: transparent !important;
+}
 .dark-theme .table-auto > tbody > tr.cursor:hover {
     background-color: var(--ls-secondary-background-color) !important;
 }
-
 .white-theme .table-auto > tbody > tr.cursor:hover {
     background-color: #E9ECEF !important;
 }
