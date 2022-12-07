@@ -419,6 +419,29 @@ blockquote {
 }
 
 /* query model */
+.custom-query .block-control {
+  display: none;
+}
+
+.custom-query .overflow-x-auto::-webkit-scrollbar {
+  background-color: var(--ls-primary-background-color);
+}
+
+.custom-query .overflow-x-auto::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  -khtml-border-radius: 10px !important;
+  border-radius: 10px !important;
+}
+
+:not(:active) .custom-query .overflow-x-auto::-webkit-scrollbar-thumb {
+  background-color: var(--ls-secondary-background-color);
+}
+
+:not(:hover, :active) .custom-query .overflow-x-auto::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
 .query-title {
   background-color: transparent;
 }
