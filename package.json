@@ -3,11 +3,11 @@
     "description": "Developer Theme For Logseq",
     "license": "MIT",
     "config": {
-        "localPath": "C:\\Users\\hi\\LocalStation\\BLOG\\docs\\logseq"
+        "localPath": "C:\\Users\\hi\\LocalStation\\BLOG\\docs"
     },
     "scripts": {
-        "dev:win": "sass --watch --no-source-map --style expanded ./scss/main.scss %npm_package_config_localPath%/custom.css",
-        "dev:linux": "sass --watch --no-source-map --style expanded ./scss/main.scss $npm_package_config_localPath/custom.css",
+        "dev:win": "sass --watch --no-source-map --style expanded ./scss/main.scss %npm_package_config_localPath%/logseq/custom.css",
+        "dev": "sass --watch --no-source-map --style expanded ./scss/main.scss $npm_package_config_localPath/logseq/custom.css",
         "theme:expanded": "sass --no-source-map --style expanded ./scss/main.scss css/custom-expanded.css",
         "theme:build": "sass --no-source-map --style compressed ./scss/main.scss css/custom.css"
     },
