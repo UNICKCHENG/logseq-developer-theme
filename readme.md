@@ -5,6 +5,8 @@
 [![logseq-dev-theme](https://img.shields.io/github/workflow/status/pengx17/logseq-dev-theme/Deploy/main?label=logseq-dev-theme)](https://github.com/pengx17/logseq-dev-theme/actions/workflows/main.yml)
 [![logseq](https://img.shields.io/github/v/release/logseq/logseq?label=logseq)](https://github.com/logseq/logseq/releases)
 
+[中文版](readme-zh.md)
+
 [logseq-developer-theme](https://github.com/UNICKCHENG/logseq-developer-theme) is a secondary development of the [logseq-dev-theme](https://github.com/pengx17/logseq-dev-theme) theme as an upstream, and you can easily see the `@import` reference in [main.scss](scss/main.scss) . You can clearly compare the differences between [logseq-dev-theme](https://pengx17.github.io/knowledge-garden/) and [logseq-developer-theme](https://docs.unickcheng.cc/#/page/%E5%B9%B3%E5%8F%B0%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8C%97) via respective website, for more information see [this article](https://docs.unickcheng.cc/#/page/logseq-developer-theme).
 
 **logseq-developer-theme will not be made into logseq-dev-theme 2.0**, just because logseq-dev-theme allows me to focus more on the desired css style, therefore, this project is not a fork, but a reference via `@import`.
@@ -73,9 +75,9 @@ You can see more information at [logseq-developer-theme](https://docs.unickcheng
 
 - [logseq team](https://github.com/logseq/logseq)
 - [pengx17/logseq-dev-theme](https://github.com/pengx17/logseq-dev-theme)
-- [flowerornament/logseq-simple-parametric-theme](https://github.com/flowerornament/logseq-simple-parametric-theme) for code CSS style
-- [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts) support  DejaVuSansMono Fonts
-- [lxgw/LxgwWenKai-Lite](https://github.com/lxgw/LxgwWenKai-Lite) support  LXGWWenKaiLite-Regular Fonts
+- [flowerornament/logseq-simple-parametric-theme](https://github.com/flowerornament/logseq-simple-parametric-theme) for code block CSS Style
+- [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts) support about DejaVuSansMono Fonts
+- [lxgw/LxgwWenKai-Lite](https://github.com/lxgw/LxgwWenKai-Lite) support about LXGWWenKaiLite-Regular Fonts
 - [awesome-logseq](https://github.com/logseq/awesome-logseq) provides list of logeseq theme
 - [RemNote](https://github.com/orgs/remnoteio/repositories) default theme style
 - Thanks to all open source projects for sharing ideas and techniques
