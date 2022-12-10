@@ -69,6 +69,8 @@ You can see more information at [logseq-developer-theme](https://docs.unickcheng
 - [logseq team](https://github.com/logseq/logseq)
 - [pengx17/logseq-dev-theme](https://github.com/pengx17/logseq-dev-theme)
 - [flowerornament/logseq-simple-parametric-theme](https://github.com/flowerornament/logseq-simple-parametric-theme) for code CSS style
+- [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts) support  DejaVuSansMono Fonts
+- [lxgw/LxgwWenKai-Lite](https://github.com/lxgw/LxgwWenKai-Lite) support  LXGWWenKaiLite-Regular Fonts
 - [awesome-logseq](https://github.com/logseq/awesome-logseq) provides list of logeseq theme
 - [RemNote](https://github.com/orgs/remnoteio/repositories) default theme style
 - Thanks to all open source projects for sharing ideas and techniques
