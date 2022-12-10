@@ -1,5 +1,4 @@
-/* ==== 重写代码效果: 浅色主题和深色主题设置一致 ===== */
-/* 参考 https://github.com/flowerornament/logseq-simple-parametric-theme */
+/* ==== 代码模块效果 ===== */
 
 @mixin bordeRadius() {
     -webkit-border-radius: 10px !important; // Safari 3-4, iOS 1-3.2, Android 1.6-
@@ -8,12 +7,16 @@
     border-radius: 10px !important;         // Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+
 }
 
-.CodeMirror, .CodeMirror-scroll, .CodeMirror-sizer {
+.CodeMirror, 
+.CodeMirror-scroll .CodeMirror-sizer ,
+.CodeMirror-code .CodeMirror-linenumber {
     font-family: var(--ct-code-font-family);
     box-shadow: none;
+    text-shadow: none !important;
     @include bordeRadius();
 }
 
+// 右上角显示语言
 .extensions__code-lang {
     @media screen and (max-width: 640px) {
         display: none !important;
@@ -24,11 +27,6 @@
         right: 1%;
         top: 1%;
     }
-}
-
-.white-theme .cm-s-solarized div.CodeMirror-selected {
-    background: #343841 !important;
-    font-weight: bolder !important;
 }
 
 // 水平滚动条样式
@@ -44,7 +42,9 @@
         @include bordeRadius();
       }
     //  序号样式
-    .CodeMirror, .CodeMirror-scroll .CodeMirror-gutters {
+    .CodeMirror, .CodeMirror-scroll .CodeMirror-gutters,
+    .CodeMirror-code .CodeMirror-linenumber {
+        color: gray;
         background: #34343c !important;
         @include bordeRadius();
     }
@@ -59,31 +59,33 @@
     }
 }
 
-// 浅色主题代码块背景
-.cm-s-solarized.cm-s-light {
-    background:  #272c35 !important;
-    color: white !important;
-    border: 0.5px solid #404b55;
-    border-radius: 8px;
-}
-.cm-s-solarized.cm-s-light .CodeMirror-gutters {
-    background:  #313942 !important;
-    border-radius: 10px !important;
-}
-
-// 默认的阴影设置
-.cm-s-solarized.cm-s-light,
-.cm-s-solarized.cm-s-dark {
-    text-shadow: none !important;
-}
-
-.cm-s-solarized.cm-s-dark .CodeMirror-linenumber,
-.cm-s-solarized.cm-s-light .CodeMirror-linenumber {
-    text-shadow: none !important;
-    color: #5e5c5c !important;
+.white-theme {
+    // 背景样式
+    .CodeMirror-scroll .CodeMirror-sizer {
+        background: #272c35 !important;
+        color: white !important;
+        @include bordeRadius();
+      }
+    //  序号样式
+    .CodeMirror, .CodeMirror-scroll .CodeMirror-gutters,
+    .CodeMirror-code .CodeMirror-linenumber {
+        color: gray;
+        background: #272c35 !important;
+        @include bordeRadius();
+    }
+    // 代码选中效果
+    .CodeMirror .CodeMirror-lines div.CodeMirror-selected {
+        background: #343841 !important;
+        font-weight: bolder !important;
+    }
+    // `` 语法的代码块
+    :not(pre) > code {
+        background-color: var(--ls-secondary-background-color);
+    }
 }
 
 // 其余代码样式设计
+// https://github.com/flowerornament/logseq-simple-parametric-theme
 .cm-s-solarized .CodeMirror-matchingbracket {
     text-decoration: underline;
     color: #5bdf66 !important;
