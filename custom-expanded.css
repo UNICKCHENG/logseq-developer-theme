@@ -98,11 +98,13 @@ html[data-theme=dark] {
   background-color: var(--ls-secondary-background-color);
 }
 
-/* ==== 重写代码效果: 浅色主题和深色主题设置一致 ===== */
-/* 参考 https://github.com/flowerornament/logseq-simple-parametric-theme */
-.CodeMirror, .CodeMirror-scroll, .CodeMirror-sizer {
+/* ==== 代码模块效果 ===== */
+.CodeMirror,
+.CodeMirror-scroll .CodeMirror-sizer,
+.CodeMirror-code .CodeMirror-linenumber {
   font-family: var(--ct-code-font-family);
   box-shadow: none;
+  text-shadow: none !important;
   -webkit-border-radius: 10px !important;
   -moz-border-radius: 10px !important;
   -khtml-border-radius: 10px !important;
@@ -123,11 +125,6 @@ html[data-theme=dark] {
   }
 }
 
-.white-theme .cm-s-solarized div.CodeMirror-selected {
-  background: #343841 !important;
-  font-weight: bolder !important;
-}
-
 .CodeMirror-hscrollbar:not(:hover, :active) {
   opacity: 0.05;
 }
@@ -140,7 +137,9 @@ html[data-theme=dark] {
   -khtml-border-radius: 10px !important;
   border-radius: 10px !important;
 }
-.dark-theme .CodeMirror, .dark-theme .CodeMirror-scroll .CodeMirror-gutters {
+.dark-theme .CodeMirror, .dark-theme .CodeMirror-scroll .CodeMirror-gutters,
+.dark-theme .CodeMirror-code .CodeMirror-linenumber {
+  color: gray;
   background: #34343c !important;
   -webkit-border-radius: 10px !important;
   -moz-border-radius: 10px !important;
@@ -155,27 +154,29 @@ html[data-theme=dark] {
   background-color: var(--ls-secondary-background-color);
 }
 
-.cm-s-solarized.cm-s-light {
+.white-theme .CodeMirror-scroll .CodeMirror-sizer {
   background: #272c35 !important;
   color: white !important;
-  border: 0.5px solid #404b55;
-  border-radius: 8px;
-}
-
-.cm-s-solarized.cm-s-light .CodeMirror-gutters {
-  background: #313942 !important;
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  -khtml-border-radius: 10px !important;
   border-radius: 10px !important;
 }
-
-.cm-s-solarized.cm-s-light,
-.cm-s-solarized.cm-s-dark {
-  text-shadow: none !important;
+.white-theme .CodeMirror, .white-theme .CodeMirror-scroll .CodeMirror-gutters,
+.white-theme .CodeMirror-code .CodeMirror-linenumber {
+  color: gray;
+  background: #272c35 !important;
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  -khtml-border-radius: 10px !important;
+  border-radius: 10px !important;
 }
-
-.cm-s-solarized.cm-s-dark .CodeMirror-linenumber,
-.cm-s-solarized.cm-s-light .CodeMirror-linenumber {
-  text-shadow: none !important;
-  color: #5e5c5c !important;
+.white-theme .CodeMirror .CodeMirror-lines div.CodeMirror-selected {
+  background: #343841 !important;
+  font-weight: bolder !important;
+}
+.white-theme :not(pre) > code {
+  background-color: var(--ls-secondary-background-color);
 }
 
 .cm-s-solarized .CodeMirror-matchingbracket {
