@@ -535,3 +535,7 @@ blockquote {
 .cp__header-logo, .fade-link:hover {
   color: gray;
 }
+
+.all-pages-nav > a {
+  display: none;
+}
