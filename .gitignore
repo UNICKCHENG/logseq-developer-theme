@@ -1,5 +1,10 @@
 .obsidian
-node_modules/
-package-lock.json
+node_modules
+css
 *css.map
 *.css
+
+# script
+*.ps1
+*.sh
+*.bat

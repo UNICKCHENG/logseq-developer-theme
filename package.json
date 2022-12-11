@@ -1,15 +1,30 @@
 {
-    "name": "unickcheng",
-    "description": "Developer Theme For Logseq",
+    "name": "logseq-developer-theme",
+    "description": "https://docs.unickcheng.cc/#/page/logseq-developer-theme",
+    "author": "UNICKCHENG",
     "license": "MIT",
+    "logseq": {
+        "themes": [
+          {
+            "name": "Developer Theme",
+            "url": "./custom.css"
+          },
+          {
+            "name": "Developer Theme Like docs.unickcheng.cc",
+            "url": "./export.css"
+          }
+        ]
+    },
     "config": {
         "localPath": "C:\\Users\\hi\\LocalStation\\BLOG\\docs"
     },
     "scripts": {
         "dev:win": "sass --watch --no-source-map --style expanded ./scss/main.scss %npm_package_config_localPath%/logseq/custom.css",
         "dev": "sass --watch --no-source-map --style expanded ./scss/main.scss $npm_package_config_localPath/logseq/custom.css",
-        "theme:expanded": "sass --no-source-map --style expanded ./scss/main.scss css/custom-expanded.css",
-        "theme:build": "sass --no-source-map --style compressed ./scss/main.scss css/custom.css"
+
+        "build": "sass --no-source-map --style compressed ./scss/main.scss css/custom.css",
+        "build:expanded": "sass --no-source-map --style expanded ./scss/main.scss css/custom-expanded.css",
+        "build:web": "sass --no-source-map --style expanded ./scss/web.scss css/export.css"
     },
     "dependencies": {
         "sass": "^1.56.1"
