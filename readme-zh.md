@@ -12,7 +12,7 @@
 您可以借助  jsDelivr CDN 来快速在您的 `custom.css` 中配置
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/unickcheng/developer-theme-for-logseq@release/custom.css");
+@import url("https://cdn.jsdelivr.net/gh/unickcheng/logseq-developer-theme@release/custom.css");
 ```
 ⚠️ 请注意，虽然  jsDelivr CDN 比使用 GitHub 自带的方式更快速，但是它无法做到实时更新到最新版本 [^3]。
 

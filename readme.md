@@ -19,7 +19,7 @@ For the record, I don't have any experience in front-end development, but the be
 Using the jsDelivr CDN to get theme styles , simply add the following code to your `custom.css`. 
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/unickcheng/developer-theme-for-logseq@release/custom.css");
+@import url("https://cdn.jsdelivr.net/gh/unickcheng/logseq-developer-theme@release/custom.css")
 ```
 ⚠️ Please note that the jsDelivr CDN provides a faster service, but may not be able to refresh the latest version in time [^3]
 
