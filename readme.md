@@ -7,7 +7,7 @@
 
 [中文版](readme-zh.md)
 
-[logseq-developer-theme](https://github.com/UNICKCHENG/logseq-developer-theme) is a secondary development of the [logseq-dev-theme](https://github.com/pengx17/logseq-dev-theme) theme as an upstream, and you can easily see the `@import` reference in [main.scss](scss/main.scss) . You can clearly compare the differences between [logseq-dev-theme](https://pengx17.github.io/knowledge-garden/) and [logseq-developer-theme](https://docs.unickcheng.cc/#/page/%E5%B9%B3%E5%8F%B0%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8C%97) via respective website, for more information see [this article](https://docs.unickcheng.cc/#/page/logseq-developer-theme).
+[logseq-developer-theme](https://github.com/UNICKCHENG/logseq-developer-theme) is a secondary development of the [logseq-dev-theme](https://github.com/pengx17/logseq-dev-theme) theme as an upstream, and you can easily see the `@import` reference in [main.scss](scss/main.scss) . You can clearly compare the differences between [logseq-dev-theme](https://pengx17.github.io/knowledge-garden/) and [logseq-developer-theme](https://docs.unickcheng.cc) via respective website [^1][^2], for more information see [this article](https://docs.unickcheng.cc/#/page/logseq-developer-theme).
 
 **logseq-developer-theme will not be made into logseq-dev-theme 2.0**, just because logseq-dev-theme allows me to focus more on the desired css style, therefore, this project is not a fork, but a reference via `@import`.
 
@@ -21,7 +21,7 @@ Using the jsDelivr CDN to get theme styles , simply add the following code to yo
 ```css
 @import url("https://cdn.jsdelivr.net/gh/unickcheng/developer-theme-for-logseq@release/custom.css");
 ```
-⚠️ Please note that the jsDelivr CDN provides a faster service, but may not be able to refresh the latest version in time [^1]
+⚠️ Please note that the jsDelivr CDN provides a faster service, but may not be able to refresh the latest version in time [^3]
 
 ![](assets/Pasted%20image%2020221210174733.png)
 
@@ -82,4 +82,6 @@ You can see more information at [logseq-developer-theme](https://docs.unickcheng
 - [RemNote](https://github.com/orgs/remnoteio/repositories) default theme style
 - Thanks to all open source projects for sharing ideas and techniques
 
-[^1]: https://blog.juanertu.com/archives/cbcd1946
+[^1]: https://pengx17.github.io/knowledge-garden/
+[^2]: https://docs.unickcheng.cc
+[^3]: https://blog.juanertu.com/archives/cbcd1946

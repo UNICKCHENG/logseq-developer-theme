@@ -1,6 +1,6 @@
 # logseq-developer-theme
 
-[logseq-developer-theme](https://github.com/UNICKCHENG/logseq-developer-theme)  是将 [logseq-dev-theme](https://github.com/pengx17/logseq-dev-theme) 主题作为上游的二次开发，您可以在 [main.scss](scss/main.scss) 看到 `@import` 引用信息。如果您想知道二者的区别，可以通过各自的网站清楚地比较 [logseq-dev-theme](https://pengx17.github.io/knowledge-garden/)  和 [logseq-developer-theme](https://docs.unickcheng.cc/#/page/%E5%B9%B3%E5%8F%B0%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8C%97)，同时这个项目也在 [这篇文章](https://docs.unickcheng.cc/#/page/logseq-developer-theme)下进行跟进。
+[logseq-developer-theme](https://github.com/UNICKCHENG/logseq-developer-theme)  是将 [logseq-dev-theme](https://github.com/pengx17/logseq-dev-theme) 主题作为上游的二次开发，您可以在 [main.scss](scss/main.scss) 看到 `@import` 引用信息。如果您想知道二者的区别，可以通过各自的网站清楚地比较 [logseq-dev-theme](https://pengx17.github.io/knowledge-garden/)  和 [logseq-developer-theme](https://docs.unickcheng.cc) [^1][^2]，同时这个项目也在 [这篇文章](https://docs.unickcheng.cc/#/page/logseq-developer-theme)下进行跟进。
 
 **logseq-developer-theme 并不会成为 logseq-dev-theme 2.0**，仅仅因为 logseq-dev-theme 让我更关注于开发期望的 css 样式，因此这个项目不是一个 fork，而是通过 `@import` 来引用它。
 
@@ -14,7 +14,7 @@
 ```css
 @import url("https://cdn.jsdelivr.net/gh/unickcheng/developer-theme-for-logseq@release/custom.css");
 ```
-⚠️ 请注意，虽然  jsDelivr CDN 比使用 GitHub 自带的方式更快速，但是它无法做到实时更新到最新版本 [^1]。
+⚠️ 请注意，虽然  jsDelivr CDN 比使用 GitHub 自带的方式更快速，但是它无法做到实时更新到最新版本 [^3]。
 
 ![](assets/Pasted%20image%2020221210174733.png)
 
@@ -79,4 +79,6 @@ npm run dev
 - 感谢所有开源项目分享的想法和技术
 
 
-[^1]: https://blog.juanertu.com/archives/cbcd1946↩︎
+[^1]: https://pengx17.github.io/knowledge-garden/
+[^2]: https://docs.unickcheng.cc
+[^3]: https://blog.juanertu.com/archives/cbcd1946
