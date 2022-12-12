@@ -48,8 +48,8 @@
 
 // timetracking 样式
 .cp__header-logo, .fade-link {
-    color: #34343C;
+    color: var(--ls-secondary-background-color);
 }
 .cp__header-logo, .fade-link:hover {
-    color: gray;
+    color: var(--ls-third-theme-color);
 }

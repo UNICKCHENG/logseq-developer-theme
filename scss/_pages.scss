@@ -1,7 +1,4 @@
-@import "./global";
 
 .all-pages-nav > a {
-    @if $IS_SHOW_ALL_PAGES {
-        display: none;
-    }
+    display: none;
 }

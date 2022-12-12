@@ -14,7 +14,7 @@
 .dark-theme {
      .left-sidebar-inner
     ,  .left-sidebar-inner .create  {
-        @include theme_background_color(true);
+        background-color: var(--ls-primary-background-color);
         background-image: linear-gradient(transparent, var(--background-color)) !important;
     }
 
@@ -28,12 +28,12 @@
     ,  .left-sidebar-inner ul li:hover
     , .left-sidebar-inner ul li a:hover {
         background-color: transparent !important;
-        @include theme_color(true);
+        color: var(--ls-primary-theme-color);
     }
 
      .left-sidebar-inner a.item:hover {
         background-color: transparent !important;
-        @include theme_color(true);
+        color: var(--ls-primary-theme-color);
         opacity: 0.78;
     }
 }

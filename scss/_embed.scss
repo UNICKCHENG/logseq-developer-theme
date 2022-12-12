@@ -1,7 +1,8 @@
-/* ==== 引用效果 ==== */
+/* ==== embed and quote ==== */
+
 // 引用效果
 blockquote {
-    @include theme_background_color(true);
+    background-color: var(--ls-primary-background-color);
 }
 
 /* 深色主题 */
@@ -10,14 +11,7 @@ blockquote {
     border: none !important;
     border-radius: 10px !important;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
-    background-color: var(--ls-primary-background-color) !important;
-}
-
-/* 浅色主题 */
-.white-theme :not(.color-level) .color-level {
-    box-shadow: none;
-    border: 2px solid #E9ECEF;
-    background-color: #FFFFFF;
+    background-color: var(--embed-right-sidebar-background-color) !important;
 }
 
 /* ==== 嵌入效果 ==== */

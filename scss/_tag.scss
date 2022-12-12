@@ -1,13 +1,18 @@
-@import "./color";
+/* Tags */
 
-:root {
-    --tag-background-color-hover-dark: #{$tag-background-color-hover-dark};
-    --tag-background-color-hover-light: #{$tag-background-color-hover-light};
-    
-    --issues-bug-color: #{$issues-bug-color};
-    --issues-enhancement-color: #{$issues-enhancement-color};
-    --issues-question-color: #{$issues-question-color};
+:root {    
+    --issues-bug-color: #D46459;
+    --issues-enhancement-color: #8A6BEF;
+    --issues-question-color: #D3A400;
+
+    --tag-priority-a-color: #000;
+    --tag-priority-b-color: #000;
+    --tag-priority-c-color: #000;
+    --tag-priority-a-background-color: var(--ct-warning-color);
+    --tag-priority-b-background-color: var(--ct-highlight-color);
+    --tag-priority-c-background-color: #E9ECEF;
 }
+
 
 /* ==== Tags ==== */
 // 针对宽屏 标签全部靠右显示
@@ -23,33 +28,30 @@ a.tag {
     border: none;
 }
 a.tag:hover {
-    background-color: var(--tag-background-color-hover-dark);
-}
-.white-theme a.tag:hover {
-    background-color: var(--tag-background-color-hover-light);
+    background-color: rgba(var(--ls-secondary-background-color), .8);
 }
 
 // === 优先级样式
 a[priority=A]::before,
 a.priority[href="#/page/A" i]:before {
   content: "A";
-  background: var(--ct-warning-color);
+  background: var(--tag-priority-a-background-color);
   border: var(--background);
-  color: #000;
+  color: var(--tag-priority-a-color);
 }
 a[priority=B]::before,
 a.priority[href="#/page/B" i]:before {
   content: "B";
-  background: var(--ct-highlight-color);
+  background: var(--tag-priority-b-background-color);
   border: var(--background);
-  color: #000;
+  color: var(--tag-priority-a-color);
 }
 a[priority=C]::before,
 a.priority[href="#/page/C" i]:before {
   content: "C";
-  background: #E9ECEF;
+  background: var(--tag-priority-c-background-color);
   border: var(--background);
-  color: #000;
+  color: var(--tag-priority-a-color);
 }
 
 // ==== 定制化 TAG 显示
