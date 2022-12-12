@@ -16,15 +16,15 @@ html[data-theme=dark] {
 .white-theme,
 html[data-theme=light] {
     --ls-primary-background-color: #fff;
-    --ls-secondary-background-color: #FBFAF8;
+    --ls-secondary-background-color: #F0F0F0;
     
     --ls-primary-theme-color: #000;
-    --ls-secondary-theme-color: #769AFF;
+    --ls-secondary-theme-color: rgb(224, 80, 27);
     --ls-third-theme-color: gray;
 
     --ls-code-color: #fff;
     --ls-code-background-color: #272c35 ;
-    --ls-code-selected-background-color: #343841;
+    --ls-code-selected-background-color: #32445A;
 }
 
 .dark-theme, .white-theme, 

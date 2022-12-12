@@ -11,29 +11,27 @@
     display: none;
 }
 
-.dark-theme {
-     .left-sidebar-inner
-    ,  .left-sidebar-inner .create  {
-        background-color: var(--ls-primary-background-color);
-        background-image: linear-gradient(transparent, var(--background-color)) !important;
-    }
+.left-sidebar-inner
+,  .left-sidebar-inner .create  {
+    background-color: var(--ls-primary-background-color);
+    background-image: linear-gradient(transparent, var(--background-color)) !important;
+}
 
-    // 收藏页面和最近使用
-     .left-sidebar-inner .header {
-        background-color: transparent !important;
-    }
+// 收藏页面和最近使用
+ .left-sidebar-inner .header {
+    background-color: transparent !important;
+}
 
-     .left-sidebar-inner a.item.active
-    ,  .left-sidebar-inner a.item:active 
-    ,  .left-sidebar-inner ul li:hover
-    , .left-sidebar-inner ul li a:hover {
-        background-color: transparent !important;
-        color: var(--ls-primary-theme-color);
-    }
+ .left-sidebar-inner a.item.active
+,  .left-sidebar-inner a.item:active 
+,  .left-sidebar-inner ul li:hover
+, .left-sidebar-inner ul li a:hover {
+    background-color: transparent !important;
+    color: var(--ls-secondary-theme-color);
+}
 
-     .left-sidebar-inner a.item:hover {
-        background-color: transparent !important;
-        color: var(--ls-primary-theme-color);
-        opacity: 0.78;
-    }
+ .left-sidebar-inner a.item:hover {
+    background-color: transparent !important;
+    color: var(--ls-secondary-theme-color);
+    opacity: 0.78;
 }

@@ -46,54 +46,27 @@
     opacity: 0.05;
 }
 
-.dark-theme {
-    // 背景样式
-    .CodeMirror-scroll .CodeMirror-sizer {
-        background: var(--code-background-color) !important;
-        color: var(--code-fonts-color) !important;
-        @include bordeRadius();
-      }
-    //  序号样式
-    .CodeMirror, .CodeMirror-scroll .CodeMirror-gutters,
-    .CodeMirror-code .CodeMirror-linenumber {
-        color: var(--code-gutters-fonts-color) ;
-        background: var(--code-gutters-background-color) !important;
-        @include bordeRadius();
+// 背景样式
+.CodeMirror-scroll .CodeMirror-sizer {
+    background: var(--code-background-color) !important;
+    color: var(--code-fonts-color) !important;
+    @include bordeRadius();
     }
-    // 代码选中效果
-    .CodeMirror .CodeMirror-lines div.CodeMirror-selected {
-        background: var(--code-selected) !important;
-        font-weight: bolder !important;
-    }
-    // `` 语法的代码块
-    :not(pre) > code {
-        background-color: var(--code-block-background-color);
-    }
+//  序号样式
+.CodeMirror, .CodeMirror-scroll .CodeMirror-gutters,
+.CodeMirror-code .CodeMirror-linenumber {
+    color: var(--code-gutters-fonts-color) ;
+    background: var(--code-gutters-background-color) !important;
+    @include bordeRadius();
 }
-
-.white-theme {
-    // 背景样式
-    .CodeMirror-scroll .CodeMirror-sizer {
-        background: var(--code-background-color) !important;
-        color: var(--code-fonts-color) !important;
-        @include bordeRadius();
-      }
-    //  序号样式
-    .CodeMirror, .CodeMirror-scroll .CodeMirror-gutters,
-    .CodeMirror-code .CodeMirror-linenumber {
-        color: var(--code-gutters-fonts-color) ;
-        background: var(--code-gutters-background-color) !important;
-        @include bordeRadius();
-    }
-    // 代码选中效果
-    .CodeMirror .CodeMirror-lines div.CodeMirror-selected {
-        background: var(--code-selected) !important;
-        font-weight: bolder !important;
-    }
-    // `` 语法的代码块
-    :not(pre) > code {
-        background-color: var(--code-block-background-color);
-    }
+// 代码选中效果
+.CodeMirror .CodeMirror-lines div.CodeMirror-selected {
+    background: var(--code-selected) !important;
+    font-weight: bolder !important;
+}
+// `` 语法的代码块
+:not(pre) > code {
+    background-color: var(--code-block-background-color);
 }
 
 // 其余代码样式设计

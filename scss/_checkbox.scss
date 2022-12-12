@@ -1,11 +1,5 @@
 /* ==== checkbox ==== */
 
-.white-theme {
-    .form-checkbox {
-        border: 1.8px solid var(--ls-primary-theme-color) !important;
-    }
-}
-
 :is(.doing, .now) .form-checkbox,
 :is(.doing, .now) .form-checkbox:focus {
     background-color: transparent !important;
@@ -15,4 +9,8 @@
 .form-checkbox:checked:focus {
     background-color: var(--ls-third-theme-color) !important;
     border: var(--background-color) !important;
+}
+
+:is(.doing, .todo) > a.block-marker:hover {
+    color: var(--ls-secondary-theme-color);
 }
