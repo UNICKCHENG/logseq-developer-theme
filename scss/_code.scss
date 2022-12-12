@@ -1,17 +1,5 @@
 /* ==== 代码模块效果 ===== */
 
-:root {
-    --code-block-background-color: var(--ls-secondary-background-color);
-    --code-lang-color: var(--ls-third-theme-color);
-
-    --code-gutters-background-color: var(--code-background-color);
-    --code-gutters-fonts-color: var(--ls-third-theme-color);
-    
-    --code-background-color: var(--ls-code-background-color);
-    --code-fonts-color: var(--ls-code-color);
-    --code-selected: var(--ls-code-selected-background-color);
-}
-
 @mixin bordeRadius() {
     -webkit-border-radius: 10px !important; // Safari 3-4, iOS 1-3.2, Android 1.6-
     -moz-border-radius: 10px !important;    // Firefox 1-3.6 
@@ -27,6 +15,7 @@
     text-shadow: none !important;
     @include bordeRadius();
 }
+
 
 // 右上角显示语言
 .extensions__code-lang {
@@ -47,26 +36,28 @@
 }
 
 // 背景样式
-.CodeMirror-scroll .CodeMirror-sizer {
-    background: var(--code-background-color) !important;
-    color: var(--code-fonts-color) !important;
+.CodeMirror-scroll .CodeMirror-sizer,
+.cm-s-solarized.cm-s-dark {
+    background: var(--ls-code-background-color) !important;
+    color: var(--ls-code-color) !important;
     @include bordeRadius();
     }
 //  序号样式
 .CodeMirror, .CodeMirror-scroll .CodeMirror-gutters,
-.CodeMirror-code .CodeMirror-linenumber {
-    color: var(--code-gutters-fonts-color) ;
-    background: var(--code-gutters-background-color) !important;
+.CodeMirror-code .CodeMirror-linenumber,
+.cm-s-solarized.cm-s-dark .CodeMirror-gutters {
+    color: var(--ls-third-theme-color) ;
+    background: var(--ls-code-background-color) !important;
     @include bordeRadius();
 }
 // 代码选中效果
 .CodeMirror .CodeMirror-lines div.CodeMirror-selected {
-    background: var(--code-selected) !important;
+    background: var(--ls-code-selected-background-color) !important;
     font-weight: bolder !important;
 }
 // `` 语法的代码块
 :not(pre) > code {
-    background-color: var(--code-block-background-color);
+    background-color: rgba(var(--ls-secondary-background-color), 0.7);
 }
 
 // 其余代码样式设计
