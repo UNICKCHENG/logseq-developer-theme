@@ -1,19 +1,16 @@
 /* ==== checkbox ==== */
 
-.white-theme {
-    .form-checkbox {
-        border: 1.8px solid #313942 !important;
-    }
-}
-
 :is(.doing, .now) .form-checkbox,
 :is(.doing, .now) .form-checkbox:focus {
-    // border: 1.8px solid var(--ct-success-color) !important;
     background-color: transparent !important;
 }
 
 .form-checkbox:checked,
 .form-checkbox:checked:focus {
-    background-color: gray !important;
+    background-color: var(--ls-third-theme-color) !important;
     border: var(--background-color) !important;
+}
+
+:is(.doing, .todo) > a.block-marker:hover {
+    color: var(--ls-secondary-theme-color);
 }

@@ -1,11 +1,19 @@
 # logseq-developer-theme
 
-[logseq-developer-theme](https://github.com/UNICKCHENG/logseq-developer-theme)  是将 [logseq-dev-theme](https://github.com/pengx17/logseq-dev-theme) 主题作为上游的二次开发，您可以在 [main.scss](scss/main.scss) 看到 `@import` 引用信息。如果您想知道二者的区别，可以通过各自的网站清楚地比较 [logseq-dev-theme](https://pengx17.github.io/knowledge-garden/)  和 [logseq-developer-theme](https://docs.unickcheng.cc) [^1][^2]，同时这个项目也在 [这篇文章](https://docs.unickcheng.cc/#/page/logseq-developer-theme)下进行跟进。
+[logseq-developer-theme](https://github.com/UNICKCHENG/logseq-developer-theme)  是将 [logseq-dev-theme](https://github.com/pengx17/logseq-dev-theme) 主题作为上游的二次开发，您可以在 [main.scss](scss/main.scss) 看到 `@import` 引用信息。如果您想知道二者的区别，可以通过各自的网站清楚地比较 [logseq-dev-theme](https://pengx17.github.io/knowledge-garden/)  和 [logseq-developer-theme](https://docs.unickcheng.cc) [^1] [^2]，同时这个项目也在 [这篇文章](https://docs.unickcheng.cc/#/page/logseq-developer-theme)下进行跟进。
 
 **logseq-developer-theme 并不会成为 logseq-dev-theme 2.0**，仅仅因为 logseq-dev-theme 让我更关注于开发期望的 css 样式，因此这个项目不是一个 fork，而是通过 `@import` 来引用它。
 
 声明下，我并没有前端的开发经验，但是最好的学习方法应该从一个项目开始。尽管 [scss](https://sass-lang.com/documentation/syntax) 并不是很复杂，可我写的代码确实很差劲。所以我将持续优化代码，您也可以在 [issues](https://github.com/UNICKCHENG/logseq-developer-theme/issues) 中提醒我，或者参与进来。
 
+## ✨Features
+
+- [X] 代码块样式增强，尤其颜色
+- [X] 支持标签部分标签高亮显示
+- [X] 适配中文字体样式
+- [X] 支持用户自定义主题颜色
+- [ ] 支持在插件市场下载
+- [ ] 支持离线模式下使用
 
 ## 🎉使用方法
 
@@ -20,6 +28,43 @@
 
 ![](assets/Pasted%20image%2020221210174750.png)
 
+从 0.4.0 版本开始，您也可以自定义主题颜色 😎
+
+```css
+@import url("https://cdn.jsdelivr.net/gh/unickcheng/logseq-developer-theme@release/custom.css")
+.dark-theme,
+html[data-theme=dark] {
+    --ls-primary-background-color: #272C35;
+    --ls-secondary-background-color: #313942;
+
+    --ls-primary-theme-color: #fff;
+    --ls-secondary-theme-color: #6096BA;
+    --ls-third-theme-color: gray;
+
+    --ls-code-color: #fff;
+    --ls-code-background-color: #34343c;
+    --ls-code-selected-background-color: #32445A;
+}
+```
+![](assets/Pasted%20image%2020221212235959.png)
+
+```css
+@import url("https://cdn.jsdelivr.net/gh/unickcheng/logseq-developer-theme@release/custom.css")
+.white-theme,
+html[data-theme=light] {
+    --ls-primary-background-color: #ffC017;
+    --ls-secondary-background-color: #ffcf4d;
+    
+    --ls-primary-theme-color: #000;
+    --ls-secondary-theme-color: rgb(224, 80, 27);
+    --ls-third-theme-color: gray;
+
+    --ls-code-color: gray;
+    --ls-code-background-color: #fff ;
+    --ls-code-selected-background-color: #C0E6FD;
+}
+```
+![](assets/Pasted%20image%2020221213001146.png)
 
 ## 🚀 本地开发
 

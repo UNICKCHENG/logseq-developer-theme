@@ -23,7 +23,7 @@
     @include bordeRadius();
 }
 :not(:active) .custom-query .overflow-x-auto::-webkit-scrollbar-thumb {
-    background-color: var(--ls-secondary-background-color);
+    background-color: var(--ls-secondary-background-color, .7);
 }
 :not(:hover, :active) .custom-query .overflow-x-auto::-webkit-scrollbar-thumb {
     background-color: transparent;
@@ -62,9 +62,6 @@
 .custom-query .table-auto > tbody > tr.cursor {
     background-color: transparent !important;
 }
-.dark-theme .table-auto > tbody > tr.cursor:hover {
+.table-auto > tbody > tr.cursor:hover {
     background-color: var(--ls-secondary-background-color) !important;
-}
-.white-theme .table-auto > tbody > tr.cursor:hover {
-    background-color: #E9ECEF !important;
 }

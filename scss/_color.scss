@@ -1,33 +1,35 @@
-// TAG 标签颜色
-$tag-background-color-hover-dark: #313942;
-$tag-background-color-hover-light: #F8F9FA;
-$issues-bug-color: #D46459;
-$issues-enhancement-color: #8A6BEF;
-$issues-question-color: #D3A400;
 
 .dark-theme,
 html[data-theme=dark] {
     --ls-primary-background-color: #232329;
     --ls-secondary-background-color: #2B2B33;
-    --ls-primary-theme-color: #769AFF;
-    --ct-header-bg-color: #232329;
 
-    --ct-secondary-color: #769AFF;
-    --ct-primary-color: #769AFF;
+    --ls-primary-theme-color: #fff;
+    --ls-secondary-theme-color: #769AFF;
+    --ls-third-theme-color: gray;
+
+    --ls-code-color: #fff;
+    --ls-code-background-color: #34343c;
+    --ls-code-selected-background-color: #32445A;
 }
 
-@mixin theme_background_color($is_primary) {
-    @if $is_primary {
-        background-color: var(--ls-primary-background-color) !important;
-    } @else {
-        background-color: var(--ls-secondary-background-color) !important;
-    }
+.white-theme,
+html[data-theme=light] {
+    --ls-primary-background-color: #fff;
+    --ls-secondary-background-color: #F0F0F0;
+    
+    --ls-primary-theme-color: #000;
+    --ls-secondary-theme-color: rgb(224, 80, 27);
+    --ls-third-theme-color: gray;
+
+    --ls-code-color: #fff;
+    --ls-code-background-color: #272c35 ;
+    --ls-code-selected-background-color: #32445A;
 }
 
-@mixin theme_color($is_primary) {
-    @if $is_primary {
-        color: var(--ls-primary-theme-color) !important;
-    } @else {
-        color: var(--ls-primary-theme-color) !important;
-    }
+.dark-theme, .white-theme, 
+html[data-theme=dark], html[data-theme=light]  {
+    --ct-primary-color: var(--ls-secondary-theme-color);
+    --ct-secondary-color: var(--ls-secondary-theme-color);
+    --ct-header-bg-color: var(--ls-primary-background-color);
 }
