@@ -1,9 +1,9 @@
 {
     "name": "logseq-developer-theme",
-    "version": "0.4.0",
+    "version": "v0.4.1",
     "description": "https://docs.unickcheng.cc/#/page/logseq-developer-theme",
     "author": "UNICKCHENG",
-    "repository": "UNICKCHENG/logseq-developer-theme",
+    "repo": "UNICKCHENG/logseq-developer-theme",
     "license": "MIT",
     "logseq": {
         "themes": [

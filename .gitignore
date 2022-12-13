@@ -4,7 +4,4 @@ css
 *css.map
 *.css
 
-# script
-*.ps1
-*.sh
-*.bat
+script
