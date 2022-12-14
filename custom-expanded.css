@@ -277,11 +277,8 @@ input[type=password], input[type=text] {
   color: var(--ls-secondary-text-color);
 }
 
-.block-ref {
-  border-bottom: none;
-}
 .block-ref .block-body > .cp__fenced-code-block div {
-  display: block;
+  display: block !important;
 }
 
 /* ==== checkbox ==== */
@@ -528,4 +525,13 @@ blockquote {
 
 .cp__header-logo, .fade-link:hover {
   color: var(--ls-third-theme-color);
+}
+
+.block-ref a.fade-link,
+.block-ref .timestamp-label {
+  display: none;
+}
+
+.block-ref .timestamp .opacity-80 {
+  font-size: 75%;
 }
