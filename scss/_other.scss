@@ -53,3 +53,13 @@
 .cp__header-logo, .fade-link:hover {
     color: var(--ls-third-theme-color);
 }
+
+// https://github.com/pengx17/logseq-dev-theme/issues/77 
+// update the style between content, time cost and scheduled date when references
+.block-ref a.fade-link,
+.block-ref .timestamp-label {
+    display: none ;
+}
+.block-ref .timestamp .opacity-80 {
+    font-size: 75%;
+}
