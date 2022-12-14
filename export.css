@@ -277,6 +277,13 @@ input[type=password], input[type=text] {
   color: var(--ls-secondary-text-color);
 }
 
+.block-ref {
+  border-bottom: none;
+}
+.block-ref .block-body > .cp__fenced-code-block div {
+  display: block;
+}
+
 /* ==== checkbox ==== */
 :is(.doing, .now) .form-checkbox,
 :is(.doing, .now) .form-checkbox:focus {
