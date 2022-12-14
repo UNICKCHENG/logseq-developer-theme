@@ -130,3 +130,12 @@
 .white-theme .cm-s-solarized span.cm-meta {
     color: var(--ls-secondary-text-color);
 }
+
+// 修复上游 code block ref 
+ .block-ref {
+    border-bottom: none;
+
+    .block-body > .cp__fenced-code-block div {
+        display: block;
+    }
+ }
