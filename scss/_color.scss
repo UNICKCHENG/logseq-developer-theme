@@ -9,6 +9,7 @@ html[data-theme=dark] {
     --ls-third-theme-color: gray;
 
     --ls-code-color: #fff;
+    --ls-code-language-color: gray;
     --ls-code-background-color: #34343c;
     --ls-code-selected-background-color: #32445A;
 
@@ -25,10 +26,11 @@ html[data-theme=light] {
     --ls-third-theme-color: gray;
 
     --ls-code-color: #fff;
+    --ls-code-language-color: gray;
     --ls-code-background-color: #272c35 ;
     --ls-code-selected-background-color: #32445A;
 
-    --ls-bullet-threading-background-color: #adadad;
+    --ls-bullet-threading-background-color: #E9ECEF;
 }
 
 .dark-theme, .white-theme, 
@@ -36,4 +38,5 @@ html[data-theme=dark], html[data-theme=light]  {
     --ct-primary-color: var(--ls-secondary-theme-color);
     --ct-secondary-color: var(--ls-secondary-theme-color);
     --ct-header-bg-color: var(--ls-primary-background-color);
+    --code-lang-color: var(--ls-code-language-color);
 }

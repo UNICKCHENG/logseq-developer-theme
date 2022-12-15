@@ -19,10 +19,10 @@
 
 // 右上角显示语言
 .extensions__code-lang {
-    @media screen and (max-width: 640px) {
+    @media (max-width: 640px) {
         display: none !important;
     }
-    @media screen and (min-width: 640px) {
+    @media (min-width: 640px) {
         background: transparent !important;
         color: var(--code-lang-color);
         right: 1%;
