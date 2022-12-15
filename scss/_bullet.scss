@@ -21,9 +21,10 @@
 
 // bullet style
 .ls-block .bullet-container.cursor {
-    &:hover {
+    &:hover  {
         background-color: transparent !important;
-        .bullet {
+         .bullet {
+            background-color: var(--ls-bullet-threading-focus-background-color);
             box-shadow: 0 0 0 1px var(--ls-bullet-threading-focus-background-color);
         }
     }
@@ -61,5 +62,13 @@
     }
     .block-children:focus-within > .ls-block:not(:focus-within)::before {
         border-color: var(--ls-bullet-threading-focus-background-color);
+    }
+}
+
+// custom-query: bullet threading
+.custom-query {
+    .ls-block:focus-within > div > div.items-center::before,
+    .block-children:focus-within > .ls-block:not(:focus-within)::before {
+        border: none;
     }
 }
