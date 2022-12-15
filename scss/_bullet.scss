@@ -1,0 +1,65 @@
+/* bullet */
+// https://github.com/pengx17/logseq-dev-theme/blob/main/src/bullet_threading.scss
+
+:root {
+    --ls-bullet-threading-focus-background-color: var(--ls-secondary-theme-color);
+}
+
+// collapse icon
+.ls-block {
+    .block-control span {
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .block-control svg {
+        color: transparent;
+    }
+    .block-control:hover svg {
+        color: var( --ls-bullet-threading-focus-background-color);
+    }
+}
+
+// bullet style
+.ls-block .bullet-container.cursor {
+    &:hover {
+        background-color: transparent !important;
+        .bullet {
+            box-shadow: 0 0 0 1px var(--ls-bullet-threading-focus-background-color);
+        }
+    }
+
+    &.bullet-closed:not(:hover) {
+        background-color: transparent;
+    }
+
+    :not(:focus-within) .bullet {
+        background-color: var(--ls-bullet-threading-background-color);
+    }
+}
+
+// bullet threading
+.ls-block {
+    .block-children-left-border:hover {
+        background-color: var(--ls-bullet-threading-background-color);
+        opacity: 0.6;
+    }
+    .block-children {
+        border-left-width: 1px !important;
+        border-left-color: var(--ls-bullet-threading-background-color);
+    }
+
+    .bullet {
+        background-color: var(--ls-bullet-threading-focus-background-color);
+        box-shadow: 0 0 0 1px var(--ls-bullet-threading-focus-background-color);
+    }
+
+    &[haschild]:focus-within > div > .block-content-wrapper::before {
+        display: none;
+    }
+    .ls-block:focus-within > div > div.items-center::before {
+        border-color: var(--ls-bullet-threading-focus-background-color);
+    }
+    .block-children:focus-within > .ls-block:not(:focus-within)::before {
+        border-color: var(--ls-bullet-threading-focus-background-color);
+    }
+}

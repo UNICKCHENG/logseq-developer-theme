@@ -11,12 +11,14 @@ html[data-theme=dark] {
     --ls-code-color: #fff;
     --ls-code-background-color: #34343c;
     --ls-code-selected-background-color: #32445A;
+
+    --ls-bullet-threading-background-color: #34343c;
 }
 
 .white-theme,
 html[data-theme=light] {
     --ls-primary-background-color: #fff;
-    --ls-secondary-background-color: #F0F0F0;
+    --ls-secondary-background-color: #adadad;
     
     --ls-primary-theme-color: #000;
     --ls-secondary-theme-color: rgb(224, 80, 27);
@@ -25,6 +27,8 @@ html[data-theme=light] {
     --ls-code-color: #fff;
     --ls-code-background-color: #272c35 ;
     --ls-code-selected-background-color: #32445A;
+
+    --ls-bullet-threading-background-color: #adadad;
 }
 
 .dark-theme, .white-theme, 
