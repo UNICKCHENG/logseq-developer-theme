@@ -1,0 +1,16 @@
+/* toggle  */
+
+// Top Menu Bar icon
+.cp__header button {
+    &.toggle-right-sidebar, 
+    &.toolbar-dots-btn,
+    &.nav-right.button,
+    &.nav-left.button,
+    &.icon.inline,
+    &.button.icon,
+    &.cp__header-left-menu {
+        &:hover {
+            background-color: var(--ls-secondary-background-color);
+        }
+    }
+}
