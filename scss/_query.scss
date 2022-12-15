@@ -29,13 +29,12 @@
     background-color: transparent;
 }
 
-// 查询标题样式
 .custom-query .query-title {
-    // 窄屏情况下不显示查询标题 
-    @media screen and (max-width: 640px) {
+    background-color: transparent;
+    // Query title is not displayed in narrow screen case 
+    @media (max-width: 640px) {
         display: none;
     }
-    background-color: transparent;
 }
 
 // .custom-query .flex-col,
@@ -54,14 +53,16 @@
     background-color: transparent !important;
 }
 
+// table
+.table-auto {
+    & > thead > tr > th {
+        border-bottom: 2px solid var(--ls-secondary-background-color) !important;
+    }
+    & > tbody > tr.cursor {
+        background-color: transparent !important;
 
-// # table
-.custom-query .table-auto > thead > tr > th {
-    border-bottom: 2px solid var(--ls-secondary-background-color) !important;
-}
-.custom-query .table-auto > tbody > tr.cursor {
-    background-color: transparent !important;
-}
-.table-auto > tbody > tr.cursor:hover {
-    background-color: var(--ls-secondary-background-color) !important;
+        &:hover {
+            background-color: var(--ls-secondary-background-color) !important;
+        }
+    }
 }

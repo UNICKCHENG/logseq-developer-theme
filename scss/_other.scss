@@ -46,12 +46,13 @@
     color: rgb(118, 154, 255, 0.78);
 }
 
-// timetracking 样式
+// the digital style about timetracking and reference 
 .cp__header-logo, .fade-link {
     color: var(--ls-secondary-background-color);
-}
-.cp__header-logo, .fade-link:hover {
-    color: var(--ls-third-theme-color);
+    &:hover {
+        color: var(--ls-custom-theme-color);
+    }
+    background-color: transparent;
 }
 
 // https://github.com/pengx17/logseq-dev-theme/issues/77 
@@ -62,4 +63,37 @@
 }
 .block-ref .timestamp .opacity-80 {
     font-size: 75%;
+}
+
+// === 外部和内部链接样式 ===
+
+// 正文区域
+.page-reference {
+    &:hover {
+        background-color: transparent;
+    }
+    .page-ref:hover {
+        color: var(--ls-custom-theme-color);
+    }
+}
+a.external-link {
+    color: var(--ls-custom-theme-color) !important;
+}
+
+// 页面属性
+.block-properties.page-properties {
+    .page-property-key {
+        color: var(--ls-primary-theme-color);
+        &:hover {
+            background-color: transparent;
+            color: var(--ls-custom-theme-color);
+        }
+    }
+    .page-ref {
+        color: var(--ls-primary-theme-color);
+        &:hover {
+            background-color: transparent;
+            color: var(--ls-custom-theme-color);
+        }
+    }
 }

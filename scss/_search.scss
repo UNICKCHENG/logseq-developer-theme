@@ -1,16 +1,13 @@
-/* 搜索效果 */
+/* search */
 
 .ui__modal-overlay {
     -webkit-backdrop-filter: blur(8px) brightness(60%); // Safari
     backdrop-filter: blur(8px) brightness(60%);
     background-color: transparent !important;
-}
-.ui__modal-overlay div {
-    background-color: transparent !important;
-}
 
-.ls-search {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5),0 4px 6px -2px rgba(0, 0, 0, 0.5);
+    div {
+        background-color: transparent !important;
+    }
 }
 .ui__modal-panel {
     background-color: var(--ls-primary-background-color);
@@ -20,14 +17,19 @@ input[type=password], input[type=text] {
 }
 #ui__ac-inner > div a:hover {
     background-color: var(--ls-secondary-background-color);
-    color: var(--ls-primary-theme-color);
+    color: var(--ls-primary-text-color);
 }
 
-.ls-search > .search-results-wrap ::-webkit-scrollbar {
-    background-color: var(--ls-primary-background-color);
+.ls-search{
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5),0 4px 6px -2px rgba(0, 0, 0, 0.5);
+    
+    &  > .search-results-wrap ::-webkit-scrollbar {
+        background-color: var(--ls-primary-background-color);
+    }
 }
 
-// 全局上下切换效果（含搜索框）
-.cp__palette-main .chosen, .cp__select-main .chosen {
+// Global up and down switching style (including search box)
+.cp__palette-main .chosen, 
+.cp__select-main .chosen {
     background-color: var(--ls-secondary-background-color);
 }

@@ -1,12 +1,8 @@
-
 .dark-theme,
 html[data-theme=dark] {
+    --ls-custom-theme-color: #769AFF;
     --ls-primary-background-color: #232329;
     --ls-secondary-background-color: #2B2B33;
-
-    --ls-primary-theme-color: #fff;
-    --ls-secondary-theme-color: #769AFF;
-    --ls-third-theme-color: gray;
 
     --ls-code-color: #fff;
     --ls-code-language-color: gray;
@@ -18,25 +14,25 @@ html[data-theme=dark] {
 
 .white-theme,
 html[data-theme=light] {
-    --ls-primary-background-color: #fff;
-    --ls-secondary-background-color: #adadad;
+    --ls-custom-theme-color: rgb(224, 80, 27);  // Fonts color
+    --ls-primary-background-color: #fff;        // Background color
+    --ls-secondary-background-color: #ADADAD;   // It has little difference from the background color
     
-    --ls-primary-theme-color: #000;
-    --ls-secondary-theme-color: rgb(224, 80, 27);
-    --ls-third-theme-color: gray;
-
     --ls-code-color: #fff;
     --ls-code-language-color: gray;
     --ls-code-background-color: #272c35 ;
-    --ls-code-selected-background-color: #32445A;
+    --ls-code-selected-background-color: #0a0c0e;
 
     --ls-bullet-threading-background-color: #E9ECEF;
 }
 
+// adaptation of upstream interfaces
 .dark-theme, .white-theme, 
 html[data-theme=dark], html[data-theme=light]  {
-    --ct-primary-color: var(--ls-secondary-theme-color);
-    --ct-secondary-color: var(--ls-secondary-theme-color);
+    --ct-primary-color: var(--ls-custom-theme-color);
+    --ct-secondary-color: var(--ls-custom-theme-color);
     --ct-header-bg-color: var(--ls-primary-background-color);
     --code-lang-color: var(--ls-code-language-color);
+
+    --ls-secondary-theme-color: var(--ls-custom-theme-color);
 }

@@ -1,16 +1,30 @@
 /* ==== checkbox ==== */
+:root {
+    --task-done-text-color: var(--ls-secondary-background-color);
+}
 
 :is(.doing, .now) .form-checkbox,
 :is(.doing, .now) .form-checkbox:focus {
     background-color: transparent !important;
 }
 
-.form-checkbox:checked,
-.form-checkbox:checked:focus {
-    background-color: var(--ls-third-theme-color) !important;
-    border: var(--background-color) !important;
+.form-checkbox:checked {
+    &, &:focus {
+        background-color: var(--task-done-text-color) !important;
+        border: var(--background-color) !important;
+    }
+}
+.done {
+    color: var(--task-done-text-color);
+    .tag:not(:hover) {
+        color: var(--task-done-text-color) !important;
+    } 
+    a::before {
+        background-color: var(--task-done-text-color) !important;
+    }
 }
 
 :is(.doing, .todo) > a.block-marker:hover {
-    color: var(--ls-secondary-theme-color);
+    color: var(--ls-custom-theme-color);
 }
+

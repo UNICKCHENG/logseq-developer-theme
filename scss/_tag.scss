@@ -1,72 +1,86 @@
 /* Tags */
+.dark-theme, .white-theme, 
+html[data-theme=dark], html[data-theme=light] {    
+    --labels-bug-color: var(--ls-labels-bug-color, #D46459);
+    --labels-improvement-color: var(--ls-labels-improvement-color, #4ea7fc);
+    --labels-feature-color: var(--ls-labels-feature-color, #BB87FC);
+    --labels-documentation-color: var(--ls-labels-documentation-color, #0F783C);
+    --labels-idea-color: var(--ls-labels-idea-color, #5E6AD2);
 
-:root {    
-    --issues-bug-color: #D46459;
-    --issues-enhancement-color: #8A6BEF;
-    --issues-question-color: #D3A400;
+    --tag-priority-a-color: var(--ls-tag-priority-a-color, #000);
+    --tag-priority-b-color: var(--ls-tag-priority-b-color, #000);
+    --tag-priority-c-color: var(--ls-tag-priority-c-color, #000);
+    --tag-priority-a-background-color: var(--ls-tag-priority-a-background-color,  var(--ct-warning-color));
+    --tag-priority-b-background-color: var(--ls-tag-priority-b-background-color, var(--ct-highlight-color));
+    --tag-priority-c-background-color: var(--ls-tag-priority-c-background-color, #E9ECEF);
 
-    --tag-priority-a-color: #000;
-    --tag-priority-b-color: #000;
-    --tag-priority-c-color: #000;
-    --tag-priority-a-background-color: var(--ct-warning-color);
-    --tag-priority-b-background-color: var(--ct-highlight-color);
-    --tag-priority-c-background-color: #E9ECEF;
+    --tag-color: var(--ls-custom-theme-color);
+    --tag-background-color: var(--ls-secondary-background-color);
 }
 
-
-/* ==== Tags ==== */
-// 针对宽屏 标签全部靠右显示
-// TODO 后期仅针对特殊标签进行配置
-@media screen and (min-width: 640px) {
-    a.tag {
-        position: relative;
-        float: right;
-        top: 11%;
-    }
-}
 a.tag {
     border: none;
-}
-a.tag:hover {
-    background-color: rgba(var(--ls-secondary-background-color), .8);
+    color: var(--tag-color);
+    &:hover {
+        color: var(--tag-color);
+        background-color: rgba(var(--tag-background-color), .8);
+        transform: scale(1.01);
+        -webkit-transform: scale(1.01);
+    }
 }
 
-// === 优先级样式
+// checkbox Priority style
+@mixin tag-priority-style($color, $bg-color) {
+    background: var($bg-color);
+    border: var(--background);
+    color: var($color);
+}
 a[priority=A]::before,
 a.priority[href="#/page/A" i]:before {
   content: "A";
-  background: var(--tag-priority-a-background-color);
-  border: var(--background);
-  color: var(--tag-priority-a-color);
+  @include tag-priority-style(--tag-priority-a-color, --tag-priority-a-background-color);
 }
 a[priority=B]::before,
 a.priority[href="#/page/B" i]:before {
   content: "B";
-  background: var(--tag-priority-b-background-color);
-  border: var(--background);
-  color: var(--tag-priority-a-color);
+  @include tag-priority-style(--tag-priority-b-color, --tag-priority-b-background-color);
 }
 a[priority=C]::before,
 a.priority[href="#/page/C" i]:before {
   content: "C";
-  background: var(--tag-priority-c-background-color);
-  border: var(--background);
-  color: var(--tag-priority-a-color);
+  @include tag-priority-style(--tag-priority-c-color, --tag-priority-c-background-color);
 }
 
-// ==== 定制化 TAG 显示
-a.tag[data-ref="issues-bug"] {
-    content: "bug";
-    border: transparent;
-    color: var(--issues-bug-color);
+// custom workflow tags
+@mixin workflow-tag-show($color) {
+    color:  var($color);
+    @media (min-width: 640px) {
+        position: relative;
+        float: right;
+        top: 11%;
+    }
+    &:hover {
+        color: var($color);
+    }
 }
-a.tag[data-ref="issues-enhancement"] {
-    content: "enhancement";
-    border: transparent;
-    color: var(--issues-enhancement-color);
-}
-a.tag[data-ref="issues-question"] {
-    content: "question";
-    border: transparent;
-    color: var(--issues-question-color);
+a.tag {
+    &[data-ref="Bug"], &[data-ref="bug"] {
+        @include workflow-tag-show(--labels-bug-color);
+    }
+
+    &[data-ref="Improvement"], &[data-ref="improvement"], &[data-ref="perf"] {
+        @include workflow-tag-show(--labels-improvement-color);
+    }
+
+    &[data-ref="Feature"], &[data-ref="feature"], &[data-ref="feat"] {
+        @include workflow-tag-show(--labels-feature-color);
+    }
+
+    &[data-ref="Documentation"], &[data-ref="documentation"], &[data-ref="docs"] {
+        @include workflow-tag-show(--labels-documentation-color);
+    }
+
+    &[data-ref="Idea"],  &[data-ref="idea"] {
+        @include workflow-tag-show(--labels-idea-color);
+    }
 }

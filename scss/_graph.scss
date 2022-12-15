@@ -1,12 +1,12 @@
-/* ==== 图谱设置 ==== */
+/* ==== Graph View ==== */
+
+// Filter
 .graph-filters {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),0 4px 6px -2px rgba(0, 0, 0, 0.05);
     border: none;
+    background-color: var(--ls-secondary-background-color);
 
     li:not(:last-of-type) {
         border-bottom: none;
     }
-}
-.graph-filters {
-    background-color: var(--ls-secondary-background-color);
 }

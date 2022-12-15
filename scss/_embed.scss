@@ -1,13 +1,6 @@
 /* ==== embed and quote ==== */
 
-// 引用效果
-blockquote {
-    background-color: var(--ls-primary-background-color);
-    border-left-color: var(--ls-secondary-theme-color);
-}
-
-/* 深色主题 */
-// 右侧显示效果
+// right sidebar
 .cp__right-sidebar-inner :not(.color-level) .sidebar-item-list > .color-level {
     border: none !important;
     border-radius: 10px !important;
@@ -15,7 +8,13 @@ blockquote {
     background-color: var(--embed-right-sidebar-background-color) !important;
 }
 
-/* ==== 嵌入效果 ==== */
+// quote style
+blockquote {
+    background-color: var(--ls-primary-background-color);
+    border-left-color: var(--ls-custom-theme-color);
+}
+
+// embed style
 .embed,
 .embed-page,
 .embed-block {
@@ -23,13 +22,12 @@ blockquote {
     transition: all ease-in 0.3s;
 }
 
-/* 关闭 logseq-dev-theme 主题嵌入页面的触发效果 */
+// turn off the trigger style for logseq-dev-theme theme embedding pages
 :is(.embed, .embed-page, .embed-block):is(:hover, :focus-within) {
     box-shadow: none;
     transform: none;
     padding: 0.75em 0.5em;
     margin: 0.5em;
-    /* border: 2px solid #38434c; */
     border-radius: 8px;
     transition: all ease-in 0.3s;
 }
