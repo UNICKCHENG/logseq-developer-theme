@@ -48,21 +48,22 @@
 
 // the digital style about timetracking and reference 
 .cp__header-logo, .fade-link {
-    color: var(--ls-secondary-background-color);
+    color: var(--ls-primary-text-color);
+    background-color: transparent;
+    font-size: 70%;
     &:hover {
         color: var(--ls-custom-theme-color);
     }
-    background-color: transparent;
 }
-
 // https://github.com/pengx17/logseq-dev-theme/issues/77 
 // update the style between content, time cost and scheduled date when references
-.block-ref a.fade-link,
-.block-ref .timestamp-label {
-    display: none ;
-}
-.block-ref .timestamp .opacity-80 {
-    font-size: 75%;
+.block-ref { 
+    a.fade-link, .timestamp-label {
+        display: none ;
+    }
+    .timestamp .opacity-80  {
+        font-size: 70%;
+    }
 }
 
 // === 外部和内部链接样式 ===

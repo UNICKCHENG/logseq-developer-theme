@@ -1,6 +1,6 @@
 /* ==== checkbox ==== */
 :root {
-    --task-done-text-color: var(--ls-secondary-background-color);
+    --task-done-text-color: var(--ls-task-done-text-color);
 }
 
 :is(.doing, .now) .form-checkbox,

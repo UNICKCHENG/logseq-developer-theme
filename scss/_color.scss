@@ -10,6 +10,7 @@ html[data-theme=dark] {
     --ls-code-selected-background-color: #32445A;
 
     --ls-bullet-threading-background-color: #34343c;
+    --ls-task-done-text-color: gray;
 }
 
 .white-theme,
@@ -24,6 +25,7 @@ html[data-theme=light] {
     --ls-code-selected-background-color: #0a0c0e;
 
     --ls-bullet-threading-background-color: #E9ECEF;
+    --ls-task-done-text-color: gray;
 }
 
 // adaptation of upstream interfaces
