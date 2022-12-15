@@ -54,14 +54,24 @@
         box-shadow: 0 0 0 1px var(--ls-bullet-threading-focus-background-color);
     }
 
-    &[haschild]:focus-within > div > .block-content-wrapper::before {
-        display: none;
-    }
     .ls-block:focus-within > div > div.items-center::before {
         border-color: var(--ls-bullet-threading-focus-background-color);
     }
     .block-children:focus-within > .ls-block:not(:focus-within)::before {
         border-color: var(--ls-bullet-threading-focus-background-color);
+    }
+
+    // multi-line blocks with children 
+    &[haschild] {
+        > div > .block-content-wrapper::before {
+            left: -16px;
+            @media screen and (max-width: 640px) {
+                left: -11.6px;
+            }
+        }
+        &:focus-within > div > .block-content-wrapper::before {
+            border-color: var(--ls-block-bullet-active-color);
+        }
     }
 }
 
