@@ -42,6 +42,9 @@ jobs:
     needs: [build-offline-theme]
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Load Fonts From Cache
         id: get-css-fonts
         uses: actions/cache@v3
@@ -52,18 +55,14 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: release-theme
-          path: release
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+          path: ${{ github.workspace }}
       - if: ${{ steps.get-css-fonts.outputs.cache-hit == 'true' }}
         run: mkdir fonts && cp ${{ env.FONTS_PATH }}/*.ttf fonts
       - name: zip themem css
         run: |
           if [ ! -d fonts ]; then mkdir fonts; fi
           version=`git tag --sort=-v:refname | head -n 1`
-          ls
-          zip -qq -r ${{ env.THEME_NAME }}-${version}.zip release/*.css package.json LICENSE fonts
+          zip -qq -r ${{ env.THEME_NAME }}-${version}.zip *.css package.json LICENSE fonts
       - uses: softprops/action-gh-release@v1
         with:
           files: ${{ env.THEME_NAME }}-*.zip
