@@ -11,77 +11,16 @@ on:
     branches: [main]
   workflow_dispatch:
 
-env:
-  THEME_NAME: "logseq-developer-theme"
-
 jobs:
 
-  build-and-deploy:
+  pre-release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Get node_modules From Cache
-        id: get-modules
-        uses: actions/cache@v3
-        with: 
-          path: ${{ github.workspace }}/node_modules
-          key: node-modules-${{ hashFiles('**/package.json') }}
-          restore-keys: node-modules-
-      - name: Setup Node.js Environment
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-      - run: npm ci
-      - name: Build CSS
-        run: |
-          npm run build
-          npm run build:expanded
-          npm run build:web
-      # https://github.com/JamesIves/github-pages-deploy-action
-      - name: Deploy to release branch
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: release
-          folder: css
-          clean: true
-      # https://github.com/softprops/action-gh-release
-      - if: startsWith(github.ref, 'refs/tags/')
-        run: |
-          cp css/*.css .
-          version=`git tag --sort=-v:refname | head -n 1`
-          zip -qq -r ${{ env.THEME_NAME }}-${version}.zip *.css package.json LICENSE readme.md assets
-      - if: startsWith(github.ref, 'refs/tags/')
-        uses: softprops/action-gh-release@v1
-        with:
-          files: |
-            ${{ env.THEME_NAME }}-*.zip
-            custom.css
-          draft: true
-
-
-  # the gh-pages branch is pushed to Tencent COS after the build job successfully
-  deploy-to-cos:
-    needs: [build-and-deploy]
+      - uses: ./.github/workflows/steps/build-css.yml
+      - uses: ./.github/workflows/steps/deploy-cos.yml
+  release:
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: [pre-release]
     runs-on: ubuntu-latest
     steps:
-      # https://github.com/actions/checkout#checkout-a-different-branch
-      - name: checkout release
-        uses: actions/checkout@v3
-        with:
-           ref: release
-           fetch-depth: 0
-      # coscmd : https://cloud.tencent.com/document/product/436/10976
-      - run: pip install coscmd
-      - name: Configure coscmd
-        env:
-          SECRET_ID: ${{ secrets.COS_SECRET_ID }}
-          SECRET_KEY: ${{ secrets.COS_SECRET_KEY }}
-          BUCKET: ${{ secrets.COS_BUCKET }}
-          REGION: ${{ secrets.COS_REGION }}
-        run: coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION
-      - name: Deploy to COS 🚀
-        run: |
-          coscmd delete ./export.css -f
-          coscmd upload -s ./export.css /
+      - uses: ./.github/workflows/steps/release-package.yml
