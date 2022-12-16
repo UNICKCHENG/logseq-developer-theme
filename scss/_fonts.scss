@@ -1,8 +1,5 @@
 /* Fonts */
-
 // https://css-tricks.com/snippets/css/system-font-stack/ 
-// https://github.com/lxgw/LxgwWenKai-Lite
-// https://github.com/ryanoasis/nerd-fonts
 
 :root {
     --ls-font-family: apple-font, common-font, code-font, ui-font, system-ui;
@@ -18,26 +15,34 @@
         url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff") format("woff");
 }
 
+// https://github.com/lxgw/LxgwWenKai-Lite
 @font-face {
     font-family: common-font;
-    src: url("https://docs.unickcheng.cc/static/fonts/Fonts_LXGWWenKaiLite_Regular.ttf")  format("TrueType");
     @if not $IS_WEB {
         // GitHub do not affect local use, but there are CORS(crossover restrictions) if used on the web.
-        src: url("https://github.com/lxgw/LxgwWenKai-Lite/releases/download/v1.245.1/LXGWWenKaiLite-Regular.ttf") format("TrueType");
-        src: url("../fonts/Fonts_LXGWWenKaiLite_Regular.ttf") format("TrueType"),
-            url("fonts/Fonts_LXGWWenKaiLite_Regular.ttf") format("TrueType");
+        src: url("https://github.com/lxgw/LxgwWenKai-Lite/releases/download/v1.245.1/LXGWWenKaiLite-Regular.ttf") format("TrueType"),
+            url("../fonts/Fonts_LXGWWenKaiLite_Regular.ttf") format("TrueType"),
+            url("fonts/Fonts_LXGWWenKaiLite_Regular.ttf") format("TrueType"),
+            url("https://docs.unickcheng.cc/static/fonts/Fonts_LXGWWenKaiLite_Regular.ttf")  format("TrueType");
+    } @else {
+        src: url("https://docs.unickcheng.cc/static/fonts/Fonts_LXGWWenKaiLite_Regular.ttf")  format("TrueType");
     }
 }
 
+// https://github.com/ryanoasis/nerd-fonts
 @font-face {
     font-family: code-font;
-    src: url("https://docs.unickcheng.cc/static/fonts/Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.ttf")  format("TrueType");
+    
     @if not $IS_WEB {
-        src: local("DejaVuSansMono Nerd Font Mono");
-        src: url("../fonts/Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.ttf") format("TrueType"),
-            url("fonts/Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.ttf") format("TrueType");
+        src: local("DejaVuSansMono Nerd Font Mono"),
+            url("../fonts/Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.ttf") format("TrueType"),
+            url("fonts/Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.ttf") format("TrueType"),
+            url("https://docs.unickcheng.cc/static/fonts/Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.ttf")  format("TrueType");
+    } @else {
+        src: url("https://docs.unickcheng.cc/static/fonts/Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.ttf")  format("TrueType");
     }
 }
+
 
 @font-face {
     font-family: ui-font;
