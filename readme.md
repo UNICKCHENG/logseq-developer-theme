@@ -2,7 +2,7 @@
 
 [![Release](https://github.com/UNICKCHENG/logseq-developer-theme/actions/workflows/release.yml/badge.svg)](https://github.com/UNICKCHENG/logseq-developer-theme/actions/workflows/release.yml)
 [![release](https://img.shields.io/github/v/release/UNICKCHENG/logseq-developer-theme)](https://github.com/UNICKCHENG/logseq-developer-theme/releases)
-[![logseq-dev-theme](https://img.shields.io/github/workflow/status/pengx17/logseq-dev-theme/Deploy/main?label=logseq-dev-theme)](https://github.com/pengx17/logseq-dev-theme/actions/workflows/main.yml)
+[![logseq-dev-theme](https://img.shields.io/github/v/release/pengx17/logseq-dev-theme?label=logseq-dev-theme)](https://github.com/pengx17/logseq-dev-theme/actions/workflows/main.yml)
 [![logseq](https://img.shields.io/github/v/release/logseq/logseq?label=logseq)](https://github.com/logseq/logseq/releases)
 
 [中文版](readme-zh.md)
@@ -13,65 +13,92 @@
 
 For the record, I don't have any experience in front-end development, but the best method to start learning is with a project. Although [scss](https://sass-lang.com/documentation/syntax) is not very complicated, the code I wrote was really ugly. So I will keep improving the code and you can also remind me at [issues](https://github.com/UNICKCHENG/logseq-developer-theme/issues) or pull request. 
 
+<a href="https://www.buymeacoffee.com/unickcheng"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a tea&emoji=&slug=unickcheng&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
+
 ## ✨Features
 
-- [X] enhance code block style , especially color
-- [X] support tag some tags highlighting
+- [x] enhance code block style , especially color
+- [X] support some tags highlighting， such as `#docs`, `#bug`, `#feat`, etc
 - [X] adapt Chinese font style
 - [X] support user-defined theme colors
-- [ ] support download in plugin marketplace
-- [ ] supports use in offline mode
+- [X] support download in plugin marketplace [#297](https://github.com/logseq/marketplace/pull/297)
+- [X] supports use in offline mode
+- [X] supports custom pdf color 
 
 ## 🎉Usage
+
+### Quick Start
 
 Using the jsDelivr CDN to get theme styles , simply add the following code to your `custom.css`. 
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/unickcheng/logseq-developer-theme@release/custom.css")
+@import url("https://cdn.jsdelivr.net/gh/unickcheng/logseq-developer-theme@release/custom.css");
 ```
 ⚠️ Please note that the jsDelivr CDN provides a faster service, but may not be able to refresh the latest version in time [^3]
+
+###  Download from Plugin Marketplace（Recommend）
+
+![](assets/Pasted%20image%2020221216222925.png)
+
+If you can't download it from the plugin marketplace, you can download it from  [GitHub Release](https://github.com/UNICKCHENG/logseq-developer-theme/releases) , unzip it, and then import it into logseq
+
+![](assets/Pasted%20image%2020221216223400.png)
+![](assets/Pasted%20image%2020221216223545.png)
+
+📌 Starting with version 1.0.0, GitHub Release or Plugin Marketplace downloads are supported for offline use. Because it will download fonts and other dependencies together to the local `~/.logseq/plugins` directory.
+
+## Demo(may be outdated)
 
 ![](assets/Pasted%20image%2020221210174733.png)
 
 ![](assets/Pasted%20image%2020221210174750.png)
 
+![](assets/Pasted%20image%2020221216232448.png)
+
 Starting with version 0.4.0, you can also customize the theme colors 😎 
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/unickcheng/logseq-developer-theme@release/custom.css")
+@import url("https://cdn.jsdelivr.net/gh/unickcheng/logseq-developer-theme@release/custom.css");
+
 .dark-theme,
 html[data-theme=dark] {
+    --ls-custom-theme-color: #6096BA;
     --ls-primary-background-color: #272C35;
     --ls-secondary-background-color: #313942;
 
-    --ls-primary-theme-color: #fff;
-    --ls-secondary-theme-color: #6096BA;
-    --ls-third-theme-color: gray;
-
     --ls-code-color: #fff;
+    --ls-code-language-color: gray;
     --ls-code-background-color: #34343c;
     --ls-code-selected-background-color: #32445A;
+
+    --ls-bullet-threading-background-color: #34343c;
+    --ls-task-done-text-color: gray;
 }
 ```
-![](assets/Pasted%20image%2020221212235959.png)
+
+![](assets/Pasted%20image%2020221216231143.png)
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/unickcheng/logseq-developer-theme@release/custom.css")
+@import url("https://cdn.jsdelivr.net/gh/unickcheng/logseq-developer-theme@release/custom.css");
 .white-theme,
 html[data-theme=light] {
+    --ls-custom-theme-color: rgb(224, 80, 27);
     --ls-primary-background-color: #ffC017;
     --ls-secondary-background-color: #ffcf4d;
-    
-    --ls-primary-theme-color: #000;
-    --ls-secondary-theme-color: rgb(224, 80, 27);
-    --ls-third-theme-color: gray;
 
     --ls-code-color: gray;
-    --ls-code-background-color: #fff ;
+    --ls-code-language-color: gray;
+    --ls-code-background-color: #fff;
     --ls-code-selected-background-color: #C0E6FD;
+
+    --ls-bullet-threading-background-color: #ffcf4d;
+    --ls-task-done-text-color: gray;
 }
 ```
-![](assets/Pasted%20image%2020221213001146.png)
+
+![](assets/Pasted%20image%2020221216231911.png)
+
+> For more custom colors see  [custom-color](custom-color.md)
 
 ## 🚀 Local development
 

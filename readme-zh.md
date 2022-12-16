@@ -6,16 +6,21 @@
 
 声明下，我并没有前端的开发经验，但是最好的学习方法应该从一个项目开始。尽管 [scss](https://sass-lang.com/documentation/syntax) 并不是很复杂，可我写的代码确实很差劲。所以我将持续优化代码，您也可以在 [issues](https://github.com/UNICKCHENG/logseq-developer-theme/issues) 中提醒我，或者参与进来。
 
+<a href="https://www.buymeacoffee.com/unickcheng"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a tea&emoji=&slug=unickcheng&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
+
 ## ✨Features
 
 - [X] 代码块样式增强，尤其颜色
-- [X] 支持标签部分标签高亮显示
+- [X] 支持部分标签高亮显示，如 `#docs`、`#bug`、`#feat` 等
 - [X] 适配中文字体样式
 - [X] 支持用户自定义主题颜色
-- [ ] 支持在插件市场下载
-- [ ] 支持离线模式下使用
+- [X] 支持在插件市场下载 [#297](https://github.com/logseq/marketplace/pull/297)
+- [X] 支持离线模式下使用
+- [X] 支持自定义 pdf 页面相关颜色
 
 ## 🎉使用方法
+
+### 快速开始
 
 您可以借助  jsDelivr CDN 来快速在您的 `custom.css` 中配置
 
@@ -24,47 +29,70 @@
 ```
 ⚠️ 请注意，虽然  jsDelivr CDN 比使用 GitHub 自带的方式更快速，但是它无法做到实时更新到最新版本 [^3]。
 
+###  从插件市场下载（推荐）
+
+![](assets/Pasted%20image%2020221216222925.png)
+
+如果您无法从插件市场下载，可以在 [GitHub Release](https://github.com/UNICKCHENG/logseq-developer-theme/releases) 进行下载，解压后再导入到 logseq
+
+![](assets/Pasted%20image%2020221216223400.png)
+
+![](assets/Pasted%20image%2020221216223545.png)
+
+ 📌 从 1.0.0 版本开始，GitHub Release 或者 Plugin Marketplace 下载，支持离线使用。因为会一起将字体等依赖下载到本地 `~/.logseq/plugins` 目录下。
+
+## 效果图 (可能已过时)
+
 ![](assets/Pasted%20image%2020221210174733.png)
 
 ![](assets/Pasted%20image%2020221210174750.png)
 
+![](assets/Pasted%20image%2020221216232448.png)
+
 从 0.4.0 版本开始，您也可以自定义主题颜色 😎
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/unickcheng/logseq-developer-theme@release/custom.css")
+@import url("https://cdn.jsdelivr.net/gh/unickcheng/logseq-developer-theme@release/custom.css");
+
 .dark-theme,
 html[data-theme=dark] {
+    --ls-custom-theme-color: #6096BA;
     --ls-primary-background-color: #272C35;
     --ls-secondary-background-color: #313942;
 
-    --ls-primary-theme-color: #fff;
-    --ls-secondary-theme-color: #6096BA;
-    --ls-third-theme-color: gray;
-
     --ls-code-color: #fff;
+    --ls-code-language-color: gray;
     --ls-code-background-color: #34343c;
     --ls-code-selected-background-color: #32445A;
+
+    --ls-bullet-threading-background-color: #34343c;
+    --ls-task-done-text-color: gray;
 }
 ```
-![](assets/Pasted%20image%2020221212235959.png)
+
+![](assets/Pasted%20image%2020221216231143.png)
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/unickcheng/logseq-developer-theme@release/custom.css")
+@import url("https://cdn.jsdelivr.net/gh/unickcheng/logseq-developer-theme@release/custom.css");
 .white-theme,
 html[data-theme=light] {
+    --ls-custom-theme-color: rgb(224, 80, 27);
     --ls-primary-background-color: #ffC017;
     --ls-secondary-background-color: #ffcf4d;
-    
-    --ls-primary-theme-color: #000;
-    --ls-secondary-theme-color: rgb(224, 80, 27);
-    --ls-third-theme-color: gray;
 
     --ls-code-color: gray;
-    --ls-code-background-color: #fff ;
+    --ls-code-language-color: gray;
+    --ls-code-background-color: #fff;
     --ls-code-selected-background-color: #C0E6FD;
+
+    --ls-bullet-threading-background-color: #ffcf4d;
+    --ls-task-done-text-color: gray;
 }
 ```
-![](assets/Pasted%20image%2020221213001146.png)
+![](assets/Pasted%20image%2020221216231911.png)
+
+> 更多自定义颜色样式见  [custom-color](custom-color.md)
+
 
 ## 🚀 本地开发
 
