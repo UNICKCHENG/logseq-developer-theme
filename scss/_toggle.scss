@@ -1,6 +1,6 @@
 /* toggle  */
 
-// Top Menu Bar icon
+// Top menu bar icon
 .cp__header button {
     &.toggle-right-sidebar, 
     &.toolbar-dots-btn,
@@ -12,5 +12,12 @@
         &:hover {
             background-color: var(--ls-secondary-background-color);
         }
+    }
+}
+
+// All pages bar
+.button {
+    &:hover, &.ui__icon:hover {
+        background-color: var(--ls-secondary-background-color);
     }
 }

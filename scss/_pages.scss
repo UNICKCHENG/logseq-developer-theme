@@ -1,4 +1,37 @@
+/* All Pages Style */
 
-.all-pages-nav > a {
-    display: none;
+@if $IS_WEB {
+    .all-pages-nav > a {
+        display: none;
+    }
+}
+
+// delete button
+.actions:not(.has-selected) .actions-wrap .ui__button {
+    background-color: transparent;
+}
+.actions.has-selected .actions-wrap .ui__button {
+    color: var(--ls-custom-theme-color);
+    &:hover {
+        background-color: var(--ls-secondary-background-color);
+    }
+}
+
+// table style
+.table-auto.cp__all_pages_table tbody a  {
+    color: var(--ls-custom-theme-color);
+}
+
+// more
+.cp__sidebar-main-content .menu-links-wrapper .menu-link {
+    &:hover {
+        color: var(--ls-primary-text-color);
+    }
+}
+// search 
+.cp__sidebar-main-content .actions .form-input {
+    &:focus {
+        box-shadow: 0 0 0 0.8px var(--ls-custom-theme-color);
+        border: none;
+    }
 }
