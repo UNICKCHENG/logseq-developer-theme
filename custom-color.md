@@ -1,6 +1,6 @@
 ## custom theme
 
-```cs
+```css
 --ls-custom-theme-color: #769AFF;
 --ls-primary-background-color: #232329;
 --ls-secondary-background-color: #2B2B33;
@@ -30,17 +30,17 @@
 ## tag
 
 ```css
---ls-labels-bug-color: #D46459
---ls-labels-improvement-color: #4ea7fc
---ls-labels-feature-color: #BB87FC
---ls-labels-documentation-color: #0F783C
---ls-labels-idea-color: #5E6AD2
---ls-tag-priority-a-color: #000
---ls-tag-priority-b-color: #000
---ls-tag-priority-c-color:#000
---ls-tag-priority-a-background-color: #FF7262
---ls-tag-priority-b-background-color: #FFC600
---ls-tag-priority-c-background-color: #E9ECEF
+--ls-labels-bug-color: #D46459;
+--ls-labels-improvement-color: #4ea7fc;
+--ls-labels-feature-color: #BB87FC;
+--ls-labels-documentation-color: #0F783C;
+--ls-labels-idea-color: #5E6AD2;
+--ls-tag-priority-a-color: #000;
+--ls-tag-priority-b-color: #000;
+--ls-tag-priority-c-color:#000;
+--ls-tag-priority-a-background-color: #FF7262;
+--ls-tag-priority-b-background-color: #FFC600;
+--ls-tag-priority-c-background-color: #E9ECEF;
 ```
 
 ## pdf
