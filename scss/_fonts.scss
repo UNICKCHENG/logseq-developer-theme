@@ -21,7 +21,7 @@
 @font-face {
     font-family: common-font;
     src: url("https://docs.unickcheng.cc/static/fonts/Fonts_LXGWWenKaiLite_Regular.ttf")  format("TrueType");
-    @if not IS_WEB {
+    @if not $IS_WEB {
         // GitHub do not affect local use, but there are CORS(crossover restrictions) if used on the web.
         src: url("https://github.com/lxgw/LxgwWenKai-Lite/releases/download/v1.245.1/LXGWWenKaiLite-Regular.ttf") format("TrueType");
         src: url("../fonts/Fonts_LXGWWenKaiLite_Regular.ttf") format("TrueType"),
@@ -32,7 +32,7 @@
 @font-face {
     font-family: code-font;
     src: url("https://docs.unickcheng.cc/static/fonts/Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.ttf")  format("TrueType");
-    @if not IS_WEB {
+    @if not $IS_WEB {
         src: local("DejaVuSansMono Nerd Font Mono");
         src: url("../fonts/Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.ttf") format("TrueType"),
             url("fonts/Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.ttf") format("TrueType");
