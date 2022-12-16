@@ -1,0 +1,43 @@
+name: Download Fonts To Cache
+
+on:
+  schedule:
+    - cron: '0 20 1 * *'
+  workflow_dispatch:
+
+env:
+  FONTS_PATH: "~/fonts"
+
+jobs:
+  fonts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Load Fonts From Cache
+        id: get-css-fonts
+        uses: actions/cache@v3
+        with: 
+          path: ${{ env.FONTS_PATH }}
+          key: ${{ runner.os }}-css-fonts
+
+      - name: Delete Fonts If Exists
+        if: ${{ steps.get-css-fonts.outputs.cache-hit == 'true' }}
+        run: rm -rf ${{ env.FONTS_PATH }}
+
+      - name: Download Fonts
+        run: |
+          if [ ! -d ${{ env.FONTS_PATH }} ]; then mkdir ${{ env.FONTS_PATH }}; fi && cd ${{ env.FONTS_PATH }}
+          
+          VERSION=`wget -qO- -t1 -T8 "https://api.github.com/repos/lxgw/LxgwWenKai-Lite/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g'`
+          wget -t1 -T8 -O Fonts_LXGWWenKaiLite_Regular.ttf https://github.com/lxgw/LxgwWenKai-Lite/releases/download/${VERSION}/LXGWWenKaiLite-Regular.ttf
+
+          VERSION=`wget -qO- -t1 -T8 "https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g'`
+          wget -t1 -T8 -O Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.zip https://github.com/ryanoasis/nerd-fonts/releases/download/${VERSION}/DejaVuSansMono.zip
+          unzip -d DejaVuSansMono ./Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.zip
+          mv './DejaVuSansMono/DejaVu Sans Mono Nerd Font Complete Mono.ttf' ./Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.ttf
+          rm -rf DejaVuSansMono Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.zip
+          
+      - name: Upload Fonts files
+        uses: actions/upload-artifact@v3
+        with:
+          name: css-fonts
+          path: ${{ env.FONTS_PATH }}
