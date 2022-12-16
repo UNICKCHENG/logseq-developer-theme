@@ -15,7 +15,7 @@ jobs:
         uses: actions/cache@v3
         with: 
           path: ${{ github.workspace }}/node_modules
-          key: node-modules-${{ hashFiles('**/package.json') }}
+          key: node-modules
           restore-keys: node-modules-
       - name: Setup Node.js Environment
         uses: actions/setup-node@v3
