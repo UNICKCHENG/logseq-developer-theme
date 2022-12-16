@@ -52,7 +52,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: release-theme
-          path: ${{ github.workspace }}
+          path: release
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
@@ -63,7 +63,7 @@ jobs:
           if [ ! -d fonts ]; then mkdir fonts; fi
           version=`git tag --sort=-v:refname | head -n 1`
           ls
-          zip -qq -r ${{ env.THEME_NAME }}-${version}.zip *.css package.json LICENSE fonts
+          zip -qq -r ${{ env.THEME_NAME }}-${version}.zip release/*.css package.json LICENSE fonts
       - uses: softprops/action-gh-release@v1
         with:
           files: ${{ env.THEME_NAME }}-*.zip
