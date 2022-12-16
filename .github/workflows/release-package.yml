@@ -17,7 +17,7 @@ jobs:
         with:
            ref: release
            fetch-depth: 0
-           path: release
+           path: pre-release
       - name: Get logseq-dev-theme files
         uses: actions/checkout@v3
         with:
@@ -25,14 +25,17 @@ jobs:
            fetch-depth: 0
            path: logseq-dev-theme
       - name: Merge two css files
-        run: cat release/local-custom.css >> logseq-dev-theme/custom.css
+        run: cat pre-release/local-custom.css >> logseq-dev-theme/custom.css
+      - name: Theme files
+        run: |
+          mkdir release && cd release
+          cp ../pre-release/export.css ./
+          cp ../logseq-dev-theme/custom.css ./
       - name: Upload Theme CSS
         uses: actions/upload-artifact@v3
         with:
-          name: local-custom
-          path: |
-            logseq-dev-theme/custom.css
-            release/export.css
+          name: release-theme
+          path: release
 
   release-package:
     if: startsWith(github.ref, 'refs/tags/')
@@ -48,7 +51,7 @@ jobs:
       - name: Download Theme files
         uses: actions/download-artifact@v3
         with:
-          name: local-custom
+          name: release-theme
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
