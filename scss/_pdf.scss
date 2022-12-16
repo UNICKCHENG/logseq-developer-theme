@@ -1,0 +1,133 @@
+/* pdf style */
+// created: 2022-12-16
+
+:root {
+    --ls-pdf-dark-background-color: #2B2B33;
+    --ls-pdf-light-background-color: #F7F7F7;
+    --ls-pdf-warm-background-color: #F9EFDB;
+    
+    --ls-pdf-dark-selected-background-color: #264F78;
+    --ls-pdf-light-selected-background-color: #B9E7FF;
+    --ls-pdf-warm-selected-background-color: #B9E7FF;
+
+    --ls-pdf-highlight-red-color: #FCA5A5;
+    --ls-pdf-highlight-blue-color: #93C5FD;
+    --ls-pdf-highlight-purple-color: #D884FE;
+    --ls-pdf-highlight-yellow-color: #FCD34D;
+    --ls-pdf-highlight-green-color:#86EFAC;
+}
+
+@mixin pdf-page-style {
+    background-color: var(--pdf-background-color);
+    span {
+        font-family: var(--ls-font-family) !important;
+        &::selection{
+            background-color: var(--pdf-selected-background-color);
+        }
+    }
+    .textLayer{
+        background-color: var(--pdf-background-color);
+        opacity: 1;
+        // search highlight
+        .highlight.appended  {
+            background-color: transparent;
+            border:2px dashed #ff3434;
+        }
+        .highlight.selected {
+            background-color: #ff3434;
+        }
+    }
+}
+#pdf-layout-container[data-theme=dark] {
+    --pdf-background-color: var(--ls-pdf-dark-background-color, #2B2B33);
+    --pdf-selected-background-color: var(--ls-pdf-dark-selected-background-color, #264F78);
+    @include pdf-page-style();
+}   
+#pdf-layout-container[data-theme=light] {
+    --pdf-background-color: var(--ls-pdf-light-background-color, #F7F7F7);
+    --pdf-selected-background-color: var(--ls-pdf-light-selected-background-color, #B9E7FF);
+    @include pdf-page-style();
+}   
+#pdf-layout-container[data-theme=warm] {
+    --pdf-background-color: var(--ls-pdf-warm-background-color, #F9EFDB);
+    --pdf-selected-background-color: var(--ls-pdf-warm-selected-background-color, #B9E7FF);
+    @include pdf-page-style();
+}
+
+// scrollbar
+#pdf-layout-container {
+    .extensions__pdf-viewer {
+        scrollbar-color: var(--ls-custom-theme-color); /* Firefox */
+        &::-webkit-scrollbar {
+            background-color: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--ls-custom-theme-color);
+        }
+    }
+}
+
+// Tool bar style
+#pdf-layout-container .extensions__pdf-toolbar {
+    background: transparent !important;
+
+    .r.flex.buttons{
+        background: var(--ls-primary-background-color);
+        opacity: 0.15;
+        &:is(:hover, :active) {
+            opacity: 0.9;
+        }
+    }
+    // outline: contens and highlights
+    .extensions__pdf-outline-panels {
+        .extensions__pdf-highlights-list-item {
+            strong {
+                color: #000;
+            }
+            .text-wrap:hover {
+                color: #000;
+            }
+        }
+        .extensions__pdf-outline-list-content {
+            a:hover {
+                color: #000;
+                background-color: #C5C5C5;
+            }
+            a:active {
+                background-color: #C5C5C5;
+            }
+        }
+        &::-webkit-scrollbar {
+            background-color: transparent;
+        }
+    }
+}
+
+// highlights
+@mixin pdf-highligh-style($color) {
+    background-color: transparent;
+    border-bottom: 4px double $color;
+    opacity: .8;
+}
+.extensions__pdf-hls-text-region {
+    .hls-text-region-item[data-color=red],
+    .extensions__pdf-container [data-color=red] {
+        @include pdf-highligh-style(var(--ls-pdf-highlight-red-color));
+    }
+    .hls-text-region-item[data-color=blue],
+    .extensions__pdf-container [data-color=blue] {
+        @include pdf-highligh-style(var(--ls-pdf-highlight-blue-color));
+    }
+    .hls-text-region-item[data-color=purple],
+    .extensions__pdf-container [data-color=purple] {
+        @include pdf-highligh-style(var(--ls-pdf-highlight-purple-color));
+    }
+    .hls-text-region-item[data-color=yellow],
+    .extensions__pdf-container [data-color=yellow] {
+        @include pdf-highligh-style(var(--ls-pdf-highlight-yellow-color));
+    }
+    .hls-text-region-item[data-color=green],
+    .extensions__pdf-container [data-color=green] {
+        @include pdf-highligh-style(var(--ls-pdf-highlight-green-color));
+    }
+}
