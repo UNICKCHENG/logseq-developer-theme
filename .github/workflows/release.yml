@@ -13,11 +13,11 @@ on:
 
 jobs:
   build:
-    uses: ./.github/workflows/steps/build-css.yml
+    uses: ./.github/workflows/build-css.yml
   deploy:
     needs: [build]
-    uses: ./.github/workflows/steps/deploy-cos.yml
+    uses: ./.github/workflows/deploy-cos.yml
   release:
     needs: [build]
     if: startsWith(github.ref, 'refs/tags/')
-    uses: ./.github/workflows/steps/release-package.yml
+    uses: ./.github/workflows/release-package.yml
