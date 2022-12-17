@@ -60,3 +60,21 @@
 --ls-pdf-highlight-yellow-color: #FCD34D;
 --ls-pdf-highlight-green-color:#86EFAC;
 ```
+
+## custom fonts
+
+Font selection is not provided, but you can customize the font in the following way
+
+```css
+/* --ls-font-family: 正文字体 */
+/* --ct-code-font-family: 代码块字体 */
+:root {
+    --ls-font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+    --ct-code-font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+}
+```
+If you don't really like the default font, but there is no font selection option, i recommend considering the following options
+- https://css-tricks.com/snippets/css/system-font-stack/ 
+- https://github.com/ryanoasis/nerd-fonts
+- https://adobe-fonts.github.io/source-code-pro/
+- https://developer.apple.com/fonts/
