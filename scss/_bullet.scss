@@ -62,11 +62,16 @@
     }
 
     // multi-line blocks with children 
+    &[haschild="false"] {
+        &:focus-within > div > .block-content-wrapper::before {
+            display: none;
+        }
+    }
     &[haschild] {
         > div > .block-content-wrapper::before {
-            left: -16px;
-            @media screen and (max-width: 640px) {
-                left: -11.6px;
+            left: -11.6px;
+            @media screen and (min-width: 640px) {
+                left: -16px;
             }
         }
         &:focus-within > div > .block-content-wrapper::before {
