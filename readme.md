@@ -1,6 +1,7 @@
 # logseq-developer-theme
 
 [![Release](https://github.com/UNICKCHENG/logseq-developer-theme/actions/workflows/release.yml/badge.svg)](https://github.com/UNICKCHENG/logseq-developer-theme/actions/workflows/release.yml)
+[![download](https://img.shields.io/github/downloads/UNICKCHENG/logseq-developer-theme/total?color=%230095FF)](https://github.com/UNICKCHENG/logseq-developer-theme/releases)
 [![release](https://img.shields.io/github/v/release/UNICKCHENG/logseq-developer-theme)](https://github.com/UNICKCHENG/logseq-developer-theme/releases)
 [![logseq-dev-theme](https://img.shields.io/github/v/release/pengx17/logseq-dev-theme?label=logseq-dev-theme)](https://github.com/pengx17/logseq-dev-theme/actions/workflows/main.yml)
 [![logseq](https://img.shields.io/github/v/release/logseq/logseq?label=logseq)](https://github.com/logseq/logseq/releases)
