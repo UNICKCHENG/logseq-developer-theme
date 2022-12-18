@@ -67,7 +67,7 @@
             display: none;
         }
     }
-    &[haschild] {
+    &[haschild="true"] {
         > div > .block-content-wrapper::before {
             left: -11.6px;
             @media screen and (min-width: 640px) {
