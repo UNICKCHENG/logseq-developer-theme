@@ -26,6 +26,10 @@ input[type=password], input[type=text] {
     &  > .search-results-wrap ::-webkit-scrollbar {
         background-color: var(--ls-primary-background-color);
     }
+
+    #ui__ac-inner div  > a.chosen {
+        background-color: var(--ls-secondary-background-color);
+    }
 }
 
 // Global up and down switching style (including search box)

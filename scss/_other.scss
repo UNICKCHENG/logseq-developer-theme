@@ -1,15 +1,29 @@
 // 主区域滚动条隐藏
 // 右上角设置按钮滚动条隐藏
-.scrollbar-spacing::-webkit-scrollbar,
+body[data-page="all-journals"] #main-content-container::-webkit-scrollbar,
+body[data-page="home"] #main-content-container::-webkit-scrollbar,
+body[data-page="page"] #main-content-container::-webkit-scrollbar,
 .menu-links-wrapper::-webkit-scrollbar {
     display: none;
 }
-.scrollbar-spacing,
+body[data-page="all-journals"] #main-content-container
+body[data-page="home"] #main-content-container,
+body[data-page="page"] #main-content-container,
 .menu-links-wrapper {
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE 10+ */
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+// setting shortcut page and other
+#main-content-container {
+    &::-webkit-scrollbar {
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        @include bordeRadius();
+    }
 }
 
 // 右上角设置操作
@@ -47,8 +61,9 @@ a.external-link {
     color: var(--ls-custom-theme-color) !important;
 }
 
-// 页面属性
-.block-properties.page-properties {
+// 页面属性, 单个 rem 属性
+.block-properties.page-properties,
+.block-children {
     .page-property-key {
         color: var(--ls-primary-theme-color);
         &:hover {
@@ -62,5 +77,27 @@ a.external-link {
             background-color: transparent;
             color: var(--ls-custom-theme-color);
         }
+    }
+}
+
+// Slash (/), Block content (<), Page reference ([[), Block reference ((()
+.editor-inner .absolute[data-modal-name="commands"],
+.editor-inner .absolute[data-modal-name="block-commands"],
+.editor-inner .absolute[data-modal-name="page-search"],
+.editor-inner .absolute[data-modal-name="block-search"]  {
+    .ui__ac-group-name {
+        color: var(--ls-custom-theme-color);
+    }
+
+    #ui__ac-inner div  > a.chosen {
+        background-color: var(--ls-secondary-background-color);
+    }
+
+    &::-webkit-scrollbar {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        @include bordeRadius();
     }
 }
