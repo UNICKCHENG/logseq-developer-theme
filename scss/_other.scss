@@ -101,3 +101,34 @@ a.external-link {
         @include bordeRadius();
     }
 }
+
+// strong fonts 
+b, strong {
+    color: var(--ls-custom-theme-color);
+    font-weight: 300;
+}
+
+// custom h1 h2 h3 h4 h5 title style, just for web
+@if ($IS_WEB) {
+    .ls-block {
+        :is(h1, h2, .h1, .h2) {
+            font-size: 18px;
+            font-weight: 300;
+        }
+        :is(h3, h4, h5, .h3, .h4, .h5) {
+            font-size: 16px;
+            font-weight: 300;
+        }
+        :is(h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5) {
+            &::after {
+                background: transparent;
+                font-size: 0.55rem;
+            }
+        }
+    }
+}
+.editor-inner .uniline-block:is(.h1,.h2), 
+.ls-block :is(h1,h2) {
+    border-bottom: 1px solid var(--ls-secondary-background-color);
+}
+
