@@ -3,5 +3,6 @@ node_modules
 css
 *css.map
 *.css
+CHANGELOG.md
 
 script
