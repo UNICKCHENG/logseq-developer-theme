@@ -83,7 +83,8 @@
 // custom-query: bullet threading
 .custom-query {
     .ls-block:focus-within > div > div.items-center::before,
-    .block-children:focus-within > .ls-block:not(:focus-within)::before {
+    .block-children:focus-within > .ls-block:not(:focus-within)::before,
+    .ls-block[haschild]:focus-within > div > .block-content-wrapper::before {
         border: none;
     }
 }
