@@ -1,3 +1,17 @@
+## [1.0.3](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.0.2...v1.0.3) (2022-12-23)
+
+
+### Bug Fixes
+
+* **bullet:** the parent bullet still shows bullet threading in the query result ([7bdc608](https://github.com/UNICKCHENG/logseq-developer-theme/commit/7bdc60875ccf867bc9d1c18351d3f11573b06fcb))
+
+
+### Features
+
+* adaptation h1 h2 h3 ... h5 title just for web ([2d514c6](https://github.com/UNICKCHENG/logseq-developer-theme/commit/2d514c61088a434a7af75d3f90f50ffcec5dc413))
+
+
+
 ## [1.0.2](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.0.1...v1.0.2) (2022-12-20)
 
 
