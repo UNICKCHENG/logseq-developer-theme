@@ -1,3 +1,12 @@
+## [1.1.1](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.1.0...v1.1.1) (2022-12-26)
+
+
+### Bug Fixes
+
+* **cards:** cards button color is wrong In light theme modes ([e362524](https://github.com/UNICKCHENG/logseq-developer-theme/commit/e3625243a015dc35c4bab1fb29c939fe27e66713))
+
+
+
 # [1.1.0](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.0.3...v1.1.0) (2022-12-26)
 
 
