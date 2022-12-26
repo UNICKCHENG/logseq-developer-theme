@@ -1,27 +1,4 @@
-@charset "UTF-8";
 
 $IS_WEB: false;
 
-// https://github.com/pengx17/logseq-dev-theme
-@import url("https://cdn.jsdelivr.net/gh/pengx17/logseq-dev-theme@latest/custom.css");
-@import url("https://raw.githubusercontent.com/pengx17/logseq-dev-theme/main/custom.css");
-
-@import "./fonts";
-@import "./color";
-@import "./toggle";
-
-@import "./left-sidebar";
-@import "./search";
-@import "./bullet";
-@import "./cards";
-
-@import "./code";
-@import "./checkbox";
-@import "./tag";
-@import "./embed";
-@import "./graph";
-@import "./query";
-@import "./pdf";
-
-@import "./other";
-@import "./pages";
+@import "./global"
