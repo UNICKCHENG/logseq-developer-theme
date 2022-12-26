@@ -26,9 +26,15 @@ div[data-refs-self*='"card"'] {
 .cards-review .ls-card {
     button {
         background-color: var(--ls-secondary-background-color);
+        color: var(--ls-primary-text-color);
+        opacity: 0.8;
 
         &:is(:visited, :focus) {
             border: none;
+        }
+        &:hover {
+            opacity: 1;
+            font-weight: 600;
         }
     }
     .keyboard-shortcut code {
