@@ -132,3 +132,14 @@ b, strong {
     border-bottom: 1px solid var(--ls-secondary-background-color);
 }
 
+// settings
+.settings-modal #settings {
+    .settings-menu {
+        li.active {
+            background-color: var(--ls-secondary-background-color);
+        }
+        a strong {
+            color: var(--ls-primary-text-color);
+        }
+    }
+}
