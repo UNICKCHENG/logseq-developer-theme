@@ -3,6 +3,11 @@ $IS_WEB: true;
 
 @import "./global";
 
+:root {
+    --ls-font-family: common-font, code-font, ui-font, system-ui;
+    --ct-code-font-family: code-font, common-font, ui-font, system-ui !important;
+}
+
 .dark-theme,
 html[data-theme=dark] {
     --ls-primary-background-color: #292C3D;
