@@ -1,0 +1,9 @@
+/* cards */
+
+div[data-refs-self*='"card"'] {
+    border-radius: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    box-shadow: none;
+}
