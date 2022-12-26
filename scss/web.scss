@@ -1,4 +1,11 @@
 
 $IS_WEB: true;
 
-@import "./global"
+@import "./global";
+
+.dark-theme,
+html[data-theme=dark] {
+    --ls-primary-background-color: #292C3D;
+    --ls-secondary-background-color: #2F3344;
+    --ls-code-background-color: #333749;
+}
