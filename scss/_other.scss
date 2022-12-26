@@ -151,3 +151,9 @@ b, strong {
 .zotero-settings .form-input, .zotero-settings .form-select {
     box-shadow: none;
 }
+
+// switch theme
+.cp__themes-installed .it.is-active {
+    background-color: var(--ls-secondary-background-color);
+    color: var(--ls-custom-theme-color);
+}
