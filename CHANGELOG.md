@@ -1,3 +1,22 @@
+# [1.1.0](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.0.3...v1.1.0) (2022-12-26)
+
+
+### Bug Fixes
+
+* **cards:** some styles are not configured ([028ab40](https://github.com/UNICKCHENG/logseq-developer-theme/commit/028ab4050fc7db8218088e40aaca567ea268ad5c))
+* selected style when switching the theme style ([4cddb68](https://github.com/UNICKCHENG/logseq-developer-theme/commit/4cddb685df9b7314ae106c6b558210b6408b0cf2))
+* **settings:** inconsistent color ([c571c80](https://github.com/UNICKCHENG/logseq-developer-theme/commit/c571c80c2fa1640e450a65992aa172c0ce3faea6))
+* **web&main:** custom css style ([4af8f8c](https://github.com/UNICKCHENG/logseq-developer-theme/commit/4af8f8cf67776c0e14a545cf07dbdafa46be78c7))
+* **zotero-settings:** remove box-shadow conflict ([584c898](https://github.com/UNICKCHENG/logseq-developer-theme/commit/584c898e6800e37a00e37120fe73ccac680af517))
+
+
+### Features
+
+* **fonts:** Chinese and English fonts use LxgwWenKai-Lite just for web ([850dbd5](https://github.com/UNICKCHENG/logseq-developer-theme/commit/850dbd548b47811d8eec52075106974c1e269c4c))
+* simplified cards style ([06f65a1](https://github.com/UNICKCHENG/logseq-developer-theme/commit/06f65a16a74cb6881a52ec2d8c726a8c010ea0b8))
+
+
+
 ## [1.0.3](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.0.2...v1.0.3) (2022-12-23)
 
 
