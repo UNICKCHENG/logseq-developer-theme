@@ -119,11 +119,14 @@ b, strong {
             font-size: 16px;
             font-weight: 300;
         }
-        :is(h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5) {
-            &::after {
-                background: transparent;
-                font-size: 0.55rem;
-            }
+    }
+}
+.ls-block {
+    :is(h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5) {
+        &::after {
+            background-color: transparent;
+            font-size: 0.55rem;
+            color: var(--ls-secondary-text-color);
         }
     }
 }
