@@ -1,3 +1,19 @@
+## [1.1.2](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.1.1...v1.1.2) (2022-12-27)
+
+
+### Bug Fixes
+
+* **cards:** some cases where bullet threading is not displayed ([0ad5a47](https://github.com/UNICKCHENG/logseq-developer-theme/commit/0ad5a47c3ba48af108b416dc45f801a7feac9d5c))
+* **code:** code block linenumber color is not valid ([e929843](https://github.com/UNICKCHENG/logseq-developer-theme/commit/e92984311952079cbf621ce96805f90a3863f894))
+* **page-ref:** color when referencing pages ([723400d](https://github.com/UNICKCHENG/logseq-developer-theme/commit/723400d784dabbddbd431f0c90be553db0d87b60))
+
+
+### Features
+
+* **no-bullet-threading:** add no-bullet-threading theme ([e306581](https://github.com/UNICKCHENG/logseq-developer-theme/commit/e3065817b965c12753641c6f2ec87e6c4c47d8c1))
+
+
+
 ## [1.1.1](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.1.0...v1.1.1) (2022-12-26)
 
 
