@@ -80,8 +80,9 @@
     }
 }
 
-// custom-query: bullet threading
-.custom-query {
+// == Some cases where bullet threading is not displayed
+.custom-query,
+.cards-review .ls-card {
     .ls-block:focus-within > div > div.items-center::before,
     .block-children:focus-within > .ls-block:not(:focus-within)::before,
     .ls-block[haschild]:focus-within > div > .block-content-wrapper::before {
