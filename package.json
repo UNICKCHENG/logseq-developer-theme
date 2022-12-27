@@ -12,6 +12,10 @@
                 "url": "./custom.css"
             },
             {
+                "name": "Developer Theme no bullet threading",
+                "url": "./no-bullet-threading.css"
+            },
+            {
                 "name": "Developer Theme Like docs.unickcheng.cc",
                 "url": "./export.css"
             }
@@ -24,14 +28,17 @@
     "scripts": {
         "dev:win": "sass --watch --no-source-map --style expanded ./scss/main.scss %npm_package_config_localPath%/logseq/custom.css",
         "dev": "sass --watch --no-source-map --style expanded ./scss/main.scss $npm_package_config_localPath/logseq/custom.css",
-        "build": "sass --no-source-map --style compressed ./scss/main.scss css/custom.css",
+        "build:custom": "sass --no-source-map --style compressed ./scss/main.scss css/custom.css",
         "build:web": "sass --no-source-map --style compressed ./scss/web.scss css/export.css",
+        "build:no": "sass --no-source-map --style compressed ./scss/no-bullet-threading.scss css/no-bullet-threading.css",
+        "build": "run-p build:custom build:web build:no",
         "changelog": "standard-changelog -f"
     },
     "dependencies": {
         "sass": "^1.56.1"
     },
     "devDependencies": {
+        "npm-run-all": "^4.1.5",
         "standard-changelog": "^2.0.27"
     },
     "title": "Developer Theme",

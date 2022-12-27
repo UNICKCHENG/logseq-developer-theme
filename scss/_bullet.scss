@@ -89,3 +89,13 @@
         border: none;
     }
 }
+
+@if(not $IS_BULLET_THREADING) {
+    .ls-block {
+        .ls-block:focus-within > div > div.items-center::before,
+        .block-children:focus-within > .ls-block:not(:focus-within)::before,
+        &[haschild]:focus-within > div > .block-content-wrapper::before {
+            border: none;
+        }
+    }
+}
