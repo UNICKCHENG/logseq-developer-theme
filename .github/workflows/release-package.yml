@@ -24,18 +24,17 @@ jobs:
            repository: pengx17/logseq-dev-theme
            fetch-depth: 0
            path: logseq-dev-theme
-      - name: Install sass & compile css
+      - name: Install & Compile scss
         run: |
           cd logseq-dev-theme
           npm install -g sass
           sass --no-source-map --style compressed ./src/main.scss custom.css
-      - name: Merge two css files
-        run: cat pre-release/custom.css >> logseq-dev-theme/custom.css
       - name: Theme files
         run: |
-          mkdir release && cd release
-          cp ../pre-release/export.css ./
-          cp ../logseq-dev-theme/custom.css ./
+          mkdir release
+          cat logseq-dev-theme/custom.css pre-release/custom.css > release/custom.css
+          cat logseq-dev-theme/custom.css pre-release/no-bullet-threading.css > release/no-bullet-threading.css
+          cat logseq-dev-theme/custom.css pre-release/export.css > release/export.css
       - name: Upload Theme CSS
         uses: actions/upload-artifact@v3
         with:

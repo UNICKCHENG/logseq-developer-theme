@@ -24,7 +24,7 @@ jobs:
       - name: Load Dependency
         run: npm ci
       - name: Build CSS
-        run: npm run build; npm run build:web
+        run: npm run build
       - name: Generate changelogs
         run: npm run changelog; mv CHANGELOG.md css/
       # https://github.com/JamesIves/github-pages-deploy-action
