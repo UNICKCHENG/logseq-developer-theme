@@ -44,7 +44,7 @@
 .CodeMirror, .CodeMirror-scroll .CodeMirror-gutters,
 .CodeMirror-code .CodeMirror-linenumber,
 .cm-s-solarized.cm-s-dark .CodeMirror-gutters {
-    color: var(--code-lang-color) ;
+    color: var(--code-lang-color) !important;
     background: var(--ls-code-background-color) !important;
     @include bordeRadius();
 }
