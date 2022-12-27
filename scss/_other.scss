@@ -61,17 +61,10 @@ a.external-link {
     color: var(--ls-custom-theme-color) !important;
 }
 
-// 页面属性, 单个 rem 属性
+// 页面属性&单个 rem 属性
 .block-properties.page-properties,
 .block-children {
     .page-property-key {
-        color: var(--ls-primary-theme-color);
-        &:hover {
-            background-color: transparent;
-            color: var(--ls-custom-theme-color);
-        }
-    }
-    .page-ref {
         color: var(--ls-primary-theme-color);
         &:hover {
             background-color: transparent;
