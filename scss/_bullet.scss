@@ -81,8 +81,8 @@
 }
 
 // == Some cases where bullet threading is not displayed
-.custom-query,
-.cards-review .ls-card {
+
+@mixin no-bullet-threading() {
     .ls-block:focus-within > div > div.items-center::before,
     .block-children:focus-within > .ls-block:not(:focus-within)::before,
     .ls-block[haschild]:focus-within > div > .block-content-wrapper::before {
@@ -90,12 +90,18 @@
     }
 }
 
+.custom-query,
+.cards-review .ls-card {
+    @include no-bullet-threading();
+}
 @if(not $IS_BULLET_THREADING) {
-    .ls-block {
-        .ls-block:focus-within > div > div.items-center::before,
-        .block-children:focus-within > .ls-block:not(:focus-within)::before,
-        &[haschild]:focus-within > div > .block-content-wrapper::before {
-            border: none;
-        }
-    }
+    @include no-bullet-threading();
+}
+
+// When the window becomes narrower, 
+// the bullet spacing of the software will also change, 
+// perhaps officially to better adapt to mobile.
+// CSS cannot be adapted flexibly, so here is a compromise
+@media screen and (max-width: 768px) {
+    @include no-bullet-threading();
 }
