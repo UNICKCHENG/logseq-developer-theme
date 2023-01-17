@@ -1,12 +1,6 @@
 /* Tags */
 .dark-theme, .white-theme, 
 html[data-theme=dark], html[data-theme=light] {    
-    --labels-bug-color: var(--ls-labels-bug-color, #D46459);
-    --labels-improvement-color: var(--ls-labels-improvement-color, #4ea7fc);
-    --labels-feature-color: var(--ls-labels-feature-color, #BB87FC);
-    --labels-documentation-color: var(--ls-labels-documentation-color, #0F783C);
-    --labels-idea-color: var(--ls-labels-idea-color, #5E6AD2);
-
     --tag-priority-a-color: var(--ls-tag-priority-a-color, #000);
     --tag-priority-b-color: var(--ls-tag-priority-b-color, #000);
     --tag-priority-c-color: var(--ls-tag-priority-c-color, #000);
@@ -64,23 +58,55 @@ a.priority[href="#/page/C" i]:before {
     }
 }
 a.tag {
-    &[data-ref="Bug"], &[data-ref="bug"] {
+    // Workflow tags
+    &[data-ref="fix"], &[data-ref="FIX"],
+    &[data-ref="Bug"], &[data-ref="bug"], &[data-ref="BUG"] {
+        --labels-bug-color: var(--ls-labels-bug-color, #D46459);
         @include workflow-tag-show(--labels-bug-color);
     }
 
-    &[data-ref="Improvement"], &[data-ref="improvement"], &[data-ref="perf"] {
+    &[data-ref="Improvement"], &[data-ref="improvement"], &[data-ref="perf"], &[data-ref="PERF"] {
+        --labels-improvement-color: var(--ls-labels-improvement-color, #4EA7FC);
         @include workflow-tag-show(--labels-improvement-color);
     }
 
-    &[data-ref="Feature"], &[data-ref="feature"], &[data-ref="feat"] {
+    &[data-ref="Feature"], &[data-ref="feature"], &[data-ref="feat"], &[data-ref="FEAT"] {
+        --labels-feature-color: var(--ls-labels-feature-color, #BB87FC);
         @include workflow-tag-show(--labels-feature-color);
     }
 
-    &[data-ref="Documentation"], &[data-ref="documentation"], &[data-ref="docs"] {
+    &[data-ref="Style"], &[data-ref="style"], &[data-ref="STYLE"] {
+        --labels-style-color: var(--ls-labels-style-color, gray);
+        @include workflow-tag-show(--labels-style-color);
+    }
+
+    &[data-ref="Chore"], &[data-ref="chore"], &[data-ref="CHORE"] {
+        --labels-chore-color: var(--ls-labels-chore-color, gray);
+        @include workflow-tag-show(--labels-chore-color);
+    }
+
+    &[data-ref="Test"], &[data-ref="test"], &[data-ref="TEST"] {
+        --labels-test-color: var(--ls-labels-test-color, #E5DA45);
+        @include workflow-tag-show(--labels-test-color);
+    }
+
+    &[data-ref="refactor"], &[data-ref="Refactor"], &[data-ref="REFACTOR"] {
+        --labels-refactor-color: var(--ls-labels-refactor-color, #00DA97);
+        @include workflow-tag-show(--labels-refactor-color);
+    }
+
+    &[data-ref="Documentation"], &[data-ref="documentation"], &[data-ref="docs"], &[data-ref="DOCS"] {
+        --labels-documentation-color: var(--ls-labels-documentation-color, #39A8FC);
         @include workflow-tag-show(--labels-documentation-color);
     }
 
-    &[data-ref="Idea"],  &[data-ref="idea"] {
+    &[data-ref="question"],  &[data-ref="Question"], &[data-ref="QUES"], &[data-ref="ques"] {
+        --labels-question-color: var(--ls-labels-question-color, #D97ECA);
+        @include workflow-tag-show(--labels-question-color);
+    }
+
+    &[data-ref="Idea"],  &[data-ref="idea"],  &[data-ref="IDEA"] {
+        --labels-idea-color: var(--ls-labels-idea-color, #5E6AD2);
         @include workflow-tag-show(--labels-idea-color);
     }
 }

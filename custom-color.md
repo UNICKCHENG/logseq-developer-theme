@@ -28,13 +28,19 @@
 ```
 
 ## tag
-
+![](assets/Pasted%20image%2020230117145915.png)
 ```css
 --ls-labels-bug-color: #D46459;
---ls-labels-improvement-color: #4ea7fc;
+--ls-labels-improvement-color: #4EA7FC;
 --ls-labels-feature-color: #BB87FC;
---ls-labels-documentation-color: #0F783C;
+--ls-labels-documentation-color: #39A8FC;
 --ls-labels-idea-color: #5E6AD2;
+--ls-labels-style-color: gray;
+--ls-labels-chore-color: gray;
+--ls-labels-test-color: #E5DA45;
+--ls-labels-refactor-color: #00DA97;
+--ls-labels-question-color: #D97ECA;
+
 --ls-tag-priority-a-color: #000;
 --ls-tag-priority-b-color: #000;
 --ls-tag-priority-c-color:#000;

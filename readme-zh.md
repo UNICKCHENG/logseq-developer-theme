@@ -6,8 +6,6 @@
 
 声明下，我并没有前端的开发经验，但是最好的学习方法应该从一个项目开始。尽管 [scss](https://sass-lang.com/documentation/syntax) 并不是很复杂，可我写的代码确实很差劲。所以我将持续优化代码，您也可以在 [issues](https://github.com/UNICKCHENG/logseq-developer-theme/issues) 中提醒我，或者参与进来。
 
-<a href="https://www.buymeacoffee.com/unickcheng"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a tea&emoji=&slug=unickcheng&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
-
 ## ✨Features
 
 - [X] 代码块样式增强，尤其颜色
@@ -48,6 +46,8 @@
 ![](assets/Pasted%20image%2020221210174750.png)
 
 ![](assets/Pasted%20image%2020221216232448.png)
+
+### 修改主题样式
 
 从 0.4.0 版本开始，您也可以自定义主题颜色 😎
 
@@ -93,6 +93,11 @@ html[data-theme=light] {
 
 > 更多自定义颜色样式见  [custom-color](custom-color.md)
 
+### 标签的加强
+
+![](assets/Pasted%20image%2020230117145915.png)
+
+考虑到可能会对您原先的文本产生影响，以及多个标签影响内容的阅读性等因素，目前只设置了上图中几个标签的加强。如果您有需要，可以在 `custom.css` 中进行设置，可参考 [#4](https://github.com/UNICKCHENG/logseq-developer-theme/issues/4)
 
 ## 🚀 本地开发
 

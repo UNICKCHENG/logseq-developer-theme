@@ -56,6 +56,8 @@ If you can't download it from the plugin marketplace, you can download it from  
 
 ![](assets/Pasted%20image%2020221216232448.png)
 
+### Custom theme styles
+
 Starting with version 0.4.0, you can also customize the theme colors 😎 
 
 ```css
@@ -100,6 +102,10 @@ html[data-theme=light] {
 ![](assets/Pasted%20image%2020221216231911.png)
 
 > For more custom colors see  [custom-color](custom-color.md)
+
+### Label enhancement
+![](assets/Pasted%20image%2020230117145915.png)
+Considering factors such as possible conflicts with your original text and multiple tags affecting the readability of the content, only a few of the tags in the above image are currently set to be enhanced. If you need, you can set them in `custom.css`, see [#4](https://github.com/UNICKCHENG/logseq-developer-theme/issues/4)
 
 ## 🚀 Local development
 
