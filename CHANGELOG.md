@@ -1,3 +1,12 @@
+# [1.2.0](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.1.3...v1.2.0) (2023-01-17)
+
+
+### Features
+
+* **tags:** add additional tags ([0361ba7](https://github.com/UNICKCHENG/logseq-developer-theme/commit/0361ba7cca058b8c2dd1a76a2a13ec899022a1ac))
+
+
+
 ## [1.1.3](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.1.2...v1.1.3) (2022-12-28)
 
 
