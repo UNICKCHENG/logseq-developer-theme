@@ -5,6 +5,7 @@
     -moz-border-radius: 10px !important;    // Firefox 1-3.6 
     -khtml-border-radius: 10px !important;  // Konqueror
     border-radius: 10px !important;         // Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+
+    -webkit-mask-image: -webkit-radial-gradient(white, black); // Hidden with border radius not working on Safari
 }
 
 .CodeMirror, 
