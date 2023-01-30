@@ -1,3 +1,12 @@
+## [1.2.1](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.0...v1.2.1) (2023-01-30)
+
+
+### Bug Fixes
+
+* **code-block:** fix border radius not working on Safari ([cd1afe3](https://github.com/UNICKCHENG/logseq-developer-theme/commit/cd1afe333734de15bdc863b6a5ed6564dffc6ea3))
+
+
+
 # [1.2.0](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.1.3...v1.2.0) (2023-01-17)
 
 
