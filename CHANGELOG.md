@@ -1,3 +1,12 @@
+## [1.2.2](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.1...v1.2.2) (2023-01-31)
+
+
+### Bug Fixes
+
+* **code-block:** fix number of lines not displayed ([a407307](https://github.com/UNICKCHENG/logseq-developer-theme/commit/a407307da931c43fb621cbc6c70f4b25133d8664))
+
+
+
 ## [1.2.1](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.0...v1.2.1) (2023-01-30)
 
 
