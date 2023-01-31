@@ -5,20 +5,35 @@
     -moz-border-radius: 10px !important;    // Firefox 1-3.6 
     -khtml-border-radius: 10px !important;  // Konqueror
     border-radius: 10px !important;         // Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+
-    -webkit-mask-image: -webkit-radial-gradient(white, black); // Hidden with border radius not working on Safari
+    mask-image: -webkit-radial-gradient(white, black); // Hidden with border radius not working on Safari
 }
 
+// border style
+.CodeMirror {
+    @include bordeRadius();
+}
+
+// `` 语法的代码块
+:not(pre) > code {
+    background-color: rgba(var(--ls-secondary-background-color), 0.7);
+}
+
+// covering upstream configurations
 .CodeMirror, 
 .CodeMirror-scroll .CodeMirror-sizer ,
 .CodeMirror-code .CodeMirror-linenumber {
     font-family: var(--ct-code-font-family);
     box-shadow: none;
     text-shadow: none !important;
-    @include bordeRadius();
 }
 
+// horizontal scroll bar style
+.CodeMirror-hscrollbar:not(:hover, :active) {
+    opacity: 0.05;
+}
 
 // upper right corner language display
+// not displayed when narrow screen
 .extensions__code-lang {
     @media screen and (max-width: 640px) {
         display: none;
@@ -29,34 +44,26 @@
     top: 1%;
 }
 
-// 水平滚动条样式
-.CodeMirror-hscrollbar:not(:hover, :active) {
-    opacity: 0.05;
-}
-
-// 背景样式
+// setting code background style 
+// and covering upstream configurations
 .CodeMirror-scroll .CodeMirror-sizer,
 .cm-s-solarized.cm-s-dark {
     background: var(--ls-code-background-color) !important;
     color: var(--ls-code-color) !important;
-    @include bordeRadius();
-    }
+}
+
 //  序号样式
 .CodeMirror, .CodeMirror-scroll .CodeMirror-gutters,
 .CodeMirror-code .CodeMirror-linenumber,
 .cm-s-solarized.cm-s-dark .CodeMirror-gutters {
     color: var(--code-lang-color) !important;
     background: var(--ls-code-background-color) !important;
-    @include bordeRadius();
 }
-// 代码选中效果
+
+// code selected style
 .CodeMirror .CodeMirror-lines div.CodeMirror-selected {
     background: var(--ls-code-selected-background-color) !important;
     font-weight: bolder !important;
-}
-// `` 语法的代码块
-:not(pre) > code {
-    background-color: rgba(var(--ls-secondary-background-color), 0.7);
 }
 
 // 其余代码样式设计
