@@ -1,3 +1,12 @@
+## [1.2.3](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.2...v1.2.3) (2023-02-07)
+
+
+### Bug Fixes
+
+* **code-block:** fix similar to the background color ([2903b11](https://github.com/UNICKCHENG/logseq-developer-theme/commit/2903b1119b972eb651670490795989457d5aff1d))
+
+
+
 ## [1.2.2](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.1...v1.2.2) (2023-01-31)
 
 
