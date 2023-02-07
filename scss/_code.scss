@@ -89,7 +89,7 @@
     color: rgba(255, 255, 255, 0.7);
 }
 .cm-s-solarized span.cm-def {
-    color: var(--ls-secondary-text-color);
+    color: #E5C07B !important;
 }
 .cm-s-solarized span.cm-operator {
     color: #f15f60;
@@ -101,7 +101,7 @@
     color: #978ade;
 }
 .cm-s-solarized span.cm-meta {
-    color: white;
+    color: #E5C07B !important;
 }
 .cm-s-solarized span.cm-tag {
     color: #f07178;
@@ -129,12 +129,6 @@
 }
 .white-theme .cm-s-solarized span.cm-variable-2 {
     color: rgba(255, 255, 255, 0.7);
-}
-.white-theme .cm-s-solarized span.cm-def {
-    color: var(--ls-secondary-text-color);
-}
-.white-theme .cm-s-solarized span.cm-meta {
-    color: var(--ls-secondary-text-color);
 }
 
 // fix code block ref 
