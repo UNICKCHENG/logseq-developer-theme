@@ -15,7 +15,7 @@
 
 // `` 语法的代码块
 :not(pre) > code {
-    background-color: rgba(var(--ls-secondary-background-color), 0.7);
+    background-color: var(--ls-secondary-background-color);
 }
 
 // covering upstream configurations
