@@ -1,3 +1,16 @@
+## [1.2.4](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.5...v1.2.4) (2023-03-21)
+
+
+
+## [1.2.5](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.4...v1.2.5) (2023-03-21)
+
+
+### Bug Fixes
+
+* **block-properties:** fix block-properties invalid ([dd1d50f](https://github.com/UNICKCHENG/logseq-developer-theme/commit/dd1d50fc262bb4a09e4f70a55c463ab2020218e6))
+
+
+
 ## [1.2.4](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.3...v1.2.4) (2023-03-03)
 
 
