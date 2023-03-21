@@ -72,6 +72,9 @@ a.external-link {
         }
     }
 }
+.block-content .block-properties {
+    background-color: transparent;
+}
 
 // Slash (/), Block content (<), Page reference ([[), Block reference ((()
 .editor-inner .absolute[data-modal-name="commands"],
