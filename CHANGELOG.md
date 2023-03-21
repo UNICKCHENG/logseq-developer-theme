@@ -1,7 +1,3 @@
-## [1.2.3](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.4...v1.2.3) (2023-03-03)
-
-
-
 ## [1.2.4](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.3...v1.2.4) (2023-03-03)
 
 
