@@ -1,3 +1,12 @@
+## [1.2.7](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.6...v1.2.7) (2023-05-13)
+
+
+### Bug Fixes
+
+* **bullet threading:** update bullet threading for Logseq 0.9.6 ([9c096f0](https://github.com/UNICKCHENG/logseq-developer-theme/commit/9c096f06d6a2384a195a7b7c7008af4d9b9a8d84))
+
+
+
 ## [1.2.6](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.5...v1.2.6) (2023-05-13)
 
 
