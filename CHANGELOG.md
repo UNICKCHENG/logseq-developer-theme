@@ -1,4 +1,9 @@
-## [1.2.4](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.5...v1.2.4) (2023-03-21)
+## [1.2.6](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.5...v1.2.6) (2023-05-13)
+
+
+### Bug Fixes
+
+* update upstream css ([b470480](https://github.com/UNICKCHENG/logseq-developer-theme/commit/b47048094e4cfe2b73bdd8cc519bbd65699eff44))
 
 
 
