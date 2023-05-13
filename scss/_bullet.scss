@@ -71,12 +71,16 @@
         > div > .block-content-wrapper::before {
             left: -11.6px;
             @media screen and (min-width: 640px) {
-                left: -16px;
+                left: -22px;
             }
         }
         &:focus-within > div > .block-content-wrapper::before {
             border-color: var(--ls-block-bullet-active-color);
         }
+    }
+
+    & > div > div.items-center::before {
+        right: 20px !important;
     }
 }
 
