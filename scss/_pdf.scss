@@ -38,37 +38,38 @@
         }
     }
 }
-#pdf-layout-container[data-theme=dark] {
+.extensions__pdf-container[data-theme=dark] {
     --pdf-background-color: var(--ls-pdf-dark-background-color, #2B2B33);
     --pdf-selected-background-color: var(--ls-pdf-dark-selected-background-color, #264F78);
     @include pdf-page-style();
 }   
-#pdf-layout-container[data-theme=light] {
+.extensions__pdf-container[data-theme=light] {
     --pdf-background-color: var(--ls-pdf-light-background-color, #F7F7F7);
     --pdf-selected-background-color: var(--ls-pdf-light-selected-background-color, #B9E7FF);
     @include pdf-page-style();
 }   
-#pdf-layout-container[data-theme=warm] {
+.extensions__pdf-container[data-theme=warm] {
     --pdf-background-color: var(--ls-pdf-warm-background-color, #F9EFDB);
     --pdf-selected-background-color: var(--ls-pdf-warm-selected-background-color, #B9E7FF);
     @include pdf-page-style();
 }
 
 // scrollbar
-#pdf-layout-container {
+.extensions__pdf-container {
     .extensions__pdf-viewer {
         scrollbar-color: var(--ls-custom-theme-color); /* Firefox */
         &::-webkit-scrollbar {
-            background-color: transparent;
+            background: transparent;
         }
         &::-webkit-scrollbar-thumb {
-            background-color: var(--ls-custom-theme-color);
+            background: rgba(128, 128, 128, 0.5);
+            @include bordeRadius();
         }
     }
 }
 
 // Tool bar style
-#pdf-layout-container .extensions__pdf-toolbar {
+.extensions__pdf-container .extensions__pdf-toolbar {
     background: transparent !important;
 
     .r.flex.buttons{
