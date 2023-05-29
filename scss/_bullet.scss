@@ -69,10 +69,7 @@
     }
     &[haschild="true"] {
         > div > .block-content-wrapper::before {
-            left: -11.6px;
-            @media screen and (min-width: 640px) {
-                left: -22px;
-            }
+            left: -14px;
         }
         &:focus-within > div > .block-content-wrapper::before {
             border-color: var(--ls-block-bullet-active-color);
@@ -80,7 +77,7 @@
     }
 
     & > div > div.items-center::before {
-        right: 20px !important;
+        right: 15px !important;
     }
 }
 
@@ -89,8 +86,15 @@
 @mixin no-bullet-threading() {
     .ls-block:focus-within > div > div.items-center::before,
     .block-children:focus-within > .ls-block:not(:focus-within)::before,
-    .ls-block[haschild]:focus-within > div > .block-content-wrapper::before {
+    .ls-block[haschild]:focus-within > div > .block-content-wrapper::before,
+    .ls-block[haschild] > div > .block-content-wrapper::before {
         border: none;
+    }
+
+    .ls-block[haschild="true"] {
+        > div > .block-content-wrapper {
+            border: none;
+        }
     }
 }
 
@@ -106,6 +110,18 @@
 // the bullet spacing of the software will also change, 
 // perhaps officially to better adapt to mobile.
 // CSS cannot be adapted flexibly, so here is a compromise
-@media screen and (max-width: 768px) {
+@media (max-width: 640px) {
     @include no-bullet-threading();
+
+    .ls-block div.block-control-wrap {
+        position: unset !important;
+        height:  unset !important;
+    }
+    
+    .ls-block .block-control svg {
+        color: var( --ls-bullet-threading-focus-background-color);
+    }
 }
+
+
+    
