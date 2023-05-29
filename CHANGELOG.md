@@ -1,3 +1,13 @@
+## [1.2.8](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.7...v1.2.8) (2023-05-29)
+
+
+### Bug Fixes
+
+* **bullet_threading:** block fold button on mobile ([7e7302b](https://github.com/UNICKCHENG/logseq-developer-theme/commit/7e7302bf5273117292c1f19f79d2f271581ebd4b))
+* **pdf:** pdf style is not working ([1369ecf](https://github.com/UNICKCHENG/logseq-developer-theme/commit/1369ecf631021eada0827c4ee542f2bda6993793))
+
+
+
 ## [1.2.7](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.6...v1.2.7) (2023-05-13)
 
 
