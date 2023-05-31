@@ -6,6 +6,27 @@
 [![logseq-dev-theme](https://img.shields.io/github/v/release/pengx17/logseq-dev-theme?label=logseq-dev-theme)](https://github.com/pengx17/logseq-dev-theme/actions/workflows/main.yml)
 [![logseq](https://img.shields.io/github/v/release/logseq/logseq?label=logseq)](https://github.com/logseq/logseq/releases)
 
+## UPDATE 2023-05-31
+
+Many users have reported that the bullet lines are misaligned. Here is a solution: configure the following code in `logseq/custom.css`. For more details, please refer to [logseq-dev-theme#95](https://github.com/pengx17/logseq-dev-theme/issues/95).
+
+
+```css
+.ls-block[haschild] > div > .block-content-wrapper::before {
+    /* Adjust the variable value of "left", such as -21px. */
+    left: -21px;
+}
+
+.ls-block > div > div.items-center::before {
+    /* Adjust the variable value of "right", such as 10px. */
+    right: 10px !important;
+}
+```
+
+![](assets/bullet_line.png)
+
+---
+
 [中文版](readme-zh.md)
 
 [logseq-developer-theme](https://github.com/UNICKCHENG/logseq-developer-theme) is a secondary development of the [logseq-dev-theme](https://github.com/pengx17/logseq-dev-theme) theme as an upstream, and you can easily see the `@import` reference in [main.scss](scss/main.scss) . You can clearly compare the differences between [logseq-dev-theme](https://pengx17.github.io/knowledge-garden/) and [logseq-developer-theme](https://docs.unickcheng.cc) via respective website [^1] [^2], for more information see [this article](https://docs.unickcheng.cc/#/page/logseq-developer-theme).

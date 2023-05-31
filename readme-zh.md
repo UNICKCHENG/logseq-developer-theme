@@ -1,5 +1,24 @@
 # logseq-developer-theme
 
+## 更新于 2023-05-31
+有不少用户反映 bullet 线条错乱，此处提供一个解决方案，即在 `logseq/custom.css` 中配置下述代码。更多细节可参考 [logseq-dev-theme#95](https://github.com/pengx17/logseq-dev-theme/issues/95)。
+
+```css
+.ls-block[haschild] > div > .block-content-wrapper::before {
+    /* 请尝试调整 left 的变量值，如 -21px */
+    left: -21px;
+}
+
+.ls-block > div > div.items-center::before {
+    /* 请尝试调整 right 的变量值，如 10px */
+    right: 10px !important;
+}
+```
+
+![](assets/bullet_line.png)
+
+---
+
 [logseq-developer-theme](https://github.com/UNICKCHENG/logseq-developer-theme)  是将 [logseq-dev-theme](https://github.com/pengx17/logseq-dev-theme) 主题作为上游的二次开发，您可以在 [main.scss](scss/main.scss) 看到 `@import` 引用信息。如果您想知道二者的区别，可以通过各自的网站清楚地比较 [logseq-dev-theme](https://pengx17.github.io/knowledge-garden/)  和 [logseq-developer-theme](https://docs.unickcheng.cc) [^1] [^2]，同时这个项目也在 [这篇文章](https://docs.unickcheng.cc/#/page/logseq-developer-theme)下进行跟进。
 
 **logseq-developer-theme 并不会成为 logseq-dev-theme 2.0**，仅仅因为 logseq-dev-theme 让我更关注于开发期望的 css 样式，因此这个项目不是一个 fork，而是通过 `@import` 来引用它。
