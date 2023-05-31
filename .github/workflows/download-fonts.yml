@@ -33,7 +33,7 @@ jobs:
           VERSION=`wget -qO- -t1 -T8 "https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g'`
           wget -t1 -T8 -O Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.zip https://github.com/ryanoasis/nerd-fonts/releases/download/${VERSION}/DejaVuSansMono.zip
           unzip -d DejaVuSansMono ./Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.zip
-          mv './DejaVuSansMono/DejaVu Sans Mono Nerd Font Complete Mono.ttf' ./Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.ttf
+          mv './DejaVuSansMono/DejaVuSansMNerdFontMono-Regular.ttf' ./Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.ttf
           rm -rf DejaVuSansMono Fonts_DejaVu_Sans_Mono_Nerd_Font_Complete_Mono.zip
           
       - name: Upload Fonts files
