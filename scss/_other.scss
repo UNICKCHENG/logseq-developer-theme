@@ -153,3 +153,26 @@ b, strong {
     background-color: var(--ls-secondary-background-color);
     color: var(--ls-custom-theme-color);
 }
+
+// ========== plugins pages =============
+
+.cp__plugins-page {
+    .cp__plugins-installed .cp__plugins-item-card.installed .de {  
+        li:hover {
+            background: var(--ls-secondary-background-color);
+            color: var(--ls-custom-theme-color);
+        }
+    }
+
+    .ui__button.logseq.active {
+        background-color: var(--ls-secondary-background-color);
+        color: var(--ls-custom-theme-color);
+    }
+}
+
+// plugins settings 
+.cp__plugins-settings .cp__settings-inner {
+    .desc-item:hover {
+        background: var(--ls-secondary-background-color);
+    }
+}
