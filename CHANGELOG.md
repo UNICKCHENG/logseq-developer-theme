@@ -1,3 +1,13 @@
+## [1.2.9](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.8...v1.2.9) (2023-05-31)
+
+
+### Bug Fixes
+
+* **ci:** fix fonts failure ([5b14c24](https://github.com/UNICKCHENG/logseq-developer-theme/commit/5b14c24d03ae7347093cb78c59c23c45ef168743))
+* **plugins-page:** fix hover and active style ([5217c07](https://github.com/UNICKCHENG/logseq-developer-theme/commit/5217c07915805aaa60c4743ab474edd1885e7960))
+
+
+
 ## [1.2.8](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.7...v1.2.8) (2023-05-29)
 
 
