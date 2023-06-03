@@ -1,3 +1,14 @@
+## [1.2.10](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.9...v1.2.10) (2023-06-03)
+
+
+### Bug Fixes
+
+* **input-box:** adjust styles in  plugin settings ([e8fee9f](https://github.com/UNICKCHENG/logseq-developer-theme/commit/e8fee9f445df3da0fe8f1ed89ef398983cb8f2fc)), closes [#21](https://github.com/UNICKCHENG/logseq-developer-theme/issues/21)
+* **pages:** fix bug-report-page style ([55e7b21](https://github.com/UNICKCHENG/logseq-developer-theme/commit/55e7b21ce76fa5109bc719176b92e0afc07cfae1))
+* **pages:** fix some notification styles ([600fa49](https://github.com/UNICKCHENG/logseq-developer-theme/commit/600fa494f72f647564324e70b16cad8bdb853236))
+
+
+
 ## [1.2.9](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.8...v1.2.9) (2023-05-31)
 
 
