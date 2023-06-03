@@ -157,16 +157,28 @@ b, strong {
 // ========== plugins pages =============
 
 .cp__plugins-page {
-    .cp__plugins-installed .cp__plugins-item-card.installed .de {  
-        li:hover {
-            background: var(--ls-secondary-background-color);
-            color: var(--ls-custom-theme-color);
-        }
-    }
 
     .ui__button.logseq.active {
         background-color: var(--ls-secondary-background-color);
         color: var(--ls-custom-theme-color);
+    }
+
+    .cp__plugins-installed, .cp__plugins-marketplace {
+        .search-ctls {
+            .form-input {
+                &:focus {
+                    box-shadow: none;
+                    border: 2px solid var(--ls-custom-theme-color);
+                }
+            }
+        }
+
+        .cp__plugins-item-card.installed .de {  
+            li:hover {
+                background: var(--ls-secondary-background-color);
+                color: var(--ls-custom-theme-color);
+            }
+        }
     }
 }
 
@@ -174,5 +186,44 @@ b, strong {
 .cp__plugins-settings .cp__settings-inner {
     .desc-item:hover {
         background: var(--ls-secondary-background-color);
+    }
+
+    .cp__plugins-settings-inner .desc-item {
+
+        input[type="text"], textarea {
+            background: var(--ls-secondary-background-color);
+            
+            &:focus {
+                box-shadow: none;
+                border: 2px solid var(--ls-custom-theme-color);
+            }
+        }
+
+        input[type="radio"] {
+            background: gray;
+            box-shadow: none;
+
+            &:hover {
+                background-color: var(--ls-custom-theme-color);
+                opacity: 0.7;
+            }
+
+            &:is(:checked, :focus) {
+                background-color: var(--ls-custom-theme-color);
+            }
+        }
+
+        input[type="range"] {
+            color: var(--ls-custom-theme-color);
+        }
+
+        input[type="date"], input[type="datetime-local"] {
+            color: var(--ls-custom-theme-color);
+
+            &:focus {
+                box-shadow: none;
+                border: 2px solid var(--ls-custom-theme-color);
+            }
+        }
     }
 }
