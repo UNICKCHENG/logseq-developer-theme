@@ -2,7 +2,7 @@
 // https://css-tricks.com/snippets/css/system-font-stack/ 
 
 :root {
-    --ls-font-family: apple-font, common-font, code-font, ui-font, system-ui;
+    --ls-font-family: apple-font, common-font, code-font, ui-font, system-ui !important;
     --ct-code-font-family: code-font, common-font, ui-font, system-ui !important;
 }
 

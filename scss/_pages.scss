@@ -35,3 +35,30 @@
         border: none;
     }
 }
+
+// =================================================================
+.theme-inner.ls-hl-colored {
+    button[id="skip-to-main"] {
+        background: var(--ls-secondary-background-color);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2),0 4px 6px -2px rgba(0, 0, 0, 0.2);
+        outline: none;
+
+        &:hover {
+            color: var(--ls-custom-theme-color);
+        }
+    }
+}
+
+.ui__notifications-content.enter-done {
+    button[type="button"] {
+        &:hover {
+            color: var(--ls-custom-theme-color);
+        }
+    }
+}
+
+.ui__notifications .notification-area {
+    background: var(--ls-secondary-background-color);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2),0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
