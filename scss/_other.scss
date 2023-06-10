@@ -226,4 +226,24 @@ b, strong {
             }
         }
     }
+
+    // plugins list
+    ul.settings-plugin-list {
+        & > li {
+            background: transparent;
+            strong {
+                color: var(--ls-primary-text-color);
+            }
+
+            &:hover {
+                background: var(--ls-secondary-background-color);
+            }
+
+            &.active {
+                strong {
+                    color: var(--ls-custom-theme-color);
+                }
+            }
+        }
+    }
 }
