@@ -50,6 +50,23 @@
     }
 }
 
+// import-existing-notes page
+#main-content-container .cp__sidebar-main-content .cp__onboarding-setups {
+
+    .inner-card > article.importer {
+        background: var(--ls-secondary-background-color) !important;
+    }
+
+    label.action-input {
+        background-color: var(--ls-primary-background-color) !important;
+        opacity: 0.7;
+
+        &:hover {
+            opacity: unset;
+        }
+    }
+}
+
 // =================================================================
 .theme-inner.ls-hl-colored {
     button[id="skip-to-main"] {
