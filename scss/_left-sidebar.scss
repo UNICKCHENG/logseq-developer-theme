@@ -33,3 +33,17 @@
         background-image: linear-gradient(transparent, var(--background-color)) !important;
     }
 }
+
+.left-sidebar-inner .create {
+    #create-button {
+        border-color: transparent;
+        background-color: var(--ls-secondary-background-color) !important;
+        opacity: 0.5;
+
+        &:is(:hover, :focus) {
+            border-color: transparent;
+            background-color: var(--ls-secondary-background-color) !important;
+            opacity: unset;
+        }
+    }
+}
