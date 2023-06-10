@@ -1,3 +1,15 @@
+## [1.2.11](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.10...v1.2.11) (2023-06-10)
+
+
+### Bug Fixes
+
+* **button:** adjust create-button-page style ([088d3e2](https://github.com/UNICKCHENG/logseq-developer-theme/commit/088d3e2217b4477775738ac4b2e207c81fd5b75c))
+* **pages:** fix import-existing-notes page  style ([95aafe6](https://github.com/UNICKCHENG/logseq-developer-theme/commit/95aafe63171d8388ed7923800fc234c9127a5edd))
+* **pages:** fix plugins list style ([05c0d4e](https://github.com/UNICKCHENG/logseq-developer-theme/commit/05c0d4e0dccbfdf86cb6ab4843ab774954191067))
+* **shortcut:** fix shortcut keys style ([b282c17](https://github.com/UNICKCHENG/logseq-developer-theme/commit/b282c17ebaad5f39d702eb4248667cc7b990ace5))
+
+
+
 ## [1.2.10](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.9...v1.2.10) (2023-06-03)
 
 
