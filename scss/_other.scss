@@ -229,8 +229,12 @@ b, strong {
 
     // plugins list
     ul.settings-plugin-list {
+        list-style: none;
+
         & > li {
             background: transparent;
+            margin-bottom: 20px;
+
             strong {
                 color: var(--ls-primary-text-color);
             }
