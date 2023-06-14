@@ -1,3 +1,12 @@
+## [1.2.12](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.11...v1.2.12) (2023-06-14)
+
+
+### Bug Fixes
+
+* adapte to logseq 0.9.9 ([c6c0f51](https://github.com/UNICKCHENG/logseq-developer-theme/commit/c6c0f51132b3e95b377d235508f049915d950943))
+
+
+
 ## [1.2.11](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.10...v1.2.11) (2023-06-10)
 
 
