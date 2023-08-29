@@ -139,3 +139,8 @@
         display: block !important;
     }
  }
+
+.keyboard-shortcut > code {
+    background-color: var(--ls-secondary-background-color);
+    box-shadow: none !important;
+ }
