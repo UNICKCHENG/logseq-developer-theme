@@ -1,3 +1,14 @@
+## [1.2.13](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.12...v1.2.13) (2023-08-29)
+
+
+### Bug Fixes
+
+* **keyword:** adjust the style of keyword-code ([0563b74](https://github.com/UNICKCHENG/logseq-developer-theme/commit/0563b74b95a80d6d7429864eac2236b3ba1ef656))
+* **left-sidebar:** hide the border between left-sidebar and main-content ([2b0b1e7](https://github.com/UNICKCHENG/logseq-developer-theme/commit/2b0b1e7a578585b3ce45b62f8052ae67eaebbbd1))
+* **right-sidebar:** adjust the header of the right-sidebar ([74842b7](https://github.com/UNICKCHENG/logseq-developer-theme/commit/74842b78471d94f663cea52b476a646900a17f74))
+
+
+
 ## [1.2.12](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.11...v1.2.12) (2023-06-14)
 
 
