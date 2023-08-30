@@ -107,3 +107,23 @@
         border: none !important;
     }
 }
+
+// header-line style
+.sidebar-drop-indicator::after, .cp__right-sidebar-topbar::after {
+    display: none !important;
+}
+.cp__right-sidebar-settings > div > button.cp__right-sidebar-settings-btn {
+    font-weight: bold;
+    background: transparent;
+    &:hover {
+        background: var(--ls-secondary-background-color);;
+    }
+}
+#app-container #left-container {
+    .cp__header.drag-region {
+        box-shadow: none !important;
+        &::after {
+            display: none !important;
+        }
+    }
+}
