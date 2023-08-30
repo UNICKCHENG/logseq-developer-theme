@@ -1,3 +1,12 @@
+## [1.2.14](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.13...v1.2.14) (2023-08-30)
+
+
+### Bug Fixes
+
+* **header:** hide the border between the bar and the main content ([d1b8dab](https://github.com/UNICKCHENG/logseq-developer-theme/commit/d1b8dab09a4e06ae5a660b7e456e5cc7b8fa641d))
+
+
+
 ## [1.2.13](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.12...v1.2.13) (2023-08-29)
 
 
