@@ -141,6 +141,34 @@ b, strong {
             color: var(--ls-primary-text-color);
         }
     }
+    .update-state {
+        background-color: var(--ls-secondary-background-color);
+    }
+    .keyboard-shortcut, .action-wrap {
+        button {
+            &:not(:hover) {
+                background-color: var(--ls-secondary-background-color);
+            }
+
+            .ui__button__tile-separator {
+                display: none;
+            }
+        }
+    }
+    .cp__shortcut-page-x ul {
+        li {
+            background-color: var(--ls-secondary-background-color);
+            opacity: 1;
+
+            &.items-center.justify-between {
+                background-color: transparent;
+            }
+
+            & > strong {
+                color: unset !important;
+            }
+        }
+    }
 }
 
 // zotero settings
@@ -158,8 +186,23 @@ b, strong {
 
 .cp__plugins-page {
 
-    .ui__button.logseq.active {
-        background-color: var(--ls-secondary-background-color);
+    .cp__plugins-item-card {
+        background-color: var(--ls-secondary-background-color) !important;
+
+        &.installed .de {  
+            li:hover {
+                background: var(--ls-secondary-background-color);
+                color: var(--ls-custom-theme-color);
+            }
+        }
+    }
+
+    button {
+        background-color: transparent !important;
+        box-shadow: none;
+    }
+
+    .ui__button-theme-color.ui__button-color-custom {
         color: var(--ls-custom-theme-color);
     }
 
@@ -170,13 +213,6 @@ b, strong {
                     box-shadow: none;
                     border: 2px solid var(--ls-custom-theme-color);
                 }
-            }
-        }
-
-        .cp__plugins-item-card.installed .de {  
-            li:hover {
-                background: var(--ls-secondary-background-color);
-                color: var(--ls-custom-theme-color);
             }
         }
     }

@@ -106,6 +106,9 @@
         margin: unset;
         border: none !important;
     }
+    .sidebar-item-list {
+        background-color: var(--ls-primary-background-color) !important;
+    }
 }
 
 // header-line style

@@ -11,13 +11,14 @@
     display: none;
 }
 
-// Hide the right border line
-.left-sidebar-inner {
-    border: none;
-}
 
 // favorits and recent 
 .left-sidebar-inner {
+
+    background-color: var(--ls-primary-background-color) !important;
+    // Hide the right border line
+    border: none;
+
     .header {
         background-color: transparent !important;
     }
