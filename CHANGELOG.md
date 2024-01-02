@@ -1,4 +1,8 @@
-## [1.2.14](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.15...v1.2.14) (2024-01-02)
+## [1.2.14](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.16...v1.2.14) (2024-01-02)
+
+
+
+## [1.2.16](https://github.com/UNICKCHENG/logseq-developer-theme/compare/v1.2.15...v1.2.16) (2024-01-02)
 
 
 ### Bug Fixes
