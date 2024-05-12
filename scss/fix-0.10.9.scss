@@ -1,0 +1,111 @@
+.menu-links-wrapper {
+    background-color: var(--ls-secondary-background-color) !important;
+
+    .menu-link {
+        &:hover {
+            color: var(--ls-custom-theme-color);
+            background-color: transparent;
+        }
+    }
+}
+
+.ui__modal-panel {
+    border: none;
+}
+
+.form-input {
+    border-color: var(--ls-secondary-background-color);
+    background-color: transparent;
+    border: 2px solid var(--ls-custom-theme-color);
+
+}
+
+// button style
+.keyboard-shortcut,
+.action-wrap,
+.search-results .flex,
+.cp__cmdk__modal .flex {
+    .ui__button {
+        background-color: var(--ls-secondary-background-color);
+
+        &:hover {
+            background-color: var(--ls-secondary-background-color);
+        }
+    }
+}
+
+.cp__plugins-page .tabs-inner {
+    .ui__button {
+        border: none;
+        box-shadow: none;
+
+        &:active {
+            >span {
+                color: var(--ls-custom-theme-color) !important;
+                background-color: var(--ls-secondary-background-color) !important;
+            }
+        }
+    }
+
+    // be selected
+    .ui__button.as-classic {
+        color: unset;
+
+        >span {
+            color: var(--ls-custom-theme-color) !important;
+            background-color: var(--ls-secondary-background-color) !important;
+        }
+    }
+}
+
+// search window style
+.cp__cmdk>.hints {
+    background-color: var(--ls-secondary-background-color);
+}
+
+.cp__cmdk__modal {
+    .text-xl {
+        line-height: 250%;
+    }
+
+    .bg-gray-02 {
+        background-color: var(--ls-primary-background-color);
+    }
+}
+
+// command and page search
+.block-main-container {
+
+    .absolute-modal[data-modal-name=commands],
+    .absolute-modal[data-modal-name=page-search] {
+        background-color: var(--ls-secondary-background-color) !important;
+
+        #ui__ac {
+            background-color: var(--ls-secondary-background-color) !important;
+
+            .menu-link-wrap {
+                &:hover {
+                    a {
+                        background-color: var(--ls-primary-background-color) !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#right-sidebar-container {
+    background-color: transparent;
+}
+
+.cp__themes-installed {
+    div:hover {
+        background-color: var(--ls-secondary-background-color) !important;
+    }
+}
+
+.cp__plugins-installed {
+    ul.menu-list>li:hover {
+        background-color: var(--ls-secondary-background-color) !important;
+    }
+}
