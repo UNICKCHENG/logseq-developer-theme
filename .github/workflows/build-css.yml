@@ -12,7 +12,7 @@ jobs:
           fetch-depth: 0
       - name: Get node_modules From Cache
         id: get-modules
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with: 
           path: ${{ github.workspace }}/node_modules
           key: node-modules

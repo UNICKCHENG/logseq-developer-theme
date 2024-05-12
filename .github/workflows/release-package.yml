@@ -51,7 +51,7 @@ jobs:
           fetch-depth: 0
       - name: Load Fonts From Cache
         id: get-css-fonts
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with: 
           path: ${{ env.FONTS_PATH }}
           key: ${{ runner.os }}-css-fonts
