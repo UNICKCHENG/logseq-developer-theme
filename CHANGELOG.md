@@ -3,7 +3,7 @@
 
 ### Bug Fixes
 
-* **theme:** adapt logseq v0.10.9 ([dd493f8](https://github.com/UNICKCHENG/logseq-developer-theme/commit/dd493f86a01b7eb81edb5a86f1fbb9707ae196f8))
+* **theme:** adapt logseq v0.10.9 ([fde5306](https://github.com/UNICKCHENG/logseq-developer-theme/commit/fde530673ff9764d0f95ff7873e7df7c2f6bbfd3))
 
 
 
