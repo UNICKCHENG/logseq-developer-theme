@@ -67,7 +67,7 @@ jobs:
           if [ ! -d fonts ]; then mkdir fonts; fi
           version=`git tag --sort=-v:refname | head -n 1`
           zip -qq -r ${{ env.THEME_NAME }}-${version}.zip *.css package.json LICENSE fonts
-      - uses: softprops/action-gh-release@v1
+      - uses: softprops/action-gh-release@v2
         with:
           files: ${{ env.THEME_NAME }}-*.zip
           draft: true
